@@ -99,23 +99,27 @@ class Handler(BaseHTTPRequestHandler):
 def perform_update():
     """Download the latest GitHub release build and stage a self-replacing update.
 
-    Only works for the packaged (frozen) Windows app: it downloads the release
-    zip, extracts it, and hands off to a batch script that waits for this
-    process to exit, copies the new files over the current install directory,
-    and relaunches the app.
+    Only works for the packaged (frozen) Windows or macOS app: it downloads the
+    platform-matching release zip, extracts it, and hands off to a small
+    script that waits for this process to exit, copies the new files over the
+    current install directory, and relaunches the app.
     """
     if not FROZEN:
-        raise RuntimeError("Auto-update is only available in the packaged Windows app.")
-    if sys.platform != "win32":
-        raise RuntimeError("Auto-update is only supported on Windows.")
+        raise RuntimeError("Auto-update is only available in the packaged app.")
+    if sys.platform not in ("win32", "darwin"):
+        raise RuntimeError("Auto-update is only supported on Windows and macOS.")
 
     api_url = f"https://api.github.com/repos/{GITHUB_REPO}/releases/latest"
     with urllib.request.urlopen(api_url, timeout=15) as resp:
         release = json.loads(resp.read().decode("utf-8"))
 
-    asset = next((a for a in release.get("assets", []) if a["name"].lower().endswith(".zip")), None)
+    asset_suffix = "-windows.zip" if sys.platform == "win32" else "-macos.zip"
+    asset = next(
+        (a for a in release.get("assets", []) if a["name"].lower().endswith(asset_suffix)),
+        None,
+    )
     if not asset:
-        raise RuntimeError("The latest release has no downloadable Windows build.")
+        raise RuntimeError("The latest release has no downloadable build for this platform.")
 
     tmp_root = Path(tempfile.mkdtemp(prefix="gdt_update_"))
     zip_path = tmp_root / asset["name"]
@@ -126,6 +130,15 @@ def perform_update():
     with zipfile.ZipFile(zip_path) as zf:
         zf.extractall(new_dir)
 
+    if sys.platform == "win32":
+        _stage_windows_update(new_dir, tmp_root)
+    else:
+        _stage_macos_update(new_dir, tmp_root)
+
+    return {"version": release.get("tag_name", "").lstrip("v")}
+
+
+def _stage_windows_update(new_dir: Path, tmp_root: Path):
     current_exe = Path(sys.executable)
     install_dir = current_exe.parent
     bat_path = tmp_root / "update.bat"
@@ -144,13 +157,37 @@ def perform_update():
         "(goto) 2>nul & del \"%~f0\"\r\n",
         encoding="utf-8",
     )
-
     subprocess.Popen(
         ["cmd", "/c", str(bat_path)],
         creationflags=subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.DETACHED_PROCESS,
         close_fds=True,
     )
-    return {"version": release.get("tag_name", "").lstrip("v")}
+
+
+def _stage_macos_update(new_dir: Path, tmp_root: Path):
+    # sys.executable is .../GraphicDesignTips.app/Contents/MacOS/GraphicDesignTips
+    app_bundle = Path(sys.executable).parents[2]
+    install_dir = app_bundle.parent
+    new_app_bundle = next(new_dir.glob("*.app"), None)
+    if new_app_bundle is None:
+        raise RuntimeError("Downloaded build did not contain a .app bundle.")
+
+    sh_path = tmp_root / "update.sh"
+    sh_path.write_text(
+        "#!/bin/sh\n"
+        f"while kill -0 {os.getpid()} 2>/dev/null; do sleep 1; done\n"
+        f'rm -rf "{app_bundle}"\n'
+        f'cp -R "{new_app_bundle}" "{install_dir}/"\n'
+        f'open "{install_dir}/{new_app_bundle.name}"\n'
+        f'rm -rf "{tmp_root}"\n',
+        encoding="utf-8",
+    )
+    sh_path.chmod(0o755)
+    subprocess.Popen(
+        ["/bin/sh", str(sh_path)],
+        start_new_session=True,
+        close_fds=True,
+    )
 
 
 def trigger_restart():

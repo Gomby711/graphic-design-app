@@ -1,4 +1,4 @@
-name: Build and Release Windows App
+name: Build and Release Desktop Apps
 
 on:
   push:
@@ -9,7 +9,16 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - id: version
+        run: echo "version=1.0.$GITHUB_RUN_NUMBER" >> "$GITHUB_OUTPUT"
+
+  build-windows:
+    needs: version
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,13 +30,9 @@ jobs:
       - name: Install dependencies
         run: pip install pywebview pyinstaller
 
-      - name: Compute version
-        id: version
+      - name: Set version
         shell: pwsh
-        run: |
-          $version = "1.0.$env:GITHUB_RUN_NUMBER"
-          "version=$version" >> $env:GITHUB_OUTPUT
-          Set-Content -Path app/version.py -Value "APP_VERSION = `"$version`""
+        run: Set-Content -Path app/version.py -Value "APP_VERSION = `"${{ needs.version.outputs.version }}`""
 
       - name: Build Windows app
         shell: pwsh
@@ -44,10 +49,58 @@ jobs:
         shell: pwsh
         run: Compress-Archive -Path dist/GraphicDesignTips/* -DestinationPath GraphicDesignTips-Windows.zip
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-build
+          path: GraphicDesignTips-Windows.zip
+
+  build-macos:
+    needs: version
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pywebview pyinstaller
+
+      - name: Set version
+        run: echo "APP_VERSION = \"${{ needs.version.outputs.version }}\"" > app/version.py
+
+      - name: Build macOS app
+        run: >
+          python -m PyInstaller --noconfirm --windowed --name GraphicDesignTips
+          --add-data "app/static:static"
+          --add-data "app/lessons.json:."
+          --add-data "app/gif_manifest.json:."
+          app/server.py
+
+      - name: Zip build
+        run: ditto -c -k --sequesterRsrc --keepParent dist/GraphicDesignTips.app GraphicDesignTips-macOS.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-build
+          path: GraphicDesignTips-macOS.zip
+
+  release:
+    needs: [version, build-windows, build-macos]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: "*-build"
+          merge-multiple: true
+
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ steps.version.outputs.version }}
-          name: v${{ steps.version.outputs.version }}
+          tag_name: v${{ needs.version.outputs.version }}
+          name: v${{ needs.version.outputs.version }}
           generate_release_notes: true
-          files: GraphicDesignTips-Windows.zip
+          files: |
+            GraphicDesignTips-Windows.zip
+            GraphicDesignTips-macOS.zip

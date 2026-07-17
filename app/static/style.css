@@ -442,8 +442,8 @@ html, body {
   cursor: zoom-out;
 }
 #lightbox img {
-  max-width: 97vw;
-  max-height: 96vh;
+  max-width: 99vw;
+  max-height: 98vh;
   width: auto;
   height: auto;
   border-radius: 10px;
