@@ -237,12 +237,57 @@ function selectTool(toolId) {
   renderTool(toolId);
 }
 
+const GITHUB_REPO = "Gomby711/graphic-design-app";
+const UPDATE_CHECK_INTERVAL_MS = 30 * 60 * 1000;
+
+async function checkForUpdate() {
+  const btn = document.getElementById("update-btn");
+  try {
+    const [verRes, relRes] = await Promise.all([
+      fetch("/api/version"),
+      fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`),
+    ]);
+    if (!verRes.ok || !relRes.ok) return;
+    const { version, frozen } = await verRes.json();
+    const release = await relRes.json();
+    const latest = (release.tag_name || "").replace(/^v/, "");
+    if (!latest || latest === version) return;
+
+    btn.textContent = `Update to v${latest}`;
+    btn.hidden = false;
+    btn.disabled = false;
+    btn.onclick = () => runUpdate(btn, frozen);
+  } catch (e) {
+    // offline, rate-limited, or no releases yet — skip silently
+  }
+}
+
+async function runUpdate(btn, frozen) {
+  if (!frozen) {
+    window.open(`https://github.com/${GITHUB_REPO}/releases/latest`, "_blank");
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = "Updating…";
+  try {
+    const res = await fetch("/api/update", { method: "POST" });
+    if (!res.ok) throw new Error("update request failed");
+    btn.textContent = "Restarting…";
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = "Update failed — retry";
+  }
+}
+
 async function init() {
   const res = await fetch("/api/lessons");
   LESSONS = await res.json();
   renderSidebar();
   document.getElementById("tab-color-wheel-tool").addEventListener("click", () => selectTool("color-wheel"));
   if (LESSONS.length) selectLesson(LESSONS[0].id);
+
+  checkForUpdate();
+  setInterval(checkForUpdate, UPDATE_CHECK_INTERVAL_MS);
 }
 
 init();

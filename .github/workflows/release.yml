@@ -1,0 +1,53 @@
+name: Build and Release Windows App
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pywebview pyinstaller
+
+      - name: Compute version
+        id: version
+        shell: pwsh
+        run: |
+          $version = "1.0.$env:GITHUB_RUN_NUMBER"
+          "version=$version" >> $env:GITHUB_OUTPUT
+          Set-Content -Path app/version.py -Value "APP_VERSION = `"$version`""
+
+      - name: Build Windows app
+        shell: pwsh
+        run: >
+          python -m PyInstaller --noconfirm --windowed --name GraphicDesignTips
+          --icon app/icon.ico
+          --add-data "app/static;static"
+          --add-data "app/lessons.json;."
+          --add-data "app/gif_manifest.json;."
+          --add-data "app/icon.ico;."
+          app/server.py
+
+      - name: Zip build
+        shell: pwsh
+        run: Compress-Archive -Path dist/GraphicDesignTips/* -DestinationPath GraphicDesignTips-Windows.zip
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: v${{ steps.version.outputs.version }}
+          generate_release_notes: true
+          files: GraphicDesignTips-Windows.zip

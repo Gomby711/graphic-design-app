@@ -11,6 +11,23 @@ python app/server.py --window   # opens in a native desktop window (requires pyw
 
 Or double-click `app/launch.vbs` for a one-click native window launch with no console.
 
+## Windows app & auto-updates
+
+Every push to `main` triggers `.github/workflows/release.yml`, which builds a
+packaged Windows app (PyInstaller, bundling the Python runtime + pywebview +
+all lesson assets) and publishes it as a new [GitHub Release](https://github.com/Gomby711/graphic-design-app/releases/latest)
+tagged `v1.0.<build number>`.
+
+Download `GraphicDesignTips-Windows.zip` from the latest release, extract it
+anywhere, and run `GraphicDesignTips.exe` — no Python install required.
+
+The running app checks that release feed on startup (and every 30 minutes).
+When a newer build is published, an **"Update to vX"** button appears in the
+top bar; clicking it downloads the new build, swaps it in, and relaunches the
+app automatically. Auto-update only runs in the packaged `.exe` — when running
+from source (`python app/server.py`) the same button just opens the releases
+page instead.
+
 ## Structure
 
 - `app/lessons.json` — all 24 lessons (I-VIII fundamentals — 4 from the PDF, 4 researched design-theory topics — plus tabs 1-16 with embedded YouTube tutorials).
