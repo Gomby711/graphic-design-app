@@ -5,8 +5,6 @@
   --border: #2a2b33;
   --text: #eef0f2;
   --text-dim: #96979f;
-  --accent: #d4f542;
-  --accent-rgb: 212, 245, 66;
   --accent-2: #ff5a36;
   --accent-2-rgb: 255, 90, 54;
   --splash-pink: #ec4899;
@@ -35,13 +33,13 @@ html, body {
 ::-webkit-scrollbar { width: 11px; height: 11px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(180deg, var(--accent), var(--splash-purple) 55%, var(--splash-pink));
+  background-image: linear-gradient(180deg, var(--splash-cyan), var(--splash-purple));
   background-clip: padding-box;
   border: 3px solid var(--bg);
   border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(180deg, var(--splash-cyan), var(--accent) 50%, var(--splash-pink));
+  background-image: linear-gradient(180deg, var(--splash-purple), var(--splash-cyan));
 }
 #sidebar::-webkit-scrollbar-thumb, #content-pane::-webkit-scrollbar-thumb {
   border: 3px solid var(--panel);
@@ -72,20 +70,20 @@ html, body {
   object-fit: cover;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.06),
-    2px 2px 0 rgba(var(--accent-rgb), 0.35),
-    -2px 3px 10px rgba(236, 72, 153, 0.25);
+    2px 2px 0 rgba(var(--splash-cyan-rgb), 0.4),
+    -2px 3px 10px rgba(var(--splash-purple-rgb), 0.3);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 #brand-icon:hover {
   transform: rotate(-4deg) scale(1.06);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.1),
-    3px 3px 0 rgba(var(--accent-rgb), 0.45),
-    -3px 4px 14px rgba(236, 72, 153, 0.35);
+    3px 3px 0 rgba(var(--splash-cyan-rgb), 0.5),
+    -3px 4px 14px rgba(var(--splash-purple-rgb), 0.4);
 }
 #brand-name { font-weight: 600; font-size: 16.5px; letter-spacing: 0.2px; }
 #brand-name b {
-  background-image: linear-gradient(90deg, var(--accent), var(--splash-purple) 55%, var(--splash-pink));
+  background-image: linear-gradient(90deg, var(--splash-cyan), var(--splash-purple));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -294,7 +292,7 @@ html, body {
 }
 .tool-preview-cta span { color: var(--text-dim); font-size: 13px; }
 .tool-open-btn {
-  background-image: linear-gradient(120deg, var(--accent), var(--splash-purple));
+  background-image: linear-gradient(120deg, var(--splash-cyan), var(--splash-purple));
   color: #f4f7ff;
   border: none;
   border-radius: 6px;
