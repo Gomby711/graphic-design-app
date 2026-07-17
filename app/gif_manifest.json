@@ -50,6 +50,7 @@
   "9-levels": {
     "0": "gifs/9-levels/0.gif",
     "1": "gifs/9-levels/1.gif",
+    "2": "gifs/9-levels/2.gif",
     "3": "gifs/9-levels/3.gif",
     "4": "gifs/9-levels/4.gif",
     "5": "gifs/9-levels/5.gif"
@@ -87,6 +88,7 @@
   "14-clipping-masks-deeper": {
     "0": "gifs/14-clipping-masks-deeper/0.gif",
     "1": "gifs/14-clipping-masks-deeper/1.gif",
+    "2": "gifs/14-clipping-masks-deeper/2.gif",
     "3": "gifs/14-clipping-masks-deeper/3.gif",
     "4": "gifs/14-clipping-masks-deeper/4.gif"
   },
@@ -243,6 +245,8 @@
     "4": "gifs/f3-figma-shapes-pen-vector/4.gif",
     "5": "gifs/f3-figma-shapes-pen-vector/5.gif",
     "6": "gifs/f3-figma-shapes-pen-vector/6.gif",
+    "7": "gifs/f3-figma-shapes-pen-vector/7.gif",
+    "8": "gifs/f3-figma-shapes-pen-vector/8.gif",
     "10": "gifs/f3-figma-shapes-pen-vector/10.gif"
   },
   "f1-figma-getting-started": {
@@ -251,6 +255,7 @@
     "2": "gifs/f1-figma-getting-started/2.gif",
     "3": "gifs/f1-figma-getting-started/3.gif",
     "4": "gifs/f1-figma-getting-started/4.gif",
+    "6": "gifs/f1-figma-getting-started/6.gif",
     "7": "gifs/f1-figma-getting-started/7.gif",
     "8": "gifs/f1-figma-getting-started/8.gif",
     "10": "gifs/f1-figma-getting-started/10.gif",
@@ -288,10 +293,12 @@
   },
   "f5-figma-auto-layout": {
     "0": "gifs/f5-figma-auto-layout/0.gif",
+    "1": "gifs/f5-figma-auto-layout/1.gif",
     "2": "gifs/f5-figma-auto-layout/2.gif",
     "3": "gifs/f5-figma-auto-layout/3.gif",
     "4": "gifs/f5-figma-auto-layout/4.gif",
-    "5": "gifs/f5-figma-auto-layout/5.gif"
+    "5": "gifs/f5-figma-auto-layout/5.gif",
+    "6": "gifs/f5-figma-auto-layout/6.gif"
   },
   "f9-figma-prototyping-smart-animate": {
     "0": "gifs/f9-figma-prototyping-smart-animate/0.gif",
@@ -319,6 +326,7 @@
     "2": "gifs/f8-figma-color-styles-variables/2.gif",
     "3": "gifs/f8-figma-color-styles-variables/3.gif",
     "4": "gifs/f8-figma-color-styles-variables/4.gif",
+    "5": "gifs/f8-figma-color-styles-variables/5.gif",
     "6": "gifs/f8-figma-color-styles-variables/6.gif",
     "7": "gifs/f8-figma-color-styles-variables/7.gif",
     "8": "gifs/f8-figma-color-styles-variables/8.gif"
