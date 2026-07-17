@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphic Design Tips</title>
+<link rel="icon" type="image/png" sizes="256x256" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div id="brand">
+    <img id="brand-icon" src="icon.png" alt="ETL logo">
+    <span id="brand-name">graphic<b>design</b>tips</span>
+  </div>
+  <div id="topbar-sub">by Evan Taye Lee</div>
+</header>
+
+<div id="subbar">
+  <div id="topbar-crumb">
+    <span id="crumb-category"></span>
+  </div>
+  <div id="topbar-right">
+    <span id="crumb-counter"></span>
+  </div>
+</div>
+
+<main id="main">
+  <aside id="sidebar">
+    <div id="sidebar-groups"></div>
+    <div class="sidebar-group" id="group-tools">
+      <div class="sidebar-group-header" data-group="tools">
+        <span class="group-chevron">▾</span>
+        <span class="sidebar-group-label">Tools</span>
+      </div>
+      <div class="sidebar-group-body">
+        <ul id="tab-list-tools">
+          <li class="tab-item" id="tab-color-wheel-tool" data-tool="color-wheel">
+            <span class="tab-badge">🎨</span><span>Color Theory Studio</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <article id="content-pane">
+    <div id="empty-state">Select a tab to begin.</div>
+  </article>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

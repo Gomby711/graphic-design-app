@@ -1,0 +1,248 @@
+let LESSONS = [];
+let activeId = null;
+
+const GROUPS = [
+  { id: "fundamentals", label: "Fundamentals", match: l => isRoman(l.tab) },
+  { id: "lessons", label: "Photoshop Lessons", match: l => !isRoman(l.tab) && !l.category },
+  { id: "figma", label: "Figma Lessons", match: l => l.category === "figma" },
+  { id: "photo", label: "Aspect Ratio / Photography / Lenses", match: l => l.category === "photo" },
+  { id: "colorspace", label: "Colorspaces", match: l => l.category === "colorspace" },
+  { id: "ai", label: "AI Lessons", match: l => l.category === "ai" },
+];
+
+let collapsedGroups = new Set();
+const storedCollapsed = localStorage.getItem("collapsedGroups");
+if (storedCollapsed === null) {
+  // first visit: keep only the first group open so the sidebar isn't overwhelming
+  collapsedGroups = new Set(GROUPS.slice(1).map(g => g.id));
+} else {
+  try {
+    collapsedGroups = new Set(JSON.parse(storedCollapsed));
+  } catch (e) { collapsedGroups = new Set(); }
+}
+
+function isRoman(tab) {
+  return /^[IVX]+$/.test(tab);
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function groupForLesson(lesson) {
+  return GROUPS.find(g => g.match(lesson));
+}
+
+function saveCollapsedGroups() {
+  localStorage.setItem("collapsedGroups", JSON.stringify([...collapsedGroups]));
+}
+
+function toggleGroup(groupId) {
+  if (collapsedGroups.has(groupId)) collapsedGroups.delete(groupId);
+  else collapsedGroups.add(groupId);
+  saveCollapsedGroups();
+  renderSidebar();
+}
+
+function renderSidebar() {
+  const wrap = document.getElementById("sidebar-groups");
+  wrap.innerHTML = "";
+
+  for (const group of GROUPS) {
+    const lessons = LESSONS.filter(group.match);
+    if (!lessons.length) continue;
+
+    const groupEl = document.createElement("div");
+    groupEl.className = "sidebar-group";
+    const isCollapsed = collapsedGroups.has(group.id);
+
+    const header = document.createElement("div");
+    header.className = "sidebar-group-header";
+    header.innerHTML = `<span class="group-chevron">${isCollapsed ? "▸" : "▾"}</span>
+      <span class="sidebar-group-label">${escapeHtml(group.label)}</span>
+      <span class="group-count">${lessons.length}</span>`;
+    header.addEventListener("click", () => toggleGroup(group.id));
+    groupEl.appendChild(header);
+
+    const body = document.createElement("div");
+    body.className = "sidebar-group-body" + (isCollapsed ? " collapsed" : "");
+    const ul = document.createElement("ul");
+    ul.className = "tab-list";
+    for (const lesson of lessons) {
+      const li = document.createElement("li");
+      li.className = "tab-item" + (lesson.id === activeId ? " active" : "");
+      li.dataset.id = lesson.id;
+      li.innerHTML = `<span class="tab-badge">${lesson.tab}</span><span>${escapeHtml(lesson.title)}</span>`;
+      li.addEventListener("click", () => selectLesson(lesson.id));
+      ul.appendChild(li);
+    }
+    body.appendChild(ul);
+    groupEl.appendChild(body);
+    wrap.appendChild(groupEl);
+  }
+}
+
+function youtubeEmbedUrl(video) {
+  const start = video.start ? `?start=${video.start}` : "";
+  return `https://www.youtube.com/embed/${video.id}${start}`;
+}
+
+function openLightbox(src) {
+  let lb = document.getElementById("lightbox");
+  if (!lb) {
+    lb = document.createElement("div");
+    lb.id = "lightbox";
+    lb.innerHTML = `<button id="lightbox-close">&times;</button><img id="lightbox-img">`;
+    lb.addEventListener("click", () => lb.remove());
+    document.body.appendChild(lb);
+  }
+  lb.querySelector("#lightbox-img").src = src;
+}
+
+function updateTopbar(group, lesson) {
+  const crumb = document.getElementById("crumb-category");
+  const counter = document.getElementById("crumb-counter");
+  if (!group || !lesson) {
+    crumb.innerHTML = `<span class="crumb-group">Tools</span>
+      <span class="crumb-sep">&rsaquo;</span>
+      <span class="crumb-lesson">Color Theory Studio</span>`;
+    counter.textContent = "";
+    return;
+  }
+  crumb.innerHTML = `<span class="crumb-group">${escapeHtml(group.label)}</span>
+    <span class="crumb-sep">&rsaquo;</span>
+    <span class="crumb-lesson">${escapeHtml(lesson.title)}</span>`;
+  const lessons = LESSONS.filter(group.match);
+  const idx = lessons.findIndex(l => l.id === lesson.id);
+  counter.textContent = `Lesson ${idx + 1} / ${lessons.length}`;
+}
+
+function renderLessonNav(group, lesson) {
+  const lessons = LESSONS.filter(group.match);
+  const idx = lessons.findIndex(l => l.id === lesson.id);
+  const prev = lessons[idx - 1];
+  const next = lessons[idx + 1];
+  return `<div class="lesson-nav">
+    <button class="lesson-nav-btn lesson-nav-prev" id="lesson-prev-btn" ${prev ? "" : "disabled"}>
+      &larr; ${prev ? `<span>${escapeHtml(prev.title)}</span>` : "<span>Start of section</span>"}
+    </button>
+    <button class="lesson-nav-btn lesson-nav-next" id="lesson-next-btn" ${next ? "" : "disabled"}>
+      ${next ? `<span>${escapeHtml(next.title)}</span>` : "<span>End of section</span>"} &rarr;
+    </button>
+  </div>`;
+}
+
+function renderLesson(lesson) {
+  const pane = document.getElementById("content-pane");
+  const group = groupForLesson(lesson);
+  updateTopbar(group, lesson);
+
+  let html = `<div id="content-inner"><h1 class="lesson-title">${lesson.tab}. ${escapeHtml(lesson.title)}</h1>`;
+  if (lesson.intro) {
+    html += `<p class="lesson-intro">${escapeHtml(lesson.intro)}</p>`;
+  }
+  if (lesson.video) {
+    html += `<div class="video-embed"><iframe src="${youtubeEmbedUrl(lesson.video)}"
+      title="Video for ${escapeHtml(lesson.title)}" allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>`;
+  }
+  if (lesson.tool_preview) {
+    html += `<div class="tool-preview-wrap">
+      <iframe src="${lesson.tool_preview.src}" title="${escapeHtml(lesson.tool_preview.title)}"></iframe>
+      <div class="tool-preview-cta">
+        <span>${escapeHtml(lesson.tool_preview.caption)}</span>
+        <button class="tool-open-btn" id="open-tool-btn">Open full tool &rarr;</button>
+      </div>
+    </div>`;
+  }
+
+  for (const section of lesson.sections) {
+    html += `<div class="section-block"><h2 class="section-heading">${escapeHtml(section.heading)}</h2>`;
+    section.bullets.forEach((bullet, i) => {
+      const gif = section.bullet_gifs && section.bullet_gifs[i];
+      html += `<div class="bullet-row">
+        <div class="bullet-text">${escapeHtml(bullet)}</div>
+        ${gif ? `<div class="bullet-gif-wrap" data-gif="${gif}"><img src="${gif}" loading="lazy" alt="Demonstration gif">
+          <div class="bullet-gif-label">demo &mdash; click to enlarge</div></div>` : ""}
+      </div>`;
+    });
+    html += `</div>`;
+  }
+
+  if (group) html += renderLessonNav(group, lesson);
+
+  html += `</div>`;
+  pane.innerHTML = html;
+  const openToolBtn = document.getElementById("open-tool-btn");
+  if (openToolBtn) openToolBtn.addEventListener("click", () => selectTool("color-wheel"));
+
+  if (group) {
+    const lessons = LESSONS.filter(group.match);
+    const idx = lessons.findIndex(l => l.id === lesson.id);
+    const prevBtn = document.getElementById("lesson-prev-btn");
+    const nextBtn = document.getElementById("lesson-next-btn");
+    if (prevBtn && lessons[idx - 1]) prevBtn.addEventListener("click", () => selectLesson(lessons[idx - 1].id));
+    if (nextBtn && lessons[idx + 1]) nextBtn.addEventListener("click", () => selectLesson(lessons[idx + 1].id));
+  }
+
+  pane.querySelectorAll(".bullet-gif-wrap").forEach(el => {
+    el.addEventListener("click", () => openLightbox(el.dataset.gif));
+    const img = el.querySelector("img");
+    const forceLandscape = lesson.id === "2-object-shadow";
+    const applyOrientation = () => {
+      if (forceLandscape) {
+        el.classList.add("orientation-landscape");
+        return;
+      }
+      if (img.naturalWidth && img.naturalHeight) {
+        el.classList.add(img.naturalWidth >= img.naturalHeight ? "orientation-landscape" : "orientation-portrait");
+      }
+    };
+    if (img.complete) applyOrientation();
+    else img.addEventListener("load", applyOrientation);
+  });
+}
+
+function renderTool(toolId) {
+  const pane = document.getElementById("content-pane");
+  if (toolId === "color-wheel") {
+    pane.innerHTML = `<div id="tool-frame-wrap"><iframe id="tool-frame" src="color-wheel-tool/index.html" title="Color Theory Studio"></iframe></div>`;
+  }
+}
+
+function expandGroupFor(lessonId) {
+  const lesson = LESSONS.find(l => l.id === lessonId);
+  if (!lesson) return;
+  const group = groupForLesson(lesson);
+  if (group && collapsedGroups.has(group.id)) {
+    collapsedGroups.delete(group.id);
+    saveCollapsedGroups();
+  }
+}
+
+function selectLesson(id) {
+  activeId = id;
+  document.getElementById("tab-color-wheel-tool").classList.remove("active");
+  expandGroupFor(id);
+  renderSidebar();
+  const lesson = LESSONS.find(l => l.id === id);
+  if (lesson) renderLesson(lesson);
+}
+
+function selectTool(toolId) {
+  activeId = null;
+  renderSidebar();
+  document.getElementById("tab-color-wheel-tool").classList.add("active");
+  updateTopbar(null, null);
+  renderTool(toolId);
+}
+
+async function init() {
+  const res = await fetch("/api/lessons");
+  LESSONS = await res.json();
+  renderSidebar();
+  document.getElementById("tab-color-wheel-tool").addEventListener("click", () => selectTool("color-wheel"));
+  if (LESSONS.length) selectLesson(LESSONS[0].id);
+}
+
+init();

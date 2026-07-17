@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Theory Studio</title>
+  <meta name="theme-color" content="#080808">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-glows">
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="glow-blob glow-blob-3"></div>
+  </div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-group">
+        <span class="logo">Color Theory Studio</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="studio">
+
+    <!-- ── Color Picker Bar ── -->
+    <section class="cpbar">
+      <div class="cpbar-swatch-cell">
+        <div class="main-swatch-picker" id="mainSwatchWrap">
+          <div id="mainSwatch" class="main-swatch" title="Click to open color picker">
+            <span class="swatch-pick-icon">🎨</span>
+          </div>
+          <div class="picker-popup" id="pickerPopup">
+            <div class="picker-popup-hd">
+              <span>Color Picker</span>
+              <button class="picker-close-btn" id="pickerClose">✕</button>
+            </div>
+            <canvas id="slCanvas" width="260" height="180" class="sl-canvas"></canvas>
+            <div class="hue-track" id="hueTrack">
+              <div class="hue-thumb" id="hueThumb"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cpbar-sep" aria-hidden="true"></div>
+
+      <div class="cpbar-vals">
+        <div class="cpbar-val"><span class="cpbar-lbl">HEX</span><span id="hexVal" class="cpbar-num">#FF0000</span></div>
+        <div class="cpbar-val"><span class="cpbar-lbl">RGB</span><span id="rgbVal" class="cpbar-num">255, 0, 0</span></div>
+        <div class="cpbar-val"><span class="cpbar-lbl">HSL</span><span id="hslVal" class="cpbar-num">0°, 100%, 50%</span></div>
+      </div>
+
+      <div class="cpbar-sep" aria-hidden="true"></div>
+
+      <div class="cpbar-palette-cell">
+        <div class="palette-select-wrap">
+          <select id="paletteSelect" class="palette-select">
+            <option value="tailwind" selected>Tailwind Scale</option>
+            <option value="shades">Shades</option>
+            <option value="tints">Tints</option>
+            <option value="tones">Tones</option>
+            <option value="analogous">Analogous</option>
+            <option value="complementary">Complementary</option>
+            <option value="split-complementary">Split Complementary</option>
+            <option value="triadic">Triadic</option>
+            <option value="tetradic">Tetradic</option>
+            <option value="square">Square</option>
+          </select>
+          <span class="select-arrow">▾</span>
+        </div>
+        <div id="paletteStrip" class="palette-strip"></div>
+      </div>
+    </section>
+
+    <!-- ── HARMONY ── -->
+    <div class="studio-head">
+      <h2 class="studio-title">Harmony</h2>
+      <span class="studio-sub" id="harmonyName">Analogous</span>
+    </div>
+
+    <div class="studio-grid">
+
+      <!-- Left: harmony buttons (ours) + generated palette -->
+      <div class="studio-left">
+        <p class="hsel-heading">Harmony Type</p>
+        <div id="harmonyGrid" class="harmony-grid"></div>
+        <div class="studio-palette">
+          <div class="studio-palette-head">
+            <span class="studio-palette-lbl">Generated Palette</span>
+            <span class="studio-palette-count" id="harmonyCount"></span>
+          </div>
+          <div id="harmonyPanel" class="harmony-panel"></div>
+        </div>
+      </div>
+
+      <!-- Right: wheel + lightness -->
+      <div class="studio-right">
+        <div class="wheel-wrapper">
+          <canvas id="colorWheel" width="440" height="440"></canvas>
+          <div id="cursor" class="cursor"></div>
+        </div>
+        <div class="lightness-block">
+          <div class="lightness-header">
+            <span class="lightness-label">Lightness</span>
+            <div class="lightness-num-wrap">
+              <input type="number" id="lightnessInput" min="0" max="100" value="50"
+                     class="lightness-num-input">
+              <span class="lightness-pct">%</span>
+            </div>
+          </div>
+          <input type="range" id="lightnessSlider" min="0" max="100" value="50"
+                 class="lightness-slider" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ── VARIATIONS ── -->
+    <div class="studio-head">
+      <h2 class="studio-title">Variations</h2>
+      <span class="studio-sub">Tints &middot; Shades &middot; Tones</span>
+    </div>
+
+    <div class="tst-grid studio-variations">
+      <div class="tst-group">
+        <h3 class="tst-subtitle">Tints <span class="tst-hint">+ White</span></h3>
+        <div id="tintSwatches" class="tst-swatches"></div>
+      </div>
+      <div class="tst-group">
+        <h3 class="tst-subtitle">Shades <span class="tst-hint">+ Black</span></h3>
+        <div id="shadeSwatches" class="tst-swatches"></div>
+      </div>
+      <div class="tst-group">
+        <h3 class="tst-subtitle">Tones <span class="tst-hint">+ Gray</span></h3>
+        <div id="toneSwatches" class="tst-swatches"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; 2026 Color Theory Studio &middot; All rights reserved</span>
+      <span class="footer-right"><span class="footer-brand">Color Theory Studio</span><span class="footer-brand-plain"> - Interactive Color Wheel &amp; Harmony Explorer</span></span>
+    </div>
+  </footer>
+
+  <script src="colormath.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

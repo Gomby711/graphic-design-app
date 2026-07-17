@@ -1,0 +1,427 @@
+{
+  "1-smudge-edges": {
+    "1": "gifs/1-smudge-edges/1.gif",
+    "2": "gifs/1-smudge-edges/2.gif",
+    "3": "gifs/1-smudge-edges/3.gif",
+    "4": "gifs/1-smudge-edges/4.gif",
+    "5": "gifs/1-smudge-edges/5.gif",
+    "6": "gifs/1-smudge-edges/6.gif",
+    "7": "gifs/1-smudge-edges/7.gif"
+  },
+  "2-object-shadow": {
+    "2": "gifs/2-object-shadow/2.gif",
+    "3": "gifs/2-object-shadow/3.gif",
+    "4": "gifs/2-object-shadow/4.gif",
+    "5": "gifs/2-object-shadow/5.gif",
+    "6": "gifs/2-object-shadow/6.gif"
+  },
+  "3-touch-up": {
+    "4": "gifs/3-touch-up/4.gif"
+  },
+  "4-gradient": {
+    "1": "gifs/4-gradient/1.gif"
+  },
+  "5-clipping-mask": {
+    "0": "gifs/5-clipping-mask/0.gif",
+    "1": "gifs/5-clipping-mask/1.gif",
+    "2": "gifs/5-clipping-mask/2.gif",
+    "3": "gifs/5-clipping-mask/3.gif"
+  },
+  "6-spacing": {
+    "3": "gifs/6-spacing/3.gif"
+  },
+  "7-magic-wand-hair": {
+    "0": "gifs/7-magic-wand-hair/0.gif",
+    "1": "gifs/7-magic-wand-hair/1.gif",
+    "2": "gifs/7-magic-wand-hair/2.gif",
+    "4": "gifs/7-magic-wand-hair/4.gif",
+    "5": "gifs/7-magic-wand-hair/5.gif",
+    "6": "gifs/7-magic-wand-hair/6.gif",
+    "7": "gifs/7-magic-wand-hair/7.gif"
+  },
+  "8-generative-fill-ai": {
+    "0": "gifs/8-generative-fill-ai/0.gif",
+    "1": "gifs/8-generative-fill-ai/1.gif",
+    "2": "gifs/8-generative-fill-ai/2.gif",
+    "3": "gifs/8-generative-fill-ai/3.gif",
+    "4": "gifs/8-generative-fill-ai/4.gif",
+    "5": "gifs/8-generative-fill-ai/5.gif"
+  },
+  "9-levels": {
+    "0": "gifs/9-levels/0.gif",
+    "1": "gifs/9-levels/1.gif",
+    "2": "gifs/9-levels/2.gif",
+    "3": "gifs/9-levels/3.gif",
+    "4": "gifs/9-levels/4.gif",
+    "5": "gifs/9-levels/5.gif"
+  },
+  "10-typography-spacing": {
+    "0": "gifs/10-typography-spacing/0.gif",
+    "1": "gifs/10-typography-spacing/1.gif",
+    "2": "gifs/10-typography-spacing/2.gif",
+    "3": "gifs/10-typography-spacing/3.gif"
+  },
+  "11-non-destructive-editing": {
+    "0": "gifs/11-non-destructive-editing/0.gif",
+    "1": "gifs/11-non-destructive-editing/1.gif",
+    "2": "gifs/11-non-destructive-editing/2.gif",
+    "3": "gifs/11-non-destructive-editing/3.gif"
+  },
+  "12-blend-modes": {
+    "0": "gifs/12-blend-modes/0.gif",
+    "1": "gifs/12-blend-modes/1.gif",
+    "2": "gifs/12-blend-modes/2.gif",
+    "3": "gifs/12-blend-modes/3.gif",
+    "4": "gifs/12-blend-modes/4.gif"
+  },
+  "13-layers-fundamentals": {
+    "0": "gifs/13-layers-fundamentals/0.gif",
+    "1": "gifs/13-layers-fundamentals/1.gif",
+    "2": "gifs/13-layers-fundamentals/2.gif",
+    "3": "gifs/13-layers-fundamentals/3.gif",
+    "4": "gifs/13-layers-fundamentals/4.gif",
+    "5": "gifs/13-layers-fundamentals/5.gif",
+    "6": "gifs/13-layers-fundamentals/6.gif",
+    "7": "gifs/13-layers-fundamentals/7.gif",
+    "8": "gifs/13-layers-fundamentals/8.gif"
+  },
+  "14-clipping-masks-deeper": {
+    "0": "gifs/14-clipping-masks-deeper/0.gif",
+    "1": "gifs/14-clipping-masks-deeper/1.gif",
+    "2": "gifs/14-clipping-masks-deeper/2.gif",
+    "3": "gifs/14-clipping-masks-deeper/3.gif",
+    "4": "gifs/14-clipping-masks-deeper/4.gif"
+  },
+  "15-image-resizing": {
+    "0": "gifs/15-image-resizing/0.gif",
+    "1": "gifs/15-image-resizing/1.gif",
+    "2": "gifs/15-image-resizing/2.gif",
+    "3": "gifs/15-image-resizing/3.gif",
+    "4": "gifs/15-image-resizing/4.gif",
+    "5": "gifs/15-image-resizing/5.gif"
+  },
+  "16-white-balance": {
+    "0": "gifs/16-white-balance/0.gif",
+    "1": "gifs/16-white-balance/1.gif",
+    "2": "gifs/16-white-balance/2.gif"
+  },
+  "17-color-theory-palettes": {
+    "0": "gifs/17-color-theory-palettes/0.gif",
+    "1": "gifs/17-color-theory-palettes/1.gif",
+    "2": "gifs/17-color-theory-palettes/2.gif",
+    "3": "gifs/17-color-theory-palettes/3.gif",
+    "4": "gifs/17-color-theory-palettes/4.gif",
+    "5": "gifs/17-color-theory-palettes/5.gif",
+    "6": "gifs/17-color-theory-palettes/6.gif",
+    "7": "gifs/17-color-theory-palettes/7.gif",
+    "8": "gifs/17-color-theory-palettes/8.gif",
+    "9": "gifs/17-color-theory-palettes/9.gif",
+    "10": "gifs/17-color-theory-palettes/10.gif",
+    "11": "gifs/17-color-theory-palettes/11.gif",
+    "12": "gifs/17-color-theory-palettes/12.gif",
+    "13": "gifs/17-color-theory-palettes/13.gif"
+  },
+  "ii-bleed-trim-cmyk-rgb": {
+    "0": "gifs/ii-bleed-trim-cmyk-rgb/0.png",
+    "1": "gifs/ii-bleed-trim-cmyk-rgb/1.png",
+    "2": "gifs/ii-bleed-trim-cmyk-rgb/2.png",
+    "3": "gifs/ii-bleed-trim-cmyk-rgb/3.png",
+    "4": "gifs/ii-bleed-trim-cmyk-rgb/4.png",
+    "5": "gifs/ii-bleed-trim-cmyk-rgb/5.png"
+  },
+  "iii-lossless-lossy": {
+    "0": "gifs/iii-lossless-lossy/0.png",
+    "1": "gifs/iii-lossless-lossy/1.png",
+    "2": "gifs/iii-lossless-lossy/2.png",
+    "3": "gifs/iii-lossless-lossy/3.png",
+    "4": "gifs/iii-lossless-lossy/4.png",
+    "5": "gifs/iii-lossless-lossy/5.png",
+    "6": "gifs/iii-lossless-lossy/6.png",
+    "7": "gifs/iii-lossless-lossy/7.png"
+  },
+  "iv-raster-image": {
+    "0": "gifs/iv-raster-image/0.png",
+    "1": "gifs/iv-raster-image/1.png",
+    "2": "gifs/iv-raster-image/2.png",
+    "3": "gifs/iv-raster-image/3.png",
+    "4": "gifs/iv-raster-image/4.png",
+    "5": "gifs/iv-raster-image/5.png",
+    "6": "gifs/iv-raster-image/6.png",
+    "7": "gifs/iv-raster-image/7.png"
+  },
+  "v-twelve-principles": {
+    "0": "gifs/v-twelve-principles/0.png",
+    "1": "gifs/v-twelve-principles/1.png",
+    "2": "gifs/v-twelve-principles/2.png",
+    "3": "gifs/v-twelve-principles/3.png",
+    "4": "gifs/v-twelve-principles/4.png",
+    "5": "gifs/v-twelve-principles/5.png",
+    "6": "gifs/v-twelve-principles/6.png",
+    "7": "gifs/v-twelve-principles/7.png",
+    "8": "gifs/v-twelve-principles/8.png",
+    "9": "gifs/v-twelve-principles/9.png",
+    "10": "gifs/v-twelve-principles/10.png",
+    "11": "gifs/v-twelve-principles/11.png"
+  },
+  "vi-color-proportion-rules": {
+    "0": "gifs/vi-color-proportion-rules/0.png",
+    "1": "gifs/vi-color-proportion-rules/1.png",
+    "2": "gifs/vi-color-proportion-rules/2.png",
+    "3": "gifs/vi-color-proportion-rules/3.png",
+    "4": "gifs/vi-color-proportion-rules/4.png",
+    "5": "gifs/vi-color-proportion-rules/5.png",
+    "6": "gifs/vi-color-proportion-rules/6.png",
+    "7": "gifs/vi-color-proportion-rules/7.png",
+    "8": "gifs/vi-color-proportion-rules/8.png"
+  },
+  "vii-eight-types": {
+    "0": "gifs/vii-eight-types/0.png",
+    "1": "gifs/vii-eight-types/1.png",
+    "2": "gifs/vii-eight-types/2.png",
+    "3": "gifs/vii-eight-types/3.png",
+    "4": "gifs/vii-eight-types/4.png",
+    "5": "gifs/vii-eight-types/5.png",
+    "6": "gifs/vii-eight-types/6.png",
+    "7": "gifs/vii-eight-types/7.png"
+  },
+  "viii-five-golden-rules": {
+    "0": "gifs/viii-five-golden-rules/0.png",
+    "1": "gifs/viii-five-golden-rules/1.png",
+    "2": "gifs/viii-five-golden-rules/2.png",
+    "3": "gifs/viii-five-golden-rules/3.png",
+    "4": "gifs/viii-five-golden-rules/4.png"
+  },
+  "18-dslr-cameras-lenses": {
+    "0": "gifs/18-dslr-cameras-lenses/0.png",
+    "1": "gifs/18-dslr-cameras-lenses/1.png",
+    "2": "gifs/18-dslr-cameras-lenses/2.png",
+    "3": "gifs/18-dslr-cameras-lenses/3.png",
+    "4": "gifs/18-dslr-cameras-lenses/4.png",
+    "5": "gifs/18-dslr-cameras-lenses/5.png",
+    "6": "gifs/18-dslr-cameras-lenses/6.png",
+    "7": "gifs/18-dslr-cameras-lenses/7.png",
+    "8": "gifs/18-dslr-cameras-lenses/8.png",
+    "9": "gifs/18-dslr-cameras-lenses/9.png",
+    "10": "gifs/18-dslr-cameras-lenses/10.png",
+    "11": "gifs/18-dslr-cameras-lenses/11.png",
+    "12": "gifs/18-dslr-cameras-lenses/12.png",
+    "13": "gifs/18-dslr-cameras-lenses/13.png",
+    "14": "gifs/18-dslr-cameras-lenses/14.png",
+    "15": "gifs/18-dslr-cameras-lenses/15.png",
+    "16": "gifs/18-dslr-cameras-lenses/16.png",
+    "17": "gifs/18-dslr-cameras-lenses/17.png"
+  },
+  "19-aspect-ratios": {
+    "0": "gifs/19-aspect-ratios/0.png",
+    "1": "gifs/19-aspect-ratios/1.png",
+    "2": "gifs/19-aspect-ratios/2.png",
+    "3": "gifs/19-aspect-ratios/3.png",
+    "4": "gifs/19-aspect-ratios/4.png",
+    "5": "gifs/19-aspect-ratios/5.png",
+    "6": "gifs/19-aspect-ratios/6.png",
+    "7": "gifs/19-aspect-ratios/7.png",
+    "8": "gifs/19-aspect-ratios/8.png",
+    "9": "gifs/19-aspect-ratios/9.png",
+    "10": "gifs/19-aspect-ratios/10.png",
+    "11": "gifs/19-aspect-ratios/11.png",
+    "12": "gifs/19-aspect-ratios/12.png",
+    "13": "gifs/19-aspect-ratios/13.png",
+    "14": "gifs/19-aspect-ratios/14.png",
+    "15": "gifs/19-aspect-ratios/15.png",
+    "16": "gifs/19-aspect-ratios/16.png",
+    "17": "gifs/19-aspect-ratios/17.png",
+    "18": "gifs/19-aspect-ratios/18.png",
+    "19": "gifs/19-aspect-ratios/19.png",
+    "20": "gifs/19-aspect-ratios/20.png",
+    "21": "gifs/19-aspect-ratios/21.png",
+    "22": "gifs/19-aspect-ratios/22.png",
+    "23": "gifs/19-aspect-ratios/23.png"
+  },
+  "f3-figma-shapes-pen-vector": {
+    "0": "gifs/f3-figma-shapes-pen-vector/0.gif",
+    "1": "gifs/f3-figma-shapes-pen-vector/1.gif",
+    "2": "gifs/f3-figma-shapes-pen-vector/2.gif",
+    "3": "gifs/f3-figma-shapes-pen-vector/3.gif",
+    "4": "gifs/f3-figma-shapes-pen-vector/4.gif",
+    "5": "gifs/f3-figma-shapes-pen-vector/5.gif",
+    "6": "gifs/f3-figma-shapes-pen-vector/6.gif",
+    "7": "gifs/f3-figma-shapes-pen-vector/7.gif",
+    "8": "gifs/f3-figma-shapes-pen-vector/8.gif",
+    "10": "gifs/f3-figma-shapes-pen-vector/10.gif"
+  },
+  "f1-figma-getting-started": {
+    "0": "gifs/f1-figma-getting-started/0.gif",
+    "1": "gifs/f1-figma-getting-started/1.gif",
+    "2": "gifs/f1-figma-getting-started/2.gif",
+    "3": "gifs/f1-figma-getting-started/3.gif",
+    "4": "gifs/f1-figma-getting-started/4.gif",
+    "6": "gifs/f1-figma-getting-started/6.gif",
+    "7": "gifs/f1-figma-getting-started/7.gif",
+    "8": "gifs/f1-figma-getting-started/8.gif",
+    "10": "gifs/f1-figma-getting-started/10.gif",
+    "11": "gifs/f1-figma-getting-started/11.gif"
+  },
+  "f2-figma-frames-groups-sections": {
+    "0": "gifs/f2-figma-frames-groups-sections/0.gif",
+    "2": "gifs/f2-figma-frames-groups-sections/2.gif",
+    "3": "gifs/f2-figma-frames-groups-sections/3.gif",
+    "5": "gifs/f2-figma-frames-groups-sections/5.gif",
+    "6": "gifs/f2-figma-frames-groups-sections/6.gif",
+    "7": "gifs/f2-figma-frames-groups-sections/7.gif"
+  },
+  "f4-figma-text-typography": {
+    "0": "gifs/f4-figma-text-typography/0.gif",
+    "1": "gifs/f4-figma-text-typography/1.gif",
+    "2": "gifs/f4-figma-text-typography/2.gif",
+    "3": "gifs/f4-figma-text-typography/3.gif",
+    "4": "gifs/f4-figma-text-typography/4.gif",
+    "6": "gifs/f4-figma-text-typography/6.gif",
+    "7": "gifs/f4-figma-text-typography/7.gif",
+    "8": "gifs/f4-figma-text-typography/8.gif"
+  },
+  "f7-figma-constraints-resizing": {
+    "0": "gifs/f7-figma-constraints-resizing/0.gif",
+    "1": "gifs/f7-figma-constraints-resizing/1.gif",
+    "2": "gifs/f7-figma-constraints-resizing/2.gif",
+    "3": "gifs/f7-figma-constraints-resizing/3.gif",
+    "4": "gifs/f7-figma-constraints-resizing/4.gif",
+    "5": "gifs/f7-figma-constraints-resizing/5.gif",
+    "6": "gifs/f7-figma-constraints-resizing/6.gif",
+    "7": "gifs/f7-figma-constraints-resizing/7.gif",
+    "8": "gifs/f7-figma-constraints-resizing/8.gif",
+    "9": "gifs/f7-figma-constraints-resizing/9.gif"
+  },
+  "f5-figma-auto-layout": {
+    "0": "gifs/f5-figma-auto-layout/0.gif",
+    "1": "gifs/f5-figma-auto-layout/1.gif",
+    "2": "gifs/f5-figma-auto-layout/2.gif",
+    "3": "gifs/f5-figma-auto-layout/3.gif",
+    "4": "gifs/f5-figma-auto-layout/4.gif",
+    "5": "gifs/f5-figma-auto-layout/5.gif",
+    "6": "gifs/f5-figma-auto-layout/6.gif"
+  },
+  "f9-figma-prototyping-smart-animate": {
+    "0": "gifs/f9-figma-prototyping-smart-animate/0.gif",
+    "1": "gifs/f9-figma-prototyping-smart-animate/1.gif",
+    "2": "gifs/f9-figma-prototyping-smart-animate/2.gif",
+    "3": "gifs/f9-figma-prototyping-smart-animate/3.gif",
+    "4": "gifs/f9-figma-prototyping-smart-animate/4.gif",
+    "5": "gifs/f9-figma-prototyping-smart-animate/5.gif",
+    "6": "gifs/f9-figma-prototyping-smart-animate/6.gif",
+    "7": "gifs/f9-figma-prototyping-smart-animate/7.gif"
+  },
+  "f6-figma-components-variants": {
+    "0": "gifs/f6-figma-components-variants/0.gif",
+    "1": "gifs/f6-figma-components-variants/1.gif",
+    "2": "gifs/f6-figma-components-variants/2.gif",
+    "3": "gifs/f6-figma-components-variants/3.gif",
+    "4": "gifs/f6-figma-components-variants/4.gif",
+    "5": "gifs/f6-figma-components-variants/5.gif",
+    "6": "gifs/f6-figma-components-variants/6.gif",
+    "7": "gifs/f6-figma-components-variants/7.gif",
+    "8": "gifs/f6-figma-components-variants/8.gif"
+  },
+  "f8-figma-color-styles-variables": {
+    "0": "gifs/f8-figma-color-styles-variables/0.gif",
+    "2": "gifs/f8-figma-color-styles-variables/2.gif",
+    "3": "gifs/f8-figma-color-styles-variables/3.gif",
+    "4": "gifs/f8-figma-color-styles-variables/4.gif",
+    "5": "gifs/f8-figma-color-styles-variables/5.gif",
+    "6": "gifs/f8-figma-color-styles-variables/6.gif",
+    "7": "gifs/f8-figma-color-styles-variables/7.gif",
+    "8": "gifs/f8-figma-color-styles-variables/8.gif"
+  },
+  "f10-figma-dev-mode-handoff": {
+    "0": "gifs/f10-figma-dev-mode-handoff/0.gif",
+    "1": "gifs/f10-figma-dev-mode-handoff/1.gif",
+    "2": "gifs/f10-figma-dev-mode-handoff/2.gif",
+    "3": "gifs/f10-figma-dev-mode-handoff/3.gif",
+    "4": "gifs/f10-figma-dev-mode-handoff/4.gif",
+    "5": "gifs/f10-figma-dev-mode-handoff/5.gif",
+    "6": "gifs/f10-figma-dev-mode-handoff/6.gif",
+    "7": "gifs/f10-figma-dev-mode-handoff/7.gif",
+    "8": "gifs/f10-figma-dev-mode-handoff/8.gif",
+    "9": "gifs/f10-figma-dev-mode-handoff/9.gif",
+    "10": "gifs/f10-figma-dev-mode-handoff/10.gif",
+    "11": "gifs/f10-figma-dev-mode-handoff/11.gif"
+  },
+  "ai-1-nano-banana-pro": {
+    "1": "gifs/ai-1-nano-banana-pro/1.gif",
+    "3": "gifs/ai-1-nano-banana-pro/3.gif",
+    "4": "gifs/ai-1-nano-banana-pro/4.gif",
+    "5": "gifs/ai-1-nano-banana-pro/5.gif",
+    "6": "gifs/ai-1-nano-banana-pro/6.gif",
+    "7": "gifs/ai-1-nano-banana-pro/7.gif",
+    "8": "gifs/ai-1-nano-banana-pro/8.gif"
+  },
+  "ai-2-midjourney": {
+    "0": "gifs/ai-2-midjourney/0.gif",
+    "2": "gifs/ai-2-midjourney/2.gif",
+    "3": "gifs/ai-2-midjourney/3.gif",
+    "4": "gifs/ai-2-midjourney/4.gif",
+    "5": "gifs/ai-2-midjourney/5.gif",
+    "6": "gifs/ai-2-midjourney/6.gif",
+    "7": "gifs/ai-2-midjourney/7.gif",
+    "8": "gifs/ai-2-midjourney/8.gif",
+    "9": "gifs/ai-2-midjourney/9.gif",
+    "10": "gifs/ai-2-midjourney/10.gif",
+    "11": "gifs/ai-2-midjourney/11.gif"
+  },
+  "ai-3-chatgpt-image": {
+    "0": "gifs/ai-3-chatgpt-image/0.gif",
+    "2": "gifs/ai-3-chatgpt-image/2.gif",
+    "3": "gifs/ai-3-chatgpt-image/3.gif",
+    "4": "gifs/ai-3-chatgpt-image/4.gif",
+    "5": "gifs/ai-3-chatgpt-image/5.gif",
+    "6": "gifs/ai-3-chatgpt-image/6.gif",
+    "7": "gifs/ai-3-chatgpt-image/7.gif",
+    "8": "gifs/ai-3-chatgpt-image/8.gif",
+    "9": "gifs/ai-3-chatgpt-image/9.gif",
+    "10": "gifs/ai-3-chatgpt-image/10.gif"
+  },
+  "cs-a-fundamentals": {
+    "0": "gifs/cs-a-fundamentals/0.png",
+    "1": "gifs/cs-a-fundamentals/1.png",
+    "2": "gifs/cs-a-fundamentals/2.png",
+    "3": "gifs/cs-a-fundamentals/3.png",
+    "4": "gifs/cs-a-fundamentals/4.png",
+    "5": "gifs/cs-a-fundamentals/5.png",
+    "6": "gifs/cs-a-fundamentals/6.png",
+    "7": "gifs/cs-a-fundamentals/7.png",
+    "8": "gifs/cs-a-fundamentals/8.png",
+    "9": "gifs/cs-a-fundamentals/9.png",
+    "10": "gifs/cs-a-fundamentals/10.png"
+  },
+  "cs-b-display-print": {
+    "0": "gifs/cs-b-display-print/0.png",
+    "1": "gifs/cs-b-display-print/1.png",
+    "2": "gifs/cs-b-display-print/2.png",
+    "3": "gifs/cs-b-display-print/3.png",
+    "4": "gifs/cs-b-display-print/4.png",
+    "5": "gifs/cs-b-display-print/5.png",
+    "6": "gifs/cs-b-display-print/6.png",
+    "7": "gifs/cs-b-display-print/7.png"
+  },
+  "cs-c-vfx-aces": {
+    "0": "gifs/cs-c-vfx-aces/0.png",
+    "1": "gifs/cs-c-vfx-aces/1.png",
+    "2": "gifs/cs-c-vfx-aces/2.png",
+    "3": "gifs/cs-c-vfx-aces/3.png",
+    "4": "gifs/cs-c-vfx-aces/4.png",
+    "5": "gifs/cs-c-vfx-aces/5.png",
+    "6": "gifs/cs-c-vfx-aces/6.png",
+    "7": "gifs/cs-c-vfx-aces/7.png",
+    "8": "gifs/cs-c-vfx-aces/8.png"
+  },
+  "cs-d-log-hdr": {
+    "0": "gifs/cs-d-log-hdr/0.png",
+    "1": "gifs/cs-d-log-hdr/1.png",
+    "2": "gifs/cs-d-log-hdr/2.png",
+    "3": "gifs/cs-d-log-hdr/3.png",
+    "4": "gifs/cs-d-log-hdr/4.png",
+    "5": "gifs/cs-d-log-hdr/5.png",
+    "6": "gifs/cs-d-log-hdr/6.png",
+    "7": "gifs/cs-d-log-hdr/7.png",
+    "8": "gifs/cs-d-log-hdr/8.png"
+  }
+}
