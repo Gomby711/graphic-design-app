@@ -80,8 +80,8 @@ def main():
     ap.add_argument("--video", required=True, help="YouTube video id")
     ap.add_argument("--start", required=True, help="clip start (HH:MM:SS, MM:SS, or seconds)")
     ap.add_argument("--end", required=True, help="clip end (HH:MM:SS, MM:SS, or seconds)")
-    ap.add_argument("--fps", type=int, default=12)
-    ap.add_argument("--width", type=int, default=640)
+    ap.add_argument("--fps", type=int, default=15)
+    ap.add_argument("--width", type=int, default=1080)
     args = ap.parse_args()
 
     rel_path = f"gifs/{args.lesson}/{args.index}.gif"
