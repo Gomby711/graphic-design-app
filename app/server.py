@@ -151,9 +151,19 @@ def _stage_windows_update(new_dir: Path, tmp_root: Path):
         "  timeout /t 1 /nobreak >nul\r\n"
         "  goto wait\r\n"
         ")\r\n"
-        f'robocopy "{new_dir}" "{install_dir}" /E /IS /IT /NFL /NDL /NJH /NJS /R:3 /W:1 >NUL\r\n'
+        "set TRIES=0\r\n"
+        ":copy\r\n"
+        f'robocopy "{new_dir}" "{install_dir}" /E /IS /IT /NFL /NDL /NJH /NJS /R:5 /W:2 >NUL\r\n'
+        "if errorlevel 8 (\r\n"
+        "  set /a TRIES+=1\r\n"
+        "  if %TRIES% LSS 5 (\r\n"
+        "    timeout /t 3 /nobreak >nul\r\n"
+        "    goto copy\r\n"
+        "  )\r\n"
+        ")\r\n"
         f'start "" "{current_exe}"\r\n'
-        f'rmdir /s /q "{tmp_root}" 2>NUL\r\n'
+        f'del /q "{new_dir / "*.*"}" 2>NUL\r\n'
+        f'rmdir /s /q "{new_dir}" 2>NUL\r\n'
         "(goto) 2>nul & del \"%~f0\"\r\n",
         encoding="utf-8",
     )
