@@ -43,6 +43,7 @@ jobs:
           --add-data "app/lessons.json;."
           --add-data "app/gif_manifest.json;."
           --add-data "app/icon.ico;."
+          --add-data "CHANGELOG.md;."
           app/server.py
 
       - name: Zip build
@@ -76,6 +77,7 @@ jobs:
           --add-data "app/static:static"
           --add-data "app/lessons.json:."
           --add-data "app/gif_manifest.json:."
+          --add-data "CHANGELOG.md:."
           app/server.py
 
       - name: Zip build
