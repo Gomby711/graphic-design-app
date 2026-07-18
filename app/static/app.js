@@ -8,6 +8,7 @@ const GROUPS = [
   { id: "photo", label: "Aspect Ratio / Photography / Lenses", match: l => l.category === "photo" },
   { id: "colorspace", label: "Colorspaces", match: l => l.category === "colorspace" },
   { id: "ai", label: "AI Lessons", match: l => l.category === "ai" },
+  { id: "ae", label: "Motion Design in Adobe After Effects", match: l => l.category === "ae" },
 ];
 
 let collapsedGroups = new Set();

@@ -422,5 +422,76 @@
     "6": "gifs/cs-d-log-hdr/6.png",
     "7": "gifs/cs-d-log-hdr/7.png",
     "8": "gifs/cs-d-log-hdr/8.png"
+  },
+  "18-remove-objects": {
+    "0": "gifs/18-remove-objects/0.gif",
+    "1": "gifs/18-remove-objects/1.gif",
+    "2": "gifs/18-remove-objects/2.gif",
+    "3": "gifs/18-remove-objects/3.gif",
+    "4": "gifs/18-remove-objects/4.gif"
+  },
+  "19-dodge-burn": {
+    "0": "gifs/19-dodge-burn/0.gif",
+    "1": "gifs/19-dodge-burn/1.gif",
+    "2": "gifs/19-dodge-burn/2.gif",
+    "3": "gifs/19-dodge-burn/3.gif",
+    "4": "gifs/19-dodge-burn/4.gif"
+  },
+  "20-actions-batch-automation": {
+    "0": "gifs/20-actions-batch-automation/0.gif",
+    "1": "gifs/20-actions-batch-automation/1.gif",
+    "2": "gifs/20-actions-batch-automation/2.gif",
+    "3": "gifs/20-actions-batch-automation/3.gif",
+    "4": "gifs/20-actions-batch-automation/4.gif"
+  },
+  "21-text-layer-styles": {
+    "0": "gifs/21-text-layer-styles/0.gif",
+    "1": "gifs/21-text-layer-styles/1.gif",
+    "2": "gifs/21-text-layer-styles/2.gif",
+    "3": "gifs/21-text-layer-styles/3.gif",
+    "4": "gifs/21-text-layer-styles/4.gif",
+    "5": "gifs/21-text-layer-styles/5.gif"
+  },
+  "ae1-interface-workspace": {
+    "0": "gifs/ae1-interface-workspace/0.gif",
+    "1": "gifs/ae1-interface-workspace/1.gif",
+    "2": "gifs/ae1-interface-workspace/2.gif",
+    "3": "gifs/ae1-interface-workspace/3.gif",
+    "4": "gifs/ae1-interface-workspace/4.gif"
+  },
+  "ae2-keyframes-easing": {
+    "0": "gifs/ae2-keyframes-easing/0.gif",
+    "1": "gifs/ae2-keyframes-easing/1.gif",
+    "2": "gifs/ae2-keyframes-easing/2.gif",
+    "3": "gifs/ae2-keyframes-easing/3.gif",
+    "4": "gifs/ae2-keyframes-easing/4.gif"
+  },
+  "ae3-shapes-trim-paths": {
+    "0": "gifs/ae3-shapes-trim-paths/0.gif",
+    "1": "gifs/ae3-shapes-trim-paths/1.gif",
+    "2": "gifs/ae3-shapes-trim-paths/2.gif",
+    "3": "gifs/ae3-shapes-trim-paths/3.gif",
+    "4": "gifs/ae3-shapes-trim-paths/4.gif"
+  },
+  "ae4-text-animation": {
+    "0": "gifs/ae4-text-animation/0.gif",
+    "1": "gifs/ae4-text-animation/1.gif",
+    "2": "gifs/ae4-text-animation/2.gif",
+    "3": "gifs/ae4-text-animation/3.gif",
+    "4": "gifs/ae4-text-animation/4.gif"
+  },
+  "ae5-masks-track-mattes": {
+    "0": "gifs/ae5-masks-track-mattes/0.gif",
+    "1": "gifs/ae5-masks-track-mattes/1.gif",
+    "2": "gifs/ae5-masks-track-mattes/2.gif",
+    "3": "gifs/ae5-masks-track-mattes/3.gif",
+    "4": "gifs/ae5-masks-track-mattes/4.gif"
+  },
+  "ae6-parenting-null-objects": {
+    "0": "gifs/ae6-parenting-null-objects/0.gif",
+    "1": "gifs/ae6-parenting-null-objects/1.gif",
+    "2": "gifs/ae6-parenting-null-objects/2.gif",
+    "3": "gifs/ae6-parenting-null-objects/3.gif",
+    "4": "gifs/ae6-parenting-null-objects/4.gif"
   }
 }
