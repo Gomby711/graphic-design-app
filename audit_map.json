@@ -1,0 +1,2294 @@
+{
+  "ii-bleed-trim-cmyk-rgb": {
+    "title": "Bleed, Trimming, and CMYK vs RGB",
+    "num_bullets": 6,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Bleed and Trimming",
+        "bullet": "Bleed: Extra artwork or background color that extends beyond the final edge of your document. This acts as a safety margin. Because paper can shift slightly when cut on massive commercial machines, a standard 0.125-inch (1/8\") bleed on all sides ensures the ink goes right to the edge without white borders.",
+        "path": "gifs/ii-bleed-trim-cmyk-rgb/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. Bleed and Trimming",
+        "bullet": "Trimming (Trim Line): The final, intended dimensions of your printed product. The trim marks (also called crop marks) are the thin lines printed on the corners of your layout showing the commercial printer exactly where to slice the paper.",
+        "path": "gifs/ii-bleed-trim-cmyk-rgb/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. Bleed and Trimming",
+        "bullet": "Safe Zone (or Quiet Area): The space roughly 0.25 inches inside the trim line. All crucial text and logos must stay within this zone so they aren't accidentally cut off.",
+        "path": "gifs/ii-bleed-trim-cmyk-rgb/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "B. CMYK vs RGB Color Modes",
+        "bullet": "RGB (Red, Green, Blue): An additive color model. Screens—like your phone, computer, and TV—use light to create colors. When you add all three colors of light together, you get white. RGB has a massive, vibrant color gamut. Use RGB only for digital mediums like websites, social media, and video.",
+        "path": "gifs/ii-bleed-trim-cmyk-rgb/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. CMYK vs RGB Color Modes",
+        "bullet": "CMYK (Cyan, Magenta, Yellow, Key/Black): A subtractive color model. Printing presses physically lay down tiny dots of these four inks. When the inks mix on the paper, they absorb light to create colors. CMYK has a smaller color range than RGB. If you design in RGB and print in CMYK, the software forces a conversion, and your vibrant digital colors often look dull or muddy on paper.",
+        "path": "gifs/ii-bleed-trim-cmyk-rgb/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. CMYK vs RGB Color Modes",
+        "bullet": "The Rule: Design files intended for physical print must be created or converted into CMYK before they are sent to the printer. Design files intended strictly for viewing on a device should remain in RGB.",
+        "path": "gifs/ii-bleed-trim-cmyk-rgb/5.png"
+      }
+    ]
+  },
+  "iii-lossless-lossy": {
+    "title": "Lossless vs Lossy Meaning",
+    "num_bullets": 8,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Lossless Compression",
+        "bullet": "What it means: Shrinks file sizes by compressing data without sacrificing a single pixel. The image looks exactly the same before and after compression, making it a 100% exact match.",
+        "path": "gifs/iii-lossless-lossy/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. Lossless Compression",
+        "bullet": "Best used for: Sharp text, flat colors, transparent backgrounds, icons, logos, and raw master files that you plan to keep editing.",
+        "path": "gifs/iii-lossless-lossy/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. Lossless Compression",
+        "bullet": "Common Formats: PNG, GIF, and RAW. Modern formats like WebP and AVIF can also use lossless compression.",
+        "path": "gifs/iii-lossless-lossy/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "B. Lossy Compression",
+        "bullet": "What it means: Purposely discards non-essential details and color data that the human eye usually cannot detect. Once the data is deleted, it is gone forever and can never be recovered.",
+        "path": "gifs/iii-lossless-lossy/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. Lossy Compression",
+        "bullet": "Best used for: Complex, high-color visuals like photographs, and for web images where fast page loading speeds are a priority.",
+        "path": "gifs/iii-lossless-lossy/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. Lossy Compression",
+        "bullet": "Common Formats: JPEG. Lossy versions of WebP and AVIF are frequently used for web design to save bandwidth.",
+        "path": "gifs/iii-lossless-lossy/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "C. How To Use Them in Your Workflow",
+        "bullet": "Avoid \"Generative Loss\": Every time you edit, re-compress, and re-save a lossy file (like a JPEG), the software discards more data, leading to blurriness or blocky \"artifacts\". Always save your original, uncompressed source files.",
+        "path": "gifs/iii-lossless-lossy/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "C. How To Use Them in Your Workflow",
+        "bullet": "Deliverables: Export final designs as PNG Files if crispness and transparency are required, or as JPEG Files if you need to send a compressed photograph or proof.",
+        "path": "gifs/iii-lossless-lossy/7.png"
+      }
+    ]
+  },
+  "iv-raster-image": {
+    "title": "What is a Raster Image?",
+    "num_bullets": 8,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Common Characteristics",
+        "bullet": "Pixels: The foundational building blocks. Each pixel holds specific color and tonal data.",
+        "path": "gifs/iv-raster-image/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. Common Characteristics",
+        "bullet": "Resolution: Dictates image quality. It measures the number of pixels across the grid (e.g., 1920 × 1080) and the density of pixels per inch.",
+        "path": "gifs/iv-raster-image/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. Common Characteristics",
+        "bullet": "Ideal Use-Cases: Perfect for digital photographs and graphics with complex colors, shading, and gradients.",
+        "path": "gifs/iv-raster-image/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "B. Common File Formats",
+        "bullet": "JPEG/JPG: Best for compressing high-quality photographs, balancing detail with a manageable file size.",
+        "path": "gifs/iv-raster-image/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. Common File Formats",
+        "bullet": "PNG: Used for images requiring transparency (like logos on websites).",
+        "path": "gifs/iv-raster-image/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. Common File Formats",
+        "bullet": "GIF: Best for simple web graphics or short, looping animations.",
+        "path": "gifs/iv-raster-image/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "B. Common File Formats",
+        "bullet": "TIFF: The preferred, high-quality, uncompressed format for professional printing.",
+        "path": "gifs/iv-raster-image/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "C. Raster vs. Vector",
+        "bullet": "The main alternative to raster images is vector graphics, which are made using mathematical formulas rather than a grid of pixels. While raster images are best for photographs, vector graphics are ideal for logos and typography because they can scale up or down infinitely without losing any sharpness.",
+        "path": "gifs/iv-raster-image/7.png"
+      }
+    ]
+  },
+  "v-twelve-principles": {
+    "title": "The 12 Principles of Graphic Design",
+    "num_bullets": 12,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "The 12 Principles",
+        "bullet": "Contrast: How different adjacent elements are (color, size, shape, style). Contrast makes key elements stand apart so viewers instantly see what matters most.",
+        "path": "gifs/v-twelve-principles/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "The 12 Principles",
+        "bullet": "Balance: The distribution of visual weight across a composition, achieved through either symmetrical or asymmetrical arrangements.",
+        "path": "gifs/v-twelve-principles/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "The 12 Principles",
+        "bullet": "Emphasis: Deliberately making certain parts of a design stand out to guide the viewer's attention to the most important content.",
+        "path": "gifs/v-twelve-principles/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "The 12 Principles",
+        "bullet": "Proportion: The size of elements in relation to one another; larger elements read as more important.",
+        "path": "gifs/v-twelve-principles/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "The 12 Principles",
+        "bullet": "Hierarchy: The visual ranking of importance, so the most important content appears most prominent (e.g., headline > subhead > body).",
+        "path": "gifs/v-twelve-principles/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "The 12 Principles",
+        "bullet": "Repetition: Reusing the same colors, shapes, or styles to reinforce an idea and unify a design.",
+        "path": "gifs/v-twelve-principles/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "The 12 Principles",
+        "bullet": "Rhythm: The spacing between repeating elements, which creates a cadence that moves the eye through the piece.",
+        "path": "gifs/v-twelve-principles/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "The 12 Principles",
+        "bullet": "Pattern: Multiple design elements repeated in combination, creating a recurring visual texture.",
+        "path": "gifs/v-twelve-principles/7.png"
+      },
+      {
+        "index": 8,
+        "heading": "The 12 Principles",
+        "bullet": "White Space (negative space): The empty area containing no design elements; it creates breathing room, separation, and emphasis.",
+        "path": "gifs/v-twelve-principles/8.png"
+      },
+      {
+        "index": 9,
+        "heading": "The 12 Principles",
+        "bullet": "Movement: The path the viewer's eye travels over a design, controlled by composition and directional cues.",
+        "path": "gifs/v-twelve-principles/9.png"
+      },
+      {
+        "index": 10,
+        "heading": "The 12 Principles",
+        "bullet": "Variety: Intentional differences in elements that create intrigue and prevent monotony.",
+        "path": "gifs/v-twelve-principles/10.png"
+      },
+      {
+        "index": 11,
+        "heading": "The 12 Principles",
+        "bullet": "Unity: How well all parts relate to each other and form a coherent whole where every element feels like it belongs.",
+        "path": "gifs/v-twelve-principles/11.png"
+      }
+    ]
+  },
+  "vi-color-proportion-rules": {
+    "title": "The 70-20-10 Rule and the 70-30 Rule",
+    "num_bullets": 9,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "The 70-20-10 Rule (color proportions)",
+        "bullet": "70% Dominant color: Sets the overall tone and mood; used for backgrounds and large areas — typically the background or primary brand color across main sections.",
+        "path": "gifs/vi-color-proportion-rules/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "The 70-20-10 Rule (color proportions)",
+        "bullet": "20% Secondary color: Complements the dominant color and adds depth and contrast without overpowering it; used for supporting graphics, text blocks, or navigation.",
+        "path": "gifs/vi-color-proportion-rules/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "The 70-20-10 Rule (color proportions)",
+        "bullet": "10% Accent color: A bold, high-contrast color used sparingly to draw the eye to key elements — CTAs, buttons, highlights. Its scarcity is what gives it power.",
+        "path": "gifs/vi-color-proportion-rules/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "The 70-20-10 Rule (color proportions)",
+        "bullet": "Application example: a light beige background (70%), dark brown text/navigation (20%), and bright teal buttons/CTAs (10%). It's a guideline, not a law — designers intentionally break the proportions for emphasis.",
+        "path": "gifs/vi-color-proportion-rules/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "The 70-30 Rule (dominance vs. contrast)",
+        "bullet": "70% Dominant visual identity: The consistent foundation — main color palette, typography, layout, and overall style — that creates cohesion and familiarity.",
+        "path": "gifs/vi-color-proportion-rules/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "The 70-30 Rule (dominance vs. contrast)",
+        "bullet": "30% Contrasting elements: Bold accent colors, distinctive type, striking imagery, or unconventional shapes that create emphasis without overwhelming the whole.",
+        "path": "gifs/vi-color-proportion-rules/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "The 70-30 Rule (dominance vs. contrast)",
+        "bullet": "Color application: keep soft neutral tones across roughly 70% of a composition, with bold vibrant color in the remaining 30% to establish focal points.",
+        "path": "gifs/vi-color-proportion-rules/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "The 70-30 Rule (dominance vs. contrast)",
+        "bullet": "Typography application: one font family carries most of the text for consistency and readability, while a bolder or decorative typeface marks headings and emphasized sections.",
+        "path": "gifs/vi-color-proportion-rules/7.png"
+      },
+      {
+        "index": 8,
+        "heading": "The 70-30 Rule (dominance vs. contrast)",
+        "bullet": "Layout/white-space application: keep about 70% of the canvas relatively simple and quiet, reserving high-detail, high-activity work for the remaining 30% to balance busy and empty areas.",
+        "path": "gifs/vi-color-proportion-rules/8.png"
+      }
+    ]
+  },
+  "vii-eight-types": {
+    "title": "The 8 Types of Graphic Design",
+    "num_bullets": 8,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "The 8 Types",
+        "bullet": "Visual identity design: The visual elements of a brand's identity (logos, typography, color palettes, image libraries) that act as the face of a brand and communicate its personality.",
+        "path": "gifs/vii-eight-types/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "The 8 Types",
+        "bullet": "Marketing & advertising design: Designs that promote products and services and drive engagement — ads, social media graphics, brochures, email campaigns, banners.",
+        "path": "gifs/vii-eight-types/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "The 8 Types",
+        "bullet": "User interface (UI) design: On-screen visual components like buttons, menus, and layouts, balancing aesthetic appeal with usability and technical function.",
+        "path": "gifs/vii-eight-types/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "The 8 Types",
+        "bullet": "Publication design: Long-form printed and digital media — books, magazines, newspapers, catalogs — built on layout, typesetting, and editorial coordination.",
+        "path": "gifs/vii-eight-types/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "The 8 Types",
+        "bullet": "Packaging design: The visual identity of a physical product's container — mockups and print-ready files that make products stand out on the shelf while conveying essential information.",
+        "path": "gifs/vii-eight-types/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "The 8 Types",
+        "bullet": "Motion graphic design: \"Visuals that move\" — animation, typography, audio, and video effects for web, television, and film.",
+        "path": "gifs/vii-eight-types/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "The 8 Types",
+        "bullet": "Environmental design: Design that connects people to physical spaces — signage, wayfinding, murals, exhibitions, retail interiors, and office branding.",
+        "path": "gifs/vii-eight-types/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "The 8 Types",
+        "bullet": "Art & illustration for graphic design: Original commissioned artwork used in commercial contexts — cover art, editorial illustration, decorative and storytelling imagery.",
+        "path": "gifs/vii-eight-types/7.png"
+      }
+    ]
+  },
+  "viii-five-golden-rules": {
+    "title": "The 5 Golden Rules of Graphic Design",
+    "num_bullets": 5,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "The 5 Golden Rules",
+        "bullet": "Contrast: Establish clear contrast in color, tone, and typography so viewers focus on essential details; it separates elements and creates depth. Similar tones between photo and text make designs fail.",
+        "path": "gifs/viii-five-golden-rules/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "The 5 Golden Rules",
+        "bullet": "Diagonals: Break the rigid square/rectangle format by creating angles with text, images, or shapes — not just lines — to add energy and movement to a composition.",
+        "path": "gifs/viii-five-golden-rules/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "The 5 Golden Rules",
+        "bullet": "Balance: Distribute visual weight deliberately — wide designs can create tension by aligning left and right, tall designs usually work best centered, and asymmetrical balance (equal detail, not mirror symmetry) is often the most effective.",
+        "path": "gifs/viii-five-golden-rules/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "The 5 Golden Rules",
+        "bullet": "Depth: Simulate three-dimensionality in a flat medium with techniques like out-of-bounds effects and images merging into backgrounds — used sparingly for greater impact.",
+        "path": "gifs/viii-five-golden-rules/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "The 5 Golden Rules",
+        "bullet": "Unity: Repeat colors, shapes, and consistent text formatting to achieve harmony and rhythm, and to establish hierarchy so similar content reads as grouped.",
+        "path": "gifs/viii-five-golden-rules/4.png"
+      }
+    ]
+  },
+  "1-smudge-edges": {
+    "title": "How to Smudge Edges in Photoshop",
+    "num_bullets": 8,
+    "entries": [
+      {
+        "index": 1,
+        "heading": "Layer Mask + Gaussian Blur method",
+        "bullet": "Add a Layer Mask: Click the Add Layer Mask icon (a rectangle with a circle inside) at the bottom of the Layers panel.",
+        "path": "gifs/1-smudge-edges/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Layer Mask + Gaussian Blur method",
+        "bullet": "Convert to Smart Filter: Right-click the image layer (not the mask) and choose Convert to Smart Object. This allows you to adjust the blur later if needed.",
+        "path": "gifs/1-smudge-edges/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Layer Mask + Gaussian Blur method",
+        "bullet": "Apply Gaussian Blur: Go to the top menu and select Filter > Blur > Gaussian Blur. Adjust the Radius slider to achieve the desired edge softness, then click OK.",
+        "path": "gifs/1-smudge-edges/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Layer Mask + Gaussian Blur method",
+        "bullet": "Hide the Center Blur (Optional): If the blur affects the center of your image, select the white mask thumbnail in the Layers panel, grab the Gradient Tool (G), set it to a Black to White gradient, and draw a line across the subject to hide the blur effect there.",
+        "path": "gifs/1-smudge-edges/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "Alternative: Feathered selection method",
+        "bullet": "Use the Marquee Tool (M) or Lasso Tool (L) to draw your selection.",
+        "path": "gifs/1-smudge-edges/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "Alternative: Feathered selection method",
+        "bullet": "Go to Select > Modify > Feather.",
+        "path": "gifs/1-smudge-edges/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "Alternative: Feathered selection method",
+        "bullet": "Type in a Feather Radius (e.g., 50 pixels) to soften the boundary and hit OK.",
+        "path": "gifs/1-smudge-edges/7.gif"
+      }
+    ]
+  },
+  "2-object-shadow": {
+    "title": "How to Add an Object's Shadow in Photoshop",
+    "num_bullets": 7,
+    "entries": [
+      {
+        "index": 2,
+        "heading": "Realistic cast shadow (manual layer)",
+        "bullet": "Isolate the object: Cut out your object and place it on its own separate layer above the background.",
+        "path": "gifs/2-object-shadow/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Realistic cast shadow (manual layer)",
+        "bullet": "Create a shadow layer: Hold Ctrl (Windows) or Cmd (Mac) and click the object's thumbnail in the Layers panel to load its selection. Create a new layer directly beneath your object, name it \"Shadow,\" and fill the selection with black.",
+        "path": "gifs/2-object-shadow/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Realistic cast shadow (manual layer)",
+        "bullet": "Position and distort: Press Ctrl+T (Windows) or Cmd+T (Mac) to open Free Transform. Hold Ctrl/Cmd and drag the top center anchor point downward and to the side to stretch and angle the shadow according to your light source.",
+        "path": "gifs/2-object-shadow/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "Realistic cast shadow (manual layer)",
+        "bullet": "Soften the edges: Go to Filter > Blur > Gaussian Blur, and adjust the radius to diffuse the shadow. Lower the layer Opacity to between 30% and 60% so it blends naturally into the surface.",
+        "path": "gifs/2-object-shadow/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "Realistic cast shadow (manual layer)",
+        "bullet": "Add a mask: Click the Add Layer Mask icon at the bottom of the Layers panel. Use the Gradient Tool to draw a black-to-white gradient on the mask to make the shadow fade out the further it gets from the object.",
+        "path": "gifs/2-object-shadow/6.gif"
+      }
+    ]
+  },
+  "3-touch-up": {
+    "title": "How to Touch Up an Object or Photo in Photoshop",
+    "num_bullets": 6,
+    "entries": [
+      {
+        "index": 4,
+        "heading": "C. Portraits: Skin and Feature Touch-Ups",
+        "bullet": "Frequency Separation: This technique splits the photo into \"low frequency\" (color/tone) and \"high frequency\" (texture/pores) layers. It lets you smooth out uneven skin tones without losing the natural skin texture.",
+        "path": "gifs/3-touch-up/4.gif"
+      }
+    ]
+  },
+  "4-gradient": {
+    "title": "How to Make an Object Have a Gradient in Photoshop",
+    "num_bullets": 2,
+    "entries": [
+      {
+        "index": 1,
+        "heading": "Step-by-step instructions",
+        "bullet": "Adobe Photoshop: Go to the Properties window, click on the Fill option, and select a gradient preset or create your own.",
+        "path": "gifs/4-gradient/1.gif"
+      }
+    ]
+  },
+  "5-clipping-mask": {
+    "title": "How to Fill an Object's Outline Using a Clipping Mask",
+    "num_bullets": 4,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Step-by-Step Guide",
+        "bullet": "Prepare your base: Open your object, silhouette, or shape in Photoshop. Ensure it sits on its own layer.",
+        "path": "gifs/5-clipping-mask/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Step-by-Step Guide",
+        "bullet": "Add the image: Drag and drop your image into the same document (or use File > Place Embedded). Your image should appear on the layer directly above your base object.",
+        "path": "gifs/5-clipping-mask/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Step-by-Step Guide",
+        "bullet": "Create the mask: Position the image layer in the Layers panel right above the layer you want it to fill. Hold Alt (Windows) or Option (Mac) and click the line separating the two layers, or right-click the image layer and select Create Clipping Mask.",
+        "path": "gifs/5-clipping-mask/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Step-by-Step Guide",
+        "bullet": "Adjust and scale: Select your image layer and press Ctrl + T (Windows) or Cmd + T (Mac) to use Free Transform, allowing you to resize or reposition the image within the object's boundary.",
+        "path": "gifs/5-clipping-mask/3.gif"
+      }
+    ]
+  },
+  "6-spacing": {
+    "title": "How to Space Objects Properly in Photoshop",
+    "num_bullets": 11,
+    "entries": [
+      {
+        "index": 3,
+        "heading": "The Quick Distribute Method",
+        "bullet": "To space them horizontally, click one of the Distribute icons (e.g., Distribute Horizontal Centers). To space them vertically, click one of the Vertical Distribute icons.",
+        "path": "gifs/6-spacing/3.gif"
+      }
+    ]
+  },
+  "7-magic-wand-hair": {
+    "title": "How to Select an Area Precisely (Magic Wand, Select Subject & Hair)",
+    "num_bullets": 8,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Starting selection",
+        "bullet": "Select Subject / Quick Selection: make the initial rough selection of the subject and set up the masking approach.",
+        "path": "gifs/7-magic-wand-hair/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Starting selection",
+        "bullet": "Select and Mask workspace: use the cloud-processed Select Subject and Refine Hair buttons for a dramatically better automatic edge than the Magic Wand alone.",
+        "path": "gifs/7-magic-wand-hair/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Refining hair and fine edges",
+        "bullet": "Mask refinement: improve the resulting layer mask by hand where the automatic edge misses detail.",
+        "path": "gifs/7-magic-wand-hair/2.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Refining hair and fine edges",
+        "bullet": "Color-contrast trick: exploit color differences between subject and background to strengthen the selection edge.",
+        "path": "gifs/7-magic-wand-hair/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "Refining hair and fine edges",
+        "bullet": "Refine Hair button: dig deeper into fine strands the initial pass didn't catch.",
+        "path": "gifs/7-magic-wand-hair/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "Refining hair and fine edges",
+        "bullet": "Select More/Less Hair trick: expand or contract how much stray hair is included in the selection.",
+        "path": "gifs/7-magic-wand-hair/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "Refining hair and fine edges",
+        "bullet": "Blend modes + Blend If: remove edge halos and match the cut-out subject to a new background.",
+        "path": "gifs/7-magic-wand-hair/7.gif"
+      }
+    ]
+  },
+  "8-generative-fill-ai": {
+    "title": "How to Properly Use Generative Fill and Photoshop's AI Tools",
+    "num_bullets": 6,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Generative Fill basics",
+        "bullet": "Selection tools (Lasso/Marquee): define a selection, open the contextual taskbar, click Generative Fill, and write a text prompt.",
+        "path": "gifs/8-generative-fill-ai/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Generative Fill basics",
+        "bullet": "Variations panel: generate results and cycle through or refine the three AI variations in the Properties panel.",
+        "path": "gifs/8-generative-fill-ai/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Generative Fill basics",
+        "bullet": "Generative Fill with a blank prompt: remove unwanted objects and enhance image quality without describing anything.",
+        "path": "gifs/8-generative-fill-ai/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Beyond removal: creating and expanding",
+        "bullet": "Generative Fill on an empty canvas: create entire images or scenes from scratch using prompts.",
+        "path": "gifs/8-generative-fill-ai/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Beyond removal: creating and expanding",
+        "bullet": "Crop tool + Generative Expand: drag the canvas edges outward and let the AI fill the newly extended area to match the scene.",
+        "path": "gifs/8-generative-fill-ai/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "Beyond removal: creating and expanding",
+        "bullet": "Advanced creative edits: generate reflections, change clothing, or create new hairstyles using targeted selections plus prompts.",
+        "path": "gifs/8-generative-fill-ai/5.gif"
+      }
+    ]
+  },
+  "9-levels": {
+    "title": "Levels in Photoshop",
+    "num_bullets": 6,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Reading and correcting the histogram",
+        "bullet": "Levels adjustment layer: open Levels non-destructively via the Adjustments panel rather than editing the pixels directly.",
+        "path": "gifs/9-levels/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Reading and correcting the histogram",
+        "bullet": "Histogram: read the tonal distribution to diagnose a washed-out or underexposed image.",
+        "path": "gifs/9-levels/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Reading and correcting the histogram",
+        "bullet": "Black point slider: drag the shadows input slider to the left edge of the histogram data to set true black.",
+        "path": "gifs/9-levels/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Reading and correcting the histogram",
+        "bullet": "White point slider: drag the highlights input slider to the right edge of the histogram data to set true white and correctly expose the image.",
+        "path": "gifs/9-levels/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Reading and correcting the histogram",
+        "bullet": "Midtone (gray) slider: shift midtone brightness after the black and white points are set.",
+        "path": "gifs/9-levels/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "Creative use",
+        "bullet": "Output levels: compress the black/white output range for a faded, matte look — a common creative color-grading move.",
+        "path": "gifs/9-levels/5.gif"
+      }
+    ]
+  },
+  "10-typography-spacing": {
+    "title": "How to Use Typography and Space Text Properly in Photoshop",
+    "num_bullets": 4,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Character Panel Controls",
+        "bullet": "Tracking: select your text layer, open Window > Character, and adjust the Tracking field to change letter-spacing uniformly across the selected text or entire layer.",
+        "path": "gifs/10-typography-spacing/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Character Panel Controls",
+        "bullet": "Kerning: click with the Type tool to place the cursor between two specific letters, then adjust the Kerning value (or hold Alt and tap the arrow keys) to fine-tune the space in that single letter pair.",
+        "path": "gifs/10-typography-spacing/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Character Panel Controls",
+        "bullet": "Leading: select multiple lines of text and change the Leading value in the Character panel to control the vertical space between lines; converting point text to paragraph text makes layout management easier.",
+        "path": "gifs/10-typography-spacing/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Character Panel Controls",
+        "bullet": "Baseline Shift: select individual characters and raise or lower them relative to the text baseline for fine-tuned vertical positioning within a line.",
+        "path": "gifs/10-typography-spacing/3.gif"
+      }
+    ]
+  },
+  "11-non-destructive-editing": {
+    "title": "Non-Destructive Editing in Photoshop",
+    "num_bullets": 4,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Core Non-Destructive Techniques",
+        "bullet": "Adjustment Layers: apply color/tone edits (Levels, Hue/Saturation, Curves) as a separate layer instead of altering pixels directly, so you can tweak or delete the edit anytime.",
+        "path": "gifs/11-non-destructive-editing/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Core Non-Destructive Techniques",
+        "bullet": "Layer Masks: hide instead of erase — paint black on a mask to conceal part of a layer and white to reveal it, keeping the original pixels intact.",
+        "path": "gifs/11-non-destructive-editing/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Core Non-Destructive Techniques",
+        "bullet": "Smart Objects: convert a layer to a Smart Object before applying filters or transforms, so those effects stay editable and non-destructive.",
+        "path": "gifs/11-non-destructive-editing/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Core Non-Destructive Techniques",
+        "bullet": "Healing Tools: use the Spot Healing Brush and Content-Aware Fill on a duplicated layer to retouch without permanently altering the original image data.",
+        "path": "gifs/11-non-destructive-editing/3.gif"
+      }
+    ]
+  },
+  "12-blend-modes": {
+    "title": "Blend Modes: Multiply, Screen & Overlay",
+    "num_bullets": 5,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Blend Mode Basics",
+        "bullet": "Blend Mode dropdown: open the menu at the top-left of the Layers panel to change how a layer's pixels mix with the layers below.",
+        "path": "gifs/12-blend-modes/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Blend Mode Basics",
+        "bullet": "Normal: the default mode — the top layer simply covers whatever is beneath it.",
+        "path": "gifs/12-blend-modes/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Multiply, Screen & Overlay",
+        "bullet": "Multiply: multiplies pixel values so white drops out and the result darkens — great for adding shadows, texture, or density.",
+        "path": "gifs/12-blend-modes/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Multiply, Screen & Overlay",
+        "bullet": "Screen: the inverse of Multiply — black drops out and the result brightens, useful for adding light, glow, or fixing underexposed areas.",
+        "path": "gifs/12-blend-modes/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Multiply, Screen & Overlay",
+        "bullet": "Overlay: combines Multiply and Screen simultaneously (multiplies darks, screens lights) to boost contrast and saturation in one move.",
+        "path": "gifs/12-blend-modes/4.gif"
+      }
+    ]
+  },
+  "13-layers-fundamentals": {
+    "title": "Layers Fundamentals in Photoshop",
+    "num_bullets": 9,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "What Are Layers?",
+        "bullet": "Layers concept: think of layers as stacked transparent sheets — content in a higher layer covers whatever is beneath it.",
+        "path": "gifs/13-layers-fundamentals/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "What Are Layers?",
+        "bullet": "Layers panel: open it via Window > Layers if it isn't visible; each row is one layer.",
+        "path": "gifs/13-layers-fundamentals/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Working With Layers",
+        "bullet": "Visibility: click the eye icon next to a layer to hide or show it.",
+        "path": "gifs/13-layers-fundamentals/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Working With Layers",
+        "bullet": "Background layer: click its padlock icon to unlock the default locked Background layer.",
+        "path": "gifs/13-layers-fundamentals/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Working With Layers",
+        "bullet": "Opacity: with a layer selected, type a number key (1-0) to instantly set its opacity.",
+        "path": "gifs/13-layers-fundamentals/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "Working With Layers",
+        "bullet": "Duplicate: press Ctrl/Cmd+J to duplicate the selected layer.",
+        "path": "gifs/13-layers-fundamentals/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "Working With Layers",
+        "bullet": "Groups: select multiple layers and press Ctrl/Cmd+G to organize them into a folder.",
+        "path": "gifs/13-layers-fundamentals/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "Types of Layers",
+        "bullet": "Raster layers hold pixel-based image data; Smart Objects preserve the original file so filters and transforms stay editable.",
+        "path": "gifs/13-layers-fundamentals/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "Types of Layers",
+        "bullet": "Adjustment Layers hold non-destructive color/tone edits; Shape and Text layers stay fully editable vector and type data.",
+        "path": "gifs/13-layers-fundamentals/8.gif"
+      }
+    ]
+  },
+  "14-clipping-masks-deeper": {
+    "title": "Clipping Masks: Beyond the Basics",
+    "num_bullets": 5,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Building & Stacking Clipping Masks",
+        "bullet": "Clipping mask creation: hold Alt (Option on Mac) and hover the line between two layers until the cursor becomes a down-arrow with a box, then click to clip the upper layer to the one below it.",
+        "path": "gifs/14-clipping-masks-deeper/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Building & Stacking Clipping Masks",
+        "bullet": "Clip multiple layers to one base: Alt/Option-click again to clip a second (or third) layer to the same base layer — all clipped layers move and scale together with the base.",
+        "path": "gifs/14-clipping-masks-deeper/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Clipping Adjustment Layers and Shapes",
+        "bullet": "Clip an adjustment layer to a subject: clip a Levels or Hue/Saturation adjustment to a cut-out subject layer so the color correction affects only that subject, not the whole image.",
+        "path": "gifs/14-clipping-masks-deeper/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Clipping Adjustment Layers and Shapes",
+        "bullet": "Clip to a shape base: draw a shape (e.g. a rounded rectangle) and clip an image to it instead of text, for a custom-shaped photo frame.",
+        "path": "gifs/14-clipping-masks-deeper/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Clipping Adjustment Layers and Shapes",
+        "bullet": "Group + mask together: select your clipped layers, press Ctrl/Cmd+G to group them, then Alt/Option-click Add Layer Mask on the group to mask everything at once.",
+        "path": "gifs/14-clipping-masks-deeper/4.gif"
+      }
+    ]
+  },
+  "15-image-resizing": {
+    "title": "Image Resizing in Photoshop",
+    "num_bullets": 6,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Image Size vs. Canvas Size",
+        "bullet": "Image Size dialog: open Image > Image Size (Ctrl/Cmd+Alt+I) to change the pixel dimensions of the actual picture content.",
+        "path": "gifs/15-image-resizing/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Image Size vs. Canvas Size",
+        "bullet": "Canvas Size: use Image > Canvas Size to change the document's overall shape or boundary without scaling the existing content.",
+        "path": "gifs/15-image-resizing/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Resampling & Resolution",
+        "bullet": "Resample checkbox: toggle Resample in the Image Size dialog to control whether Photoshop creates or discards pixel data when resizing.",
+        "path": "gifs/15-image-resizing/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Resampling & Resolution",
+        "bullet": "Resample method dropdown: compare Bicubic, Bicubic Smoother/Sharper, and Preserve Details 2.0 to find the sharpest result for your image.",
+        "path": "gifs/15-image-resizing/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Resampling & Resolution",
+        "bullet": "Preserve Details 2.0 (AI upscaling): use this resample option when enlarging an image significantly, to minimize blur and softness.",
+        "path": "gifs/15-image-resizing/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "Resampling & Resolution",
+        "bullet": "Resolution field: set the PPI (pixels per inch) appropriately — higher for print, lower for web/screen use.",
+        "path": "gifs/15-image-resizing/5.gif"
+      }
+    ]
+  },
+  "16-white-balance": {
+    "title": "White Balance in Photoshop",
+    "num_bullets": 3,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "Three Ways to Fix White Balance",
+        "bullet": "Color adjustment layer: add the Color/Vibrance adjustment and use it to neutralize a color cast non-destructively.",
+        "path": "gifs/16-white-balance/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "Three Ways to Fix White Balance",
+        "bullet": "Camera Raw White Balance eyedropper: open Camera Raw Filter and click the eyedropper on an averaged neutral gray/white area so Temperature and Tint snap to accurate values.",
+        "path": "gifs/16-white-balance/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "Three Ways to Fix White Balance",
+        "bullet": "Average Blur trick: duplicate the layer, run Filter > Blur > Average to find the image's overall color cast, then use that flat color to neutralize the original image.",
+        "path": "gifs/16-white-balance/2.gif"
+      }
+    ]
+  },
+  "17-color-theory-palettes": {
+    "title": "Color Theory and Color Palettes",
+    "num_bullets": 14,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "The Color Wheel",
+        "bullet": "Primary Colors: the three base colors (red, yellow, blue) that cannot be mixed from any other colors.",
+        "path": "gifs/17-color-theory-palettes/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "The Color Wheel",
+        "bullet": "Secondary Colors: mix two primaries together to produce orange, green, and violet.",
+        "path": "gifs/17-color-theory-palettes/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "The Color Wheel",
+        "bullet": "Tertiary Colors: combine a primary with an adjacent secondary to get the in-between hues (e.g. red-orange).",
+        "path": "gifs/17-color-theory-palettes/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "Hue, Saturation, Value & Temperature",
+        "bullet": "Hue, Saturation, Value: the three properties that define any color — hue is the color itself, saturation is its intensity, value is its lightness/darkness.",
+        "path": "gifs/17-color-theory-palettes/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "Hue, Saturation, Value & Temperature",
+        "bullet": "Shade, Tint, Tone: modify a hue by adding black (shade), white (tint), or gray (tone) to expand a palette from a single color.",
+        "path": "gifs/17-color-theory-palettes/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "Hue, Saturation, Value & Temperature",
+        "bullet": "Color Temperatures: distinguish warm colors (reds, oranges, yellows) from cool colors (blues, greens, purples) and the moods each conveys.",
+        "path": "gifs/17-color-theory-palettes/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "Color Harmonies",
+        "bullet": "Complementary: pick two colors directly opposite each other on the wheel for maximum contrast.",
+        "path": "gifs/17-color-theory-palettes/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "Color Harmonies",
+        "bullet": "Analogous: choose neighboring colors on the wheel for a cohesive, low-contrast scheme.",
+        "path": "gifs/17-color-theory-palettes/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "Color Harmonies",
+        "bullet": "Monochromatic: build a palette from one hue using its tints, shades, and tones.",
+        "path": "gifs/17-color-theory-palettes/8.gif"
+      },
+      {
+        "index": 9,
+        "heading": "Color Harmonies",
+        "bullet": "Triadic: space three colors evenly around the wheel for bold, balanced contrast.",
+        "path": "gifs/17-color-theory-palettes/9.gif"
+      },
+      {
+        "index": 10,
+        "heading": "Color Harmonies",
+        "bullet": "Tetradic: use two complementary pairs together, letting one color dominate the composition.",
+        "path": "gifs/17-color-theory-palettes/10.gif"
+      },
+      {
+        "index": 11,
+        "heading": "Color Models & Building a Palette",
+        "bullet": "RGB and CMYK: know which color model to use — RGB for screens, CMYK for print — since the same color can look different across the two.",
+        "path": "gifs/17-color-theory-palettes/11.gif"
+      },
+      {
+        "index": 12,
+        "heading": "Color Models & Building a Palette",
+        "bullet": "Color Psychology: consider the emotional associations of colors (e.g. blue for trust, red for urgency) when picking a palette for a brand.",
+        "path": "gifs/17-color-theory-palettes/12.gif"
+      },
+      {
+        "index": 13,
+        "heading": "Color Models & Building a Palette",
+        "bullet": "Building a Project Palette: start from a brand's dominant color, then use a harmony rule to add supporting and accent colors — the same logic as the 70-20-10 rule.",
+        "path": "gifs/17-color-theory-palettes/13.gif"
+      }
+    ]
+  },
+  "f1-figma-getting-started": {
+    "title": "Getting Started: Files, Projects & the Figma Community",
+    "num_bullets": 12,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Creating & Organizing Files",
+        "bullet": "Starting a design file: hover the Create button and choose \"Design file\" to open a new blank canvas.",
+        "path": "gifs/f1-figma-getting-started/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Creating & Organizing Files",
+        "bullet": "Drafts & autosave: every new file starts in your personal Drafts and saves automatically as you work.",
+        "path": "gifs/f1-figma-getting-started/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Creating & Organizing Files",
+        "bullet": "Team projects: create a dedicated team (e.g. a \"UX design team\") to organize and share files with collaborators.",
+        "path": "gifs/f1-figma-getting-started/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "A. Creating & Organizing Files",
+        "bullet": "Moving a file into a team: right-click a file in Drafts, choose Move file, and select the team project to relocate it there.",
+        "path": "gifs/f1-figma-getting-started/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. The Workspace Layout",
+        "bullet": "Collapsing panels: click the panel toggle to hide the side panels and maximize your view of the canvas.",
+        "path": "gifs/f1-figma-getting-started/4.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. The Workspace Layout",
+        "bullet": "Design panel (right): shows fill, position, and style properties for whatever is currently selected, and updates based on your selection.",
+        "path": "gifs/f1-figma-getting-started/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "B. The Workspace Layout",
+        "bullet": "Canvas background: change the page's background color independently of the actual design content.",
+        "path": "gifs/f1-figma-getting-started/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "C. Figma Community",
+        "bullet": "Browsing Community: open the Community tab from the bottom-left corner to explore shared resources.",
+        "path": "gifs/f1-figma-getting-started/8.gif"
+      },
+      {
+        "index": 10,
+        "heading": "C. Figma Community",
+        "bullet": "Browsing by category: filter Community resources by category (e.g. \"Visual tools\") or search directly for a template.",
+        "path": "gifs/f1-figma-getting-started/10.gif"
+      },
+      {
+        "index": 11,
+        "heading": "C. Figma Community",
+        "bullet": "Duplicating a template: open a community file and duplicate it into your own drafts as a starting point instead of a blank canvas.",
+        "path": "gifs/f1-figma-getting-started/11.gif"
+      }
+    ]
+  },
+  "f2-figma-frames-groups-sections": {
+    "title": "Frames, Groups & Sections",
+    "num_bullets": 9,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Groups & Frames",
+        "bullet": "Groups: bounds are derived from their children, so moving or resizing the contents automatically resizes the group.",
+        "path": "gifs/f2-figma-frames-groups-sections/0.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Groups & Frames",
+        "bullet": "When not to use groups: avoid them for anything needing constraints, auto layout, clipping, or an independent background — frames handle all of that.",
+        "path": "gifs/f2-figma-frames-groups-sections/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "A. Groups & Frames",
+        "bullet": "Frames: act as containers with fixed bounds (like an artboard) that support auto layout, constraints, and clipping content.",
+        "path": "gifs/f2-figma-frames-groups-sections/3.gif"
+      },
+      {
+        "index": 5,
+        "heading": "A. Groups & Frames",
+        "bullet": "When not to use frames: avoid using a frame just to nudge a couple of unrelated layers together — a group is simpler for that.",
+        "path": "gifs/f2-figma-frames-groups-sections/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. Sections",
+        "bullet": "Sections: a larger organizational container for grouping multiple frames together on the canvas.",
+        "path": "gifs/f2-figma-frames-groups-sections/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "B. Sections",
+        "bullet": "Best uses for sections: separating a large file into flows like \"Onboarding\" or \"Checkout\" for easier navigation.",
+        "path": "gifs/f2-figma-frames-groups-sections/7.gif"
+      }
+    ]
+  },
+  "f3-figma-shapes-pen-vector": {
+    "title": "Shapes, the Pen Tool & Vector Networks",
+    "num_bullets": 11,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Vector Basics",
+        "bullet": "Vector graphics: made of points connected by mathematical lines/curves called paths, so they stay lossless at any scale — unlike pixel-based bitmaps.",
+        "path": "gifs/f3-figma-shapes-pen-vector/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Vector Basics",
+        "bullet": "Vector networks: Figma's system for paths that can branch in multiple directions from a single point, instead of being limited to one closed line like traditional vector paths.",
+        "path": "gifs/f3-figma-shapes-pen-vector/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Vector Basics",
+        "bullet": "Shape tools vs. the Pen tool: basic shape tools (rectangle, ellipse, polygon) create simple vector objects, while the Pen tool lets you build a fully custom vector network.",
+        "path": "gifs/f3-figma-shapes-pen-vector/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. Using the Pen Tool",
+        "bullet": "Vector edit mode: press Enter with an object selected (or double-click it) to edit its individual points and handles.",
+        "path": "gifs/f3-figma-shapes-pen-vector/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Using the Pen Tool",
+        "bullet": "Selecting the Pen tool: find it on the toolbar or press P to start placing vector points.",
+        "path": "gifs/f3-figma-shapes-pen-vector/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. Using the Pen Tool",
+        "bullet": "Placing points: click to place a straight point; click and hold to pull out curved Bezier handles for a smooth point.",
+        "path": "gifs/f3-figma-shapes-pen-vector/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. Using the Pen Tool",
+        "bullet": "Closing a path: guide your cursor back to the starting point until a small black circle appears, then click to close the shape.",
+        "path": "gifs/f3-figma-shapes-pen-vector/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "B. Using the Pen Tool",
+        "bullet": "Filling a closed path: use the Paint Bucket tool (B) to add or remove a fill once a vector path is closed.",
+        "path": "gifs/f3-figma-shapes-pen-vector/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "C. Editing Vector Networks",
+        "bullet": "Bend tool: adjusts a point's Bezier handles to create or reshape a curve.",
+        "path": "gifs/f3-figma-shapes-pen-vector/8.gif"
+      },
+      {
+        "index": 10,
+        "heading": "C. Editing Vector Networks",
+        "bullet": "Nudging & deleting points: use arrow keys for precise nudges, and Shift+Delete to remove a point while keeping the path healed.",
+        "path": "gifs/f3-figma-shapes-pen-vector/10.gif"
+      }
+    ]
+  },
+  "f4-figma-text-typography": {
+    "title": "Text & Typography",
+    "num_bullets": 9,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Adding & Sizing Text",
+        "bullet": "Text tool (T): press T and click on the canvas to place a new text layer.",
+        "path": "gifs/f4-figma-text-typography/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Adding & Sizing Text",
+        "bullet": "Font size & weight: open the Typography section in the right panel to set font size and switch a heading to bold.",
+        "path": "gifs/f4-figma-text-typography/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Adding & Sizing Text",
+        "bullet": "Paragraph body text: use a smaller size and regular weight for body copy so it reads as secondary to a heading.",
+        "path": "gifs/f4-figma-text-typography/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. Spacing Controls",
+        "bullet": "Line height: raise line height (e.g. to 140%) in the Typography section to keep multi-line text readable and well spaced.",
+        "path": "gifs/f4-figma-text-typography/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Spacing Controls",
+        "bullet": "Letter spacing: increase letter spacing slightly to add breathing room between characters and improve readability.",
+        "path": "gifs/f4-figma-text-typography/4.gif"
+      },
+      {
+        "index": 6,
+        "heading": "C. Typographic Hierarchy & Layout",
+        "bullet": "Grouping text with Auto Layout: select a heading and paragraph together and press Shift+A to wrap them in an auto layout frame.",
+        "path": "gifs/f4-figma-text-typography/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "C. Typographic Hierarchy & Layout",
+        "bullet": "Padding & corner radius: add padding and a corner radius to a text-holding frame so the type doesn't crowd its container's edges.",
+        "path": "gifs/f4-figma-text-typography/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "C. Typographic Hierarchy & Layout",
+        "bullet": "Font family: pick a different typeface directly from the Typography section's font dropdown to change a text layer's font.",
+        "path": "gifs/f4-figma-text-typography/8.gif"
+      }
+    ]
+  },
+  "f5-figma-auto-layout": {
+    "title": "Auto Layout",
+    "num_bullets": 7,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Applying Auto Layout",
+        "bullet": "Shift+A: converts a selected frame or group of objects into an auto layout frame that arranges its children automatically.",
+        "path": "gifs/f5-figma-auto-layout/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Applying Auto Layout",
+        "bullet": "Direction: choose horizontal or vertical stacking so children reflow automatically when content changes.",
+        "path": "gifs/f5-figma-auto-layout/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Applying Auto Layout",
+        "bullet": "Gap & padding: control the space between items and the padding around the auto layout frame's own edges.",
+        "path": "gifs/f5-figma-auto-layout/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. Sizing Behavior",
+        "bullet": "Hug vs. Fill: set sizing per-axis — Hug shrinks a frame to fit its content, while Fill stretches a child to take up its parent's remaining space.",
+        "path": "gifs/f5-figma-auto-layout/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Sizing Behavior",
+        "bullet": "Hug contents: picture it like a balloon — the frame inflates or shrinks to exactly match what's inside it.",
+        "path": "gifs/f5-figma-auto-layout/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. Sizing Behavior",
+        "bullet": "Fill container: a child set to Fill grows or shrinks along with its parent frame when the frame is resized.",
+        "path": "gifs/f5-figma-auto-layout/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. Sizing Behavior",
+        "bullet": "Alignment: change how children line up within the auto layout frame (e.g. left/center/right, top/middle/bottom).",
+        "path": "gifs/f5-figma-auto-layout/6.gif"
+      }
+    ]
+  },
+  "f6-figma-components-variants": {
+    "title": "Components, Variants & Instances",
+    "num_bullets": 9,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Main Components & Instances",
+        "bullet": "Creating a component: click the four-diamond \"Create component\" icon in the design panel to turn a selected layer into a reusable main component.",
+        "path": "gifs/f6-figma-components-variants/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Main Components & Instances",
+        "bullet": "Instances vs. the master component: a single-diamond instance is a linked duplicate of the four-diamond master component, in a parent/child relationship.",
+        "path": "gifs/f6-figma-components-variants/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Main Components & Instances",
+        "bullet": "Reusing from the Assets panel: drag a component out of the Assets panel to create a new instance anywhere in the file.",
+        "path": "gifs/f6-figma-components-variants/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "A. Main Components & Instances",
+        "bullet": "Editing the master updates every instance: change a property (like fill color or corner radius) on the master component and every linked instance updates automatically.",
+        "path": "gifs/f6-figma-components-variants/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Component Properties & Variants",
+        "bullet": "Component property types: Figma offers four kinds of component properties — Variant, Boolean, Text, and Instance Swap.",
+        "path": "gifs/f6-figma-components-variants/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. Component Properties & Variants",
+        "bullet": "Boolean property: add a true/false property to a component (e.g. to toggle an icon's visibility).",
+        "path": "gifs/f6-figma-components-variants/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. Component Properties & Variants",
+        "bullet": "Instance Swap property: lets an instance swap which component it displays (e.g. swapping one icon for another) directly from the design panel.",
+        "path": "gifs/f6-figma-components-variants/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "B. Component Properties & Variants",
+        "bullet": "Detaching an instance: use the \"more actions\" menu's Detach Instance option to permanently break its link to the master component.",
+        "path": "gifs/f6-figma-components-variants/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "B. Component Properties & Variants",
+        "bullet": "Nesting components: place components inside other components (e.g. an icon inside a button) so changes to the inner one cascade up.",
+        "path": "gifs/f6-figma-components-variants/8.gif"
+      }
+    ]
+  },
+  "f7-figma-constraints-resizing": {
+    "title": "Constraints & Responsive Resizing",
+    "num_bullets": 10,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. How Constraints Work",
+        "bullet": "What constraints do: define how a child element adjusts its position and size when its parent frame is resized.",
+        "path": "gifs/f7-figma-constraints-resizing/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. How Constraints Work",
+        "bullet": "Frames only: constraints only work on elements inside a frame — groups don't support them at all.",
+        "path": "gifs/f7-figma-constraints-resizing/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. How Constraints Work",
+        "bullet": "Default alignment: a new element defaults to being pinned to the top-left corner of its parent frame, shown by two blue alignment lines.",
+        "path": "gifs/f7-figma-constraints-resizing/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "A. How Constraints Work",
+        "bullet": "The constraints panel: select an element and open the constraints icon in the right panel to see separate Horizontal and Vertical constraint menus.",
+        "path": "gifs/f7-figma-constraints-resizing/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Horizontal & Vertical Options",
+        "bullet": "Horizontal constraint: choose Left, Right, Left & Right, Center, or Scale for how an element behaves when the frame resizes horizontally.",
+        "path": "gifs/f7-figma-constraints-resizing/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. Horizontal & Vertical Options",
+        "bullet": "Vertical constraint: the same set of options (Top, Bottom, Top & Bottom, Center, Scale) applied vertically.",
+        "path": "gifs/f7-figma-constraints-resizing/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. Horizontal & Vertical Options",
+        "bullet": "Pinning to an edge: click a line in the constraints diagram (or choose Right) to re-pin an element to the opposite edge of its frame.",
+        "path": "gifs/f7-figma-constraints-resizing/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "C. \"Left & Right\" vs. \"Scale\"",
+        "bullet": "Left & Right (\"stretch\"): the element's width changes with the frame, but the margins on each side stay fixed.",
+        "path": "gifs/f7-figma-constraints-resizing/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "C. \"Left & Right\" vs. \"Scale\"",
+        "bullet": "Scale: both the element and its margins resize proportionally together as the frame resizes.",
+        "path": "gifs/f7-figma-constraints-resizing/8.gif"
+      },
+      {
+        "index": 9,
+        "heading": "C. \"Left & Right\" vs. \"Scale\"",
+        "bullet": "Top & Bottom vs. Scale: the same fixed-margin vs. proportional-scale difference applies vertically between an element and the frame's top/bottom edges.",
+        "path": "gifs/f7-figma-constraints-resizing/9.gif"
+      }
+    ]
+  },
+  "f8-figma-color-styles-variables": {
+    "title": "Color Styles & Variables",
+    "num_bullets": 9,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Color Styles",
+        "bullet": "What color styles are: a saved, reusable color you can apply as a fill or stroke and update everywhere it's used from a single source.",
+        "path": "gifs/f8-figma-color-styles-variables/0.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Color Styles",
+        "bullet": "Hue, shades & tints: build out a range of a base hue by mixing in black (shades) or white (tints) before saving each as its own style.",
+        "path": "gifs/f8-figma-color-styles-variables/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "A. Color Styles",
+        "bullet": "Primary color: establish and save the single dominant brand hue as the first color style in a file.",
+        "path": "gifs/f8-figma-color-styles-variables/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Neutral & Semantic Colors",
+        "bullet": "Neutral colors: build out a full gray scale (from near-white to near-black) as its own set of saved styles for text, backgrounds, and borders.",
+        "path": "gifs/f8-figma-color-styles-variables/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. Neutral & Semantic Colors",
+        "bullet": "Semantic colors: name styles by their role (e.g. \"success\", \"warning\", \"error\") rather than their literal hue, so their purpose stays clear across a file.",
+        "path": "gifs/f8-figma-color-styles-variables/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. Neutral & Semantic Colors",
+        "bullet": "Creating semantic color styles: assign existing base colors to new, purpose-named styles that reference the underlying palette.",
+        "path": "gifs/f8-figma-color-styles-variables/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "C. Color Variables",
+        "bullet": "Color variables: Figma's newer, more powerful way to store reusable color values, usable anywhere a variable is supported (including component properties).",
+        "path": "gifs/f8-figma-color-styles-variables/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "C. Color Variables",
+        "bullet": "Automatic color scale (plugin tip): use a plugin to auto-generate an entire tint/shade scale from one base color instead of adjusting each manually.",
+        "path": "gifs/f8-figma-color-styles-variables/8.gif"
+      }
+    ]
+  },
+  "f9-figma-prototyping-smart-animate": {
+    "title": "Prototyping & Smart Animate",
+    "num_bullets": 8,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Prototype Connections",
+        "bullet": "Prototyping basics: switch to the Prototype tab, select an element, and drag from its blue plus-button connector to link it to another screen.",
+        "path": "gifs/f9-figma-prototyping-smart-animate/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Prototype Connections",
+        "bullet": "Clickable hotspots: while presenting, click anywhere off a hotspot to reveal the small blue squares marking every clickable connection on the frame.",
+        "path": "gifs/f9-figma-prototyping-smart-animate/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Prototype Connections",
+        "bullet": "Vertical/horizontal scrolling: group scrollable content into an auto layout frame smaller than its contents, then set the prototype's scroll direction so it actually scrolls.",
+        "path": "gifs/f9-figma-prototyping-smart-animate/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "A. Prototype Connections",
+        "bullet": "Clip content: enable Clip content on the frame so anything outside its bounds is hidden instead of overflowing.",
+        "path": "gifs/f9-figma-prototyping-smart-animate/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Smart Animate",
+        "bullet": "Beginning & end states: build the same layer at two different screens (its \"before\" and \"after\") — Smart Animate then tweens between them.",
+        "path": "gifs/f9-figma-prototyping-smart-animate/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. Smart Animate",
+        "bullet": "Matching layer names: Smart Animate only tweens between layers with identical names, so keep names consistent between states.",
+        "path": "gifs/f9-figma-prototyping-smart-animate/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. Smart Animate",
+        "bullet": "Linking with On Click: in prototype settings, connect a click trigger for a frame to the page it should navigate to.",
+        "path": "gifs/f9-figma-prototyping-smart-animate/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "B. Smart Animate",
+        "bullet": "Navigating between flows: use the flows menu to jump between the different prototype starting points defined in a file.",
+        "path": "gifs/f9-figma-prototyping-smart-animate/7.gif"
+      }
+    ]
+  },
+  "f10-figma-dev-mode-handoff": {
+    "title": "Dev Mode, Handoff & Version History",
+    "num_bullets": 12,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Preparing & Sharing for Handoff",
+        "bullet": "Prepare designs for development: Dev Mode surfaces the tools designers use to ready a file before handing it to engineers.",
+        "path": "gifs/f10-figma-dev-mode-handoff/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Preparing & Sharing for Handoff",
+        "bullet": "Measure tool: hover or select elements in Dev Mode to see exact spacing and dimensions between them.",
+        "path": "gifs/f10-figma-dev-mode-handoff/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Preparing & Sharing for Handoff",
+        "bullet": "Annotate tool: attach notes directly to design elements to call out interaction details or edge cases for developers.",
+        "path": "gifs/f10-figma-dev-mode-handoff/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "A. Preparing & Sharing for Handoff",
+        "bullet": "Share designs with developers: grant a developer-specific view of the file so they can inspect it without editor permissions.",
+        "path": "gifs/f10-figma-dev-mode-handoff/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Inspecting & Organizing Work",
+        "bullet": "Inspect designs: click any layer in Dev Mode to see its generated code, measurements, and applied styles/variables.",
+        "path": "gifs/f10-figma-dev-mode-handoff/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. Inspecting & Organizing Work",
+        "bullet": "Ready for dev view: filter a file down to only the sections/frames marked ready for development.",
+        "path": "gifs/f10-figma-dev-mode-handoff/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. Inspecting & Organizing Work",
+        "bullet": "Focus view: isolate a single frame or component to inspect it without distraction from the rest of the file.",
+        "path": "gifs/f10-figma-dev-mode-handoff/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "C. Tracking Changes & Handoff",
+        "bullet": "Status updates: mark a design's development status and see when a section's design has changed since a developer last reviewed it.",
+        "path": "gifs/f10-figma-dev-mode-handoff/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "C. Tracking Changes & Handoff",
+        "bullet": "Update design changes: refresh a developer's view after making changes so they always inspect the current version.",
+        "path": "gifs/f10-figma-dev-mode-handoff/8.gif"
+      },
+      {
+        "index": 9,
+        "heading": "C. Tracking Changes & Handoff",
+        "bullet": "Versions: save named versions of a file so you can review or return to a specific point in its history.",
+        "path": "gifs/f10-figma-dev-mode-handoff/9.gif"
+      },
+      {
+        "index": 10,
+        "heading": "C. Tracking Changes & Handoff",
+        "bullet": "Compare changes: view a visual diff between two versions to see exactly what changed.",
+        "path": "gifs/f10-figma-dev-mode-handoff/10.gif"
+      },
+      {
+        "index": 11,
+        "heading": "C. Tracking Changes & Handoff",
+        "bullet": "Mark design as completed: flag a section as done once development work matches the final design.",
+        "path": "gifs/f10-figma-dev-mode-handoff/11.gif"
+      }
+    ]
+  },
+  "18-dslr-cameras-lenses": {
+    "title": "DSLR Cameras & Lenses: Gear for Different Environments",
+    "num_bullets": 18,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Camera Bodies for the Environment",
+        "bullet": "Full-Frame vs. Crop-Sensor (APS-C): Full-frame sensors capture a wider field of view, better low-light/high-ISO performance, and shallower depth of field — ideal for studio, portrait, and low-light work. Crop-sensor bodies are lighter, cheaper, and give extra effective reach for telephoto lenses, which is a real advantage for sports and wildlife.",
+        "path": "gifs/18-dslr-cameras-lenses/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. Camera Bodies for the Environment",
+        "bullet": "Outdoor / Natural Light Shooting: Favor weather-sealed bodies with strong dynamic range (to handle bright skies and shadow detail at once) and fast, reliable autofocus tracking for moving subjects — e.g. Canon EOS R5, Nikon Z8, Sony A7 IV.",
+        "path": "gifs/18-dslr-cameras-lenses/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. Camera Bodies for the Environment",
+        "bullet": "Studio / Indoor Controlled Light: Weather sealing matters less indoors; prioritize high resolution, accurate color science, reliable flash sync speed for working with studio strobes, and tethering support for reviewing shots on a large monitor as you shoot.",
+        "path": "gifs/18-dslr-cameras-lenses/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "A. Camera Bodies for the Environment",
+        "bullet": "Indoor / Low-Light Without Strobes: Prioritize a body with strong high-ISO performance paired with a wide-aperture lens, since you're relying on ambient or minimal lighting rather than flash.",
+        "path": "gifs/18-dslr-cameras-lenses/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. Lens Focal Lengths (mm) and What They're For",
+        "bullet": "Ultra-Wide (14–24mm): Landscapes, architecture, interiors, and astrophotography. Captures broad, expansive scenes and works well in tight indoor spaces like real estate interiors.",
+        "path": "gifs/18-dslr-cameras-lenses/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. Lens Focal Lengths (mm) and What They're For",
+        "bullet": "Wide (24–35mm): Environmental portraits, street photography, group shots, and vlogging. Shows the subject plus their surroundings, useful indoors when a room doesn't give you much space to back up.",
+        "path": "gifs/18-dslr-cameras-lenses/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "B. Lens Focal Lengths (mm) and What They're For",
+        "bullet": "Standard / Normal (35–50mm): The all-purpose range that most closely matches natural human vision. Great for everyday, documentary, and street shooting, and for a natural-looking studio portrait.",
+        "path": "gifs/18-dslr-cameras-lenses/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "B. Lens Focal Lengths (mm) and What They're For",
+        "bullet": "Short Telephoto / Portrait (85–135mm): The classic studio and headshot range (85mm especially) — flattering facial compression and strong background blur, a staple for weddings and portrait studios.",
+        "path": "gifs/18-dslr-cameras-lenses/7.png"
+      },
+      {
+        "index": 8,
+        "heading": "B. Lens Focal Lengths (mm) and What They're For",
+        "bullet": "Telephoto (135–300mm): Sports, concerts, and wildlife where you can't get physically close to the subject; isolates a subject from a busy background.",
+        "path": "gifs/18-dslr-cameras-lenses/8.png"
+      },
+      {
+        "index": 9,
+        "heading": "B. Lens Focal Lengths (mm) and What They're For",
+        "bullet": "Super-Telephoto (300mm+): Professional sports sidelines, birding, and distant wildlife where extreme reach is required.",
+        "path": "gifs/18-dslr-cameras-lenses/9.png"
+      },
+      {
+        "index": 10,
+        "heading": "B. Lens Focal Lengths (mm) and What They're For",
+        "bullet": "Macro Lenses (often 60–105mm, 1:1 magnification): Product photography, jewelry, food, and insect/texture close-ups where true-to-life close focusing matters.",
+        "path": "gifs/18-dslr-cameras-lenses/10.png"
+      },
+      {
+        "index": 11,
+        "heading": "B. Lens Focal Lengths (mm) and What They're For",
+        "bullet": "Zoom vs. Prime: Zoom lenses trade some sharpness and maximum aperture for flexibility, useful for run-and-gun events. Prime lenses are typically faster (wider maximum aperture) and sharper, which is why they're favored for studio portraits and low light.",
+        "path": "gifs/18-dslr-cameras-lenses/11.png"
+      },
+      {
+        "index": 12,
+        "heading": "C. Matching Gear to the Scenario",
+        "bullet": "Landscape / Nature: Full-frame body, wide-angle lens (14–24mm), narrow aperture (f/8–f/16) for front-to-back sharpness, tripod, weather-sealed gear.",
+        "path": "gifs/18-dslr-cameras-lenses/12.png"
+      },
+      {
+        "index": 13,
+        "heading": "C. Matching Gear to the Scenario",
+        "bullet": "Outdoor Portrait: 50mm or 85mm prime, wide aperture (f/1.4–f/2.8) for background blur, natural light modifiers like reflectors or diffusers.",
+        "path": "gifs/18-dslr-cameras-lenses/13.png"
+      },
+      {
+        "index": 14,
+        "heading": "C. Matching Gear to the Scenario",
+        "bullet": "Studio Portrait / Product: Tethered high-resolution body, 85–105mm portrait or macro lens, controlled strobes with a fast flash sync speed.",
+        "path": "gifs/18-dslr-cameras-lenses/14.png"
+      },
+      {
+        "index": 15,
+        "heading": "C. Matching Gear to the Scenario",
+        "bullet": "Sports / Action (indoor or outdoor): Body with a fast burst rate and strong autofocus tracking, telephoto zoom (70–200mm or 100–400mm), fast shutter speed to freeze motion.",
+        "path": "gifs/18-dslr-cameras-lenses/15.png"
+      },
+      {
+        "index": 16,
+        "heading": "C. Matching Gear to the Scenario",
+        "bullet": "Indoor Events / Weddings in Low Light: Fast prime lenses (35mm f/1.4, 50mm f/1.2), a full-frame body with strong high-ISO performance, bounce flash for soft fill light.",
+        "path": "gifs/18-dslr-cameras-lenses/16.png"
+      },
+      {
+        "index": 17,
+        "heading": "C. Matching Gear to the Scenario",
+        "bullet": "Architecture / Interiors: Ultra-wide or tilt-shift lens to correct converging vertical lines, tripod for long exposures in dim interiors.",
+        "path": "gifs/18-dslr-cameras-lenses/17.png"
+      }
+    ]
+  },
+  "19-aspect-ratios": {
+    "title": "Aspect Ratios: Film, Print, and Social Media",
+    "num_bullets": 24,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. What an Aspect Ratio Is (and Basic vs. Complex Workflows)",
+        "bullet": "Definition: Aspect ratio is expressed as width:height (e.g. 16:9) or as a decimal (e.g. 1.78:1); it defines the shape of the canvas, not its resolution.",
+        "path": "gifs/19-aspect-ratios/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. What an Aspect Ratio Is (and Basic vs. Complex Workflows)",
+        "bullet": "Basic workflow: One deliverable, one fixed ratio — design straight to that canvas shape with no re-cropping needed.",
+        "path": "gifs/19-aspect-ratios/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. What an Aspect Ratio Is (and Basic vs. Complex Workflows)",
+        "bullet": "Complex workflow: One campaign needs the same asset delivered in several ratios (e.g. 1:1, 4:5, 9:16, and 16:9 versions of the same ad). Keep the subject and any text inside a central \"safe zone\" so the composition still works when it's cropped tighter for a different ratio.",
+        "path": "gifs/19-aspect-ratios/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "A. What an Aspect Ratio Is (and Basic vs. Complex Workflows)",
+        "bullet": "Letterboxing vs. pillarboxing: When content doesn't match the target ratio, you either crop it to fit or add bars — letterboxing (bars on top/bottom) for wide content forced into a narrower ratio, pillarboxing (bars on the sides) for narrow content placed in a wider ratio — to preserve the full frame without distorting or stretching it.",
+        "path": "gifs/19-aspect-ratios/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. Standard Photo & Print Ratios",
+        "bullet": "1:1 (Square): Classic square format — album covers, Instagram feed posts.",
+        "path": "gifs/19-aspect-ratios/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. Standard Photo & Print Ratios",
+        "bullet": "4:3: Traditional television and monitor shape, standard point-and-shoot photography, classic presentation slides.",
+        "path": "gifs/19-aspect-ratios/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "B. Standard Photo & Print Ratios",
+        "bullet": "3:2: The classic 35mm film ratio and the default sensor shape on most DSLRs and mirrorless cameras; standard 4×6 photo prints.",
+        "path": "gifs/19-aspect-ratios/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "B. Standard Photo & Print Ratios",
+        "bullet": "2:3 (Portrait): The vertical rotation of 3:2, used for vertical prints and portrait-oriented photography.",
+        "path": "gifs/19-aspect-ratios/7.png"
+      },
+      {
+        "index": 8,
+        "heading": "B. Standard Photo & Print Ratios",
+        "bullet": "5:4: The standard 8×10 print ratio, common in framed prints and fine-art photography.",
+        "path": "gifs/19-aspect-ratios/8.png"
+      },
+      {
+        "index": 9,
+        "heading": "B. Standard Photo & Print Ratios",
+        "bullet": "A-Series Paper (ISO 216, ≈1:1.414): The ratio behind A4, A3, and the rest of the international paper sizes, used across print and document design.",
+        "path": "gifs/19-aspect-ratios/9.png"
+      },
+      {
+        "index": 10,
+        "heading": "B. Standard Photo & Print Ratios",
+        "bullet": "US Letter (8.5×11, ≈1:1.294): The standard US print/document ratio, distinct from the international A-series.",
+        "path": "gifs/19-aspect-ratios/10.png"
+      },
+      {
+        "index": 11,
+        "heading": "C. Cinematic & Widescreen Ratios (Including IMAX)",
+        "bullet": "4:3 / 1.33:1 (Academy Ratio): The classic Hollywood film ratio through the 1950s, and the shape of old CRT televisions.",
+        "path": "gifs/19-aspect-ratios/11.png"
+      },
+      {
+        "index": 12,
+        "heading": "C. Cinematic & Widescreen Ratios (Including IMAX)",
+        "bullet": "1.85:1 (Academy Flat): The most common theatrical widescreen ratio used in US cinemas today.",
+        "path": "gifs/19-aspect-ratios/12.png"
+      },
+      {
+        "index": 13,
+        "heading": "C. Cinematic & Widescreen Ratios (Including IMAX)",
+        "bullet": "2.39:1 / 2.40:1 (Anamorphic \"Scope\"): The wide, epic cinematic ratio used for big-budget widescreen releases (Panavision-style anamorphic lenses).",
+        "path": "gifs/19-aspect-ratios/13.png"
+      },
+      {
+        "index": 14,
+        "heading": "C. Cinematic & Widescreen Ratios (Including IMAX)",
+        "bullet": "2.35:1: An older anamorphic cinema standard used before the 2.39:1 spec was finalized, still referenced loosely as \"scope\" today.",
+        "path": "gifs/19-aspect-ratios/14.png"
+      },
+      {
+        "index": 15,
+        "heading": "C. Cinematic & Widescreen Ratios (Including IMAX)",
+        "bullet": "1.43:1 (Native 70mm IMAX Film): The tall, nearly-square IMAX film ratio — far taller than standard widescreen — used for immersive large-format sequences in films like Dunkirk and Oppenheimer.",
+        "path": "gifs/19-aspect-ratios/15.png"
+      },
+      {
+        "index": 16,
+        "heading": "C. Cinematic & Widescreen Ratios (Including IMAX)",
+        "bullet": "1.90:1 (Digital IMAX): The wider ratio used in digital IMAX theaters, which don't project the taller native 70mm film frame.",
+        "path": "gifs/19-aspect-ratios/16.png"
+      },
+      {
+        "index": 17,
+        "heading": "C. Cinematic & Widescreen Ratios (Including IMAX)",
+        "bullet": "21:9 / 2.33:1 (Ultrawide): Used by ultrawide consumer monitors and some \"cinematic-style\" TVs to mimic a widescreen theatrical look at home.",
+        "path": "gifs/19-aspect-ratios/17.png"
+      },
+      {
+        "index": 18,
+        "heading": "D. Social Media & Digital Platform Ratios",
+        "bullet": "1:1 (Square): Instagram and Facebook feed posts.",
+        "path": "gifs/19-aspect-ratios/18.png"
+      },
+      {
+        "index": 19,
+        "heading": "D. Social Media & Digital Platform Ratios",
+        "bullet": "4:5 (Portrait): Instagram and Facebook feed posts — the tallest ratio most feeds allow, giving the most vertical screen space per post.",
+        "path": "gifs/19-aspect-ratios/19.png"
+      },
+      {
+        "index": 20,
+        "heading": "D. Social Media & Digital Platform Ratios",
+        "bullet": "9:16 (Full Vertical): Instagram/Facebook Stories and Reels, TikTok, and YouTube Shorts.",
+        "path": "gifs/19-aspect-ratios/20.png"
+      },
+      {
+        "index": 21,
+        "heading": "D. Social Media & Digital Platform Ratios",
+        "bullet": "16:9 (Landscape): Standard YouTube video and horizontal video on X/Twitter and LinkedIn.",
+        "path": "gifs/19-aspect-ratios/21.png"
+      },
+      {
+        "index": 22,
+        "heading": "D. Social Media & Digital Platform Ratios",
+        "bullet": "1.91:1 (Landscape Link Preview): Facebook and LinkedIn link-preview images and horizontal display ads.",
+        "path": "gifs/19-aspect-ratios/22.png"
+      },
+      {
+        "index": 23,
+        "heading": "D. Social Media & Digital Platform Ratios",
+        "bullet": "2:3 (Portrait): Pinterest's recommended Pin ratio.",
+        "path": "gifs/19-aspect-ratios/23.png"
+      }
+    ]
+  },
+  "cs-a-fundamentals": {
+    "title": "Color Space Fundamentals",
+    "num_bullets": 11,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. What Defines a Color Space",
+        "bullet": "Primaries: the three specific red/green/blue chromaticity points that anchor a color space's outer boundary.",
+        "path": "gifs/cs-a-fundamentals/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. What Defines a Color Space",
+        "bullet": "White point: the specific \"white\" reference a color space is calibrated to (e.g. D65 daylight, D60), which shifts every other color relative to it.",
+        "path": "gifs/cs-a-fundamentals/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. What Defines a Color Space",
+        "bullet": "Gamut: the total range of colors a space can represent, visualized as the area enclosed by its primaries on a chromaticity diagram.",
+        "path": "gifs/cs-a-fundamentals/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "A. What Defines a Color Space",
+        "bullet": "Bit depth: how many discrete steps of brightness/color are available per channel (8-bit = 256 steps, 16-bit = 65,536, 32-bit float = practically continuous), affecting banding and grading headroom.",
+        "path": "gifs/cs-a-fundamentals/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. Linear Light vs. Gamma & Log Encoding",
+        "bullet": "Linear light: pixel values are directly proportional to real-world light intensity — the physically correct space for rendering and compositing math, but it wastes bits on highlights the eye barely distinguishes.",
+        "path": "gifs/cs-a-fundamentals/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. Linear Light vs. Gamma & Log Encoding",
+        "bullet": "Gamma encoding (e.g. sRGB's ~2.2 curve): compresses values non-linearly to match human brightness perception, packing more useful steps into the shadows where our eyes are most sensitive.",
+        "path": "gifs/cs-a-fundamentals/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "B. Linear Light vs. Gamma & Log Encoding",
+        "bullet": "Log encoding: camera-specific curves (LogC, S-Log3, etc.) that compress a huge dynamic range into a normal 10-bit signal, producing a deliberately flat, low-contrast image that's graded afterward.",
+        "path": "gifs/cs-a-fundamentals/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "B. Linear Light vs. Gamma & Log Encoding",
+        "bullet": "Why the curve matters: applying the wrong transfer function to an image (e.g. viewing log footage without a LUT) makes it look washed out and desaturated even though no data is missing.",
+        "path": "gifs/cs-a-fundamentals/7.png"
+      },
+      {
+        "index": 8,
+        "heading": "C. Color Space Conversions & Where They Go Wrong",
+        "bullet": "Color space transform (CST): mathematically converting pixel values from one space's primaries/white point/curve to another's, required whenever footage moves between camera, VFX, and delivery formats.",
+        "path": "gifs/cs-a-fundamentals/8.png"
+      },
+      {
+        "index": 9,
+        "heading": "C. Color Space Conversions & Where They Go Wrong",
+        "bullet": "Gamut clipping: colors that exist in a larger source space but fall outside a smaller destination space get clipped or compressed, which is why converting Rec.2020 footage down to Rec.709 can flatten vivid colors.",
+        "path": "gifs/cs-a-fundamentals/9.png"
+      },
+      {
+        "index": 10,
+        "heading": "C. Color Space Conversions & Where They Go Wrong",
+        "bullet": "Mismatched color management: tagging or interpreting an image in the wrong color space (e.g. viewing Log C footage as if it were Rec.709) is one of the most common sources of \"why does this look wrong\" in a VFX or grading pipeline.",
+        "path": "gifs/cs-a-fundamentals/10.png"
+      }
+    ]
+  },
+  "cs-b-display-print": {
+    "title": "Display & Print Color Spaces",
+    "num_bullets": 8,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Web & Screen Color Spaces",
+        "bullet": "sRGB: the default, universal color space for the web, most monitors, and non-color-managed apps — small gamut but maximum compatibility.",
+        "path": "gifs/cs-b-display-print/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. Web & Screen Color Spaces",
+        "bullet": "Rec.709 (BT.709): the HDTV broadcast standard, sharing nearly the same primaries and gamut as sRGB, used for traditional HD video delivery.",
+        "path": "gifs/cs-b-display-print/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. Web & Screen Color Spaces",
+        "bullet": "Display P3: the wider-gamut space used by Apple displays, modern phones, and much of current web/mobile content, covering roughly 25% more visible color than sRGB.",
+        "path": "gifs/cs-b-display-print/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "A. Web & Screen Color Spaces",
+        "bullet": "Rec.2020 (BT.2020): the ultra-wide gamut standard for 4K/8K and HDR broadcast, covering far more of the visible spectrum than P3 — though few real displays can reproduce all of it yet.",
+        "path": "gifs/cs-b-display-print/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. Print & Professional Editing Spaces",
+        "bullet": "CMYK: a subtractive, ink-based color space used for commercial printing, with a notably smaller and differently-shaped gamut than any RGB space — vivid RGB colors often look muted once converted.",
+        "path": "gifs/cs-b-display-print/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. Print & Professional Editing Spaces",
+        "bullet": "Adobe RGB: a wider-than-sRGB editing space popular in photography and print workflows, covering more cyans and greens that sRGB clips.",
+        "path": "gifs/cs-b-display-print/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "B. Print & Professional Editing Spaces",
+        "bullet": "ProPhoto RGB: an extremely wide gamut space (wider than human vision in some regions) used as a \"safe\" working space for RAW photo editing, so no color gets clipped during heavy adjustments.",
+        "path": "gifs/cs-b-display-print/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "B. Print & Professional Editing Spaces",
+        "bullet": "Lab (CIELAB): a device-independent space that separates lightness (L) from color (a/b axes), used internally by editing software for perceptually-uniform adjustments and gamut mapping between other spaces.",
+        "path": "gifs/cs-b-display-print/7.png"
+      }
+    ]
+  },
+  "cs-c-vfx-aces": {
+    "title": "VFX & CG Color Spaces (ACES / OCIO)",
+    "num_bullets": 9,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Scene-Referred & Linear Workflows",
+        "bullet": "Scene-referred vs. display-referred: scene-referred values represent real-world light before any \"look\" is applied, while display-referred values are already baked for a specific screen — VFX rendering happens in scene-referred space.",
+        "path": "gifs/cs-c-vfx-aces/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. Scene-Referred & Linear Workflows",
+        "bullet": "Linear light in CG: 3D renderers calculate lighting, shadows, and reflections correctly only when working on linear (non-gamma-encoded) pixel values — rendering in a gamma space produces physically wrong lighting math.",
+        "path": "gifs/cs-c-vfx-aces/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. Scene-Referred & Linear Workflows",
+        "bullet": "OCIO (OpenColorIO): the open-source color management framework most VFX/animation pipelines use to keep every application (renderer, compositor, review tool) reading and writing color the same consistent way.",
+        "path": "gifs/cs-c-vfx-aces/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "B. The ACES System",
+        "bullet": "ACES2065-1: the archival, interchange-format heart of ACES — an extremely wide gamut, scene-linear space wide enough to hold any camera's captured colors without clipping, used for long-term masters.",
+        "path": "gifs/cs-c-vfx-aces/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. The ACES System",
+        "bullet": "ACEScg: the practical, scene-linear working space for CG rendering and compositing — narrower than ACES2065-1 but chosen specifically to play well with 3D renderers and float math.",
+        "path": "gifs/cs-c-vfx-aces/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. The ACES System",
+        "bullet": "ACEScc / ACEScct: logarithmic encodings of the ACES gamut built for color grading (not rendering) — ACEScct adds a toe to the shadows so grading tools behave better near black.",
+        "path": "gifs/cs-c-vfx-aces/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "B. The ACES System",
+        "bullet": "Input Device Transforms (IDTs) & Output Device Transforms (ODTs): the standardized \"front door\" and \"back door\" of ACES — an IDT converts a specific camera's log footage into ACES, and an ODT converts the final ACES render out to a specific display (sRGB, Rec.709, P3, etc).",
+        "path": "gifs/cs-c-vfx-aces/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "C. Why VFX Studios Standardize on This",
+        "bullet": "Consistent look across vendors: when multiple studios/artists work on the same shot, ACES/OCIO guarantee that a render looks the same in every artist's viewer regardless of their monitor or software.",
+        "path": "gifs/cs-c-vfx-aces/7.png"
+      },
+      {
+        "index": 8,
+        "heading": "C. Why VFX Studios Standardize on This",
+        "bullet": "Future-proofing masters: because ACES2065-1 can hold any camera or display's gamut without clipping, footage graded today can be re-mastered for a wider format (like a future display standard) later without redoing the color work.",
+        "path": "gifs/cs-c-vfx-aces/8.png"
+      }
+    ]
+  },
+  "cs-d-log-hdr": {
+    "title": "Camera Log & HDR Formats",
+    "num_bullets": 9,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Why Cameras Shoot Log",
+        "bullet": "Dynamic range problem: real scenes can span far more stops of brightness than an 8/10-bit gamma-encoded signal can hold without clipping highlights or crushing shadows.",
+        "path": "gifs/cs-d-log-hdr/0.png"
+      },
+      {
+        "index": 1,
+        "heading": "A. Why Cameras Shoot Log",
+        "bullet": "Log curve: a logarithmic transfer function that compresses a camera sensor's full dynamic range into a standard-bit-depth signal, deliberately producing a flat, desaturated image on set.",
+        "path": "gifs/cs-d-log-hdr/1.png"
+      },
+      {
+        "index": 2,
+        "heading": "A. Why Cameras Shoot Log",
+        "bullet": "Grading with a LUT: a Look-Up Table (or CST + creative grade) is applied afterward to map the flat log image back to a normal-contrast, normal-saturation \"graded\" look.",
+        "path": "gifs/cs-d-log-hdr/2.png"
+      },
+      {
+        "index": 3,
+        "heading": "B. Manufacturer Log Formats",
+        "bullet": "LogC (ARRI): Arri's log curve, paired with the Alexa Wide Gamut color space, widely used as an industry-standard intermediate format in feature film and high-end TV production.",
+        "path": "gifs/cs-d-log-hdr/3.png"
+      },
+      {
+        "index": 4,
+        "heading": "B. Manufacturer Log Formats",
+        "bullet": "S-Log3 (Sony): Sony's log curve for its cinema and mirrorless cameras, paired with S-Gamut3 or S-Gamut3.Cine color space.",
+        "path": "gifs/cs-d-log-hdr/4.png"
+      },
+      {
+        "index": 5,
+        "heading": "B. Manufacturer Log Formats",
+        "bullet": "V-Log (Panasonic): Panasonic's log curve for its cinema and Lumix cameras, designed to closely match Log C's characteristics for easier multi-camera grading.",
+        "path": "gifs/cs-d-log-hdr/5.png"
+      },
+      {
+        "index": 6,
+        "heading": "B. Manufacturer Log Formats",
+        "bullet": "RedLog / REDWideGamutRGB: RED's own log and wide-gamut color space combination used across their cinema camera line.",
+        "path": "gifs/cs-d-log-hdr/6.png"
+      },
+      {
+        "index": 7,
+        "heading": "C. HDR & Wide Gamut Delivery",
+        "bullet": "PQ (Perceptual Quantizer / SMPTE ST 2084): an absolute-brightness transfer function used for HDR mastering (e.g. Dolby Vision, HDR10), encoding real nit values instead of a relative curve.",
+        "path": "gifs/cs-d-log-hdr/7.png"
+      },
+      {
+        "index": 8,
+        "heading": "C. HDR & Wide Gamut Delivery",
+        "bullet": "HLG (Hybrid Log-Gamma): a broadcast-friendly HDR transfer function designed to be backward-compatible with standard-dynamic-range displays, unlike PQ.",
+        "path": "gifs/cs-d-log-hdr/8.png"
+      }
+    ]
+  },
+  "ai-1-nano-banana-pro": {
+    "title": "Nano Banana Pro: Google's Gemini Image Model",
+    "num_bullets": 12,
+    "entries": [
+      {
+        "index": 1,
+        "heading": "A. What It Is & Where to Use It",
+        "bullet": "Where to access it: open the image generator inside the Gemini app, where a set of style templates appears before you even type a prompt.",
+        "path": "gifs/ai-1-nano-banana-pro/1.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. How to Speak to It (Prompting Technique)",
+        "bullet": "Style templates: click a template (e.g. \"cinematic\", \"steampunk\") to set an art direction instantly instead of describing a style from scratch.",
+        "path": "gifs/ai-1-nano-banana-pro/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. How to Speak to It (Prompting Technique)",
+        "bullet": "Use reference images for consistency: upload a photo of yourself (or several subjects) and ask the model to place them in a new scene while keeping their exact identity.",
+        "path": "gifs/ai-1-nano-banana-pro/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. How to Speak to It (Prompting Technique)",
+        "bullet": "Iterate conversationally: ask for one specific follow-up change (a new pose, mood, or setting) on the same uploaded subjects instead of restarting from scratch.",
+        "path": "gifs/ai-1-nano-banana-pro/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. How to Speak to It (Prompting Technique)",
+        "bullet": "Order instructions by importance and be specific: a long, structured prompt describing subject, layout, mood, camera angle, and lighting all at once produces a precise result.",
+        "path": "gifs/ai-1-nano-banana-pro/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "B. How to Speak to It (Prompting Technique)",
+        "bullet": "Ask for exact on-image text and layouts: because it renders text unusually well, you can request specific words and a full infographic-style layout rendered directly inside the image.",
+        "path": "gifs/ai-1-nano-banana-pro/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "C. Applying Graphic Design Principles",
+        "bullet": "Aspect ratio & platform targeting: ask for a specific ratio (e.g. \"render as 16:9\") on an existing image instead of cropping it afterward, and it keeps the rest of the composition intact.",
+        "path": "gifs/ai-1-nano-banana-pro/8.gif"
+      }
+    ]
+  },
+  "ai-2-midjourney": {
+    "title": "Midjourney: Prompting a Powerful AI Art Model",
+    "num_bullets": 13,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. What It Is & Where to Use It",
+        "bullet": "What it is: the Create page's Imagine bar is where you type a prompt and get a grid of four results back — your main workspace for prompting.",
+        "path": "gifs/ai-2-midjourney/0.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. What It Is & Where to Use It",
+        "bullet": "Default aesthetic & assumptions: if you don't specify a style, Midjourney picks one for you, shown here defaulting to an illustrated look for an unstyled prompt.",
+        "path": "gifs/ai-2-midjourney/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. How to Speak to It",
+        "bullet": "Starting simple: begin with just a clear subject (e.g. \"two bears having a tea party\") and see what Midjourney assumes, then refine from there.",
+        "path": "gifs/ai-2-midjourney/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. How to Speak to It",
+        "bullet": "Getting more specific: add explicit style/medium words and a real camera film reference (e.g. \"Kodak Portra 400 film\") to push results toward a specific photographic look.",
+        "path": "gifs/ai-2-midjourney/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. How to Speak to It",
+        "bullet": "Editing a prompt without starting over: click a result's edit button to load its exact prompt back into the Imagine bar so you can tweak just one part.",
+        "path": "gifs/ai-2-midjourney/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. How to Speak to It",
+        "bullet": "Image & style references: use a result's Image or Style reference options to carry that image's subject or visual aesthetic into your next prompt.",
+        "path": "gifs/ai-2-midjourney/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "B. How to Speak to It",
+        "bullet": "Iterate with the grid: use the Very Subtle / Very Strong buttons on a result to generate new variations based on that image instead of a fresh prompt.",
+        "path": "gifs/ai-2-midjourney/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "B. How to Speak to It",
+        "bullet": "Aspect ratio parameter (--ar): add \"--ar 9:16\" (or any ratio) to the end of a prompt to control its shape directly, instead of relying on the default 1:1 square.",
+        "path": "gifs/ai-2-midjourney/8.gif"
+      },
+      {
+        "index": 9,
+        "heading": "C. Refining, Upscaling & Applying Design Principles",
+        "bullet": "Remix mode: reuse an image as a base while editing its prompt text before resubmitting, so the new result keeps aspects of the original.",
+        "path": "gifs/ai-2-midjourney/9.gif"
+      },
+      {
+        "index": 10,
+        "heading": "C. Refining, Upscaling & Applying Design Principles",
+        "bullet": "Upscaling: use Upscale Subtle or Upscale Creative to enlarge a chosen result 2x, trading faithfulness to the original for more creative freedom.",
+        "path": "gifs/ai-2-midjourney/10.gif"
+      },
+      {
+        "index": 11,
+        "heading": "C. Refining, Upscaling & Applying Design Principles",
+        "bullet": "Being specific about details: if a detail (like the background or a color) matters to you, spell it out — Midjourney fills in anything you don't specify on its own.",
+        "path": "gifs/ai-2-midjourney/11.gif"
+      }
+    ]
+  },
+  "ai-3-chatgpt-image": {
+    "title": "ChatGPT Image (GPT Image 1): OpenAI's Native Image Model",
+    "num_bullets": 14,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. What It Is & Where to Use It",
+        "bullet": "What it is: type directly into the chat box (or use the toolbox icon's \"Create image\" option) to generate an image inline in the conversation — both do the same thing.",
+        "path": "gifs/ai-3-chatgpt-image/0.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. What It Is & Where to Use It",
+        "bullet": "Vague vs. specific prompts: a one-word prompt like \"a dog\" forces ChatGPT to guess the breed, time of day, and style — being specific instead locks in a far more precise result.",
+        "path": "gifs/ai-3-chatgpt-image/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. How to Speak to It",
+        "bullet": "The five-part formula: fill in subject, style, setting, mood, and specific details (camera angle, lighting, colors) — you don't need all five every time, but each one adds control.",
+        "path": "gifs/ai-3-chatgpt-image/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. How to Speak to It",
+        "bullet": "Photographic detail (camera + lens + lighting): naming a specific camera, lens, and lighting setup makes a prompt read as a real photograph instead of an obvious AI image.",
+        "path": "gifs/ai-3-chatgpt-image/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. How to Speak to It",
+        "bullet": "Changing style with the same tool: swap the words in the same structured prompt to flip from a photorealistic look to a fully illustrated style.",
+        "path": "gifs/ai-3-chatgpt-image/5.gif"
+      },
+      {
+        "index": 6,
+        "heading": "B. How to Speak to It",
+        "bullet": "Exact on-image text: put the precise words you want inside quotation marks in the prompt so ChatGPT knows exactly what to render.",
+        "path": "gifs/ai-3-chatgpt-image/6.gif"
+      },
+      {
+        "index": 7,
+        "heading": "B. How to Speak to It",
+        "bullet": "Aspect ratio, transparent backgrounds & exact hex colors: request \"portrait\", \"landscape\", \"transparent PNG background\", or a specific hex code directly in the prompt.",
+        "path": "gifs/ai-3-chatgpt-image/7.gif"
+      },
+      {
+        "index": 8,
+        "heading": "B. How to Speak to It",
+        "bullet": "Use the conversation itself: ask for a follow-up change (\"change the couch color to dark green\") in the same chat instead of writing a new prompt from scratch.",
+        "path": "gifs/ai-3-chatgpt-image/8.gif"
+      },
+      {
+        "index": 9,
+        "heading": "B. How to Speak to It",
+        "bullet": "Upload and edit real photos: attach an existing photo and ask for a targeted edit (background swap, object removal, style change) while the rest of the photo stays untouched.",
+        "path": "gifs/ai-3-chatgpt-image/9.gif"
+      },
+      {
+        "index": 10,
+        "heading": "B. How to Speak to It",
+        "bullet": "The select tool: draw a box around one specific part of a generated image (like a typo) and describe the fix for just that area.",
+        "path": "gifs/ai-3-chatgpt-image/10.gif"
+      }
+    ]
+  }
+}
