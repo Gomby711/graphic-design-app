@@ -1172,6 +1172,290 @@
     ]
   },
   {
+    "id": "ap11-cgi-3d-compositing",
+    "tab": "AP-11",
+    "category": "advanced-photoshop",
+    "title": "Compositing CGI/3D Renders into Photography",
+    "intro": "Blending a 3D render into a real photograph takes more than dropping it on top — the render's separate light passes, camera perspective, grain, and depth of field all have to be matched to the background plate individually before the two will read as one captured image.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=aGACoUDokXo",
+      "id": "aGACoUDokXo",
+      "start": 60
+    },
+    "sections": [
+      {
+        "heading": "A. Preparing the 3D Render",
+        "bullets": [
+          "Export the 3D render with separate passes (beauty, ambient occlusion, shadow, reflection) so each layer can be blended independently in Photoshop.",
+          "Match the render's camera field of view and horizon line to the background photograph before placing it, so perspective lines agree.",
+          "Bring the render in as a Smart Object so its scale and position stay adjustable non-destructively."
+        ]
+      },
+      {
+        "heading": "B. Blending the Render into the Scene",
+        "bullets": [
+          "Set the render's shadow pass to Multiply and its reflection/highlight pass to Screen or Linear Dodge so each pass reads correctly against the photo.",
+          "Sample the background photo's color cast with the eyedropper and add a matching Color Balance/Photo Filter adjustment clipped to the render.",
+          "Add a contact shadow directly beneath the rendered object and blur its edges to plant it convincingly into the scene."
+        ]
+      },
+      {
+        "heading": "C. Selling the Realism",
+        "bullets": [
+          "Match the photograph's grain/noise and depth of field onto the render with Add Noise and Gaussian/Lens Blur so it doesn't look artificially sharp.",
+          "Finish with a single Camera Raw Filter pass across the whole flattened composite so the render and photo share one unified color grade."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap12-composite-realism-grain-ca-vignette",
+    "tab": "AP-12",
+    "category": "advanced-photoshop",
+    "title": "Advanced Composite Realism: Matching Grain, Chromatic Aberration & Lens Vignette",
+    "intro": "The details that separate a convincing composite from an obviously edited one are subtle: matching the exact grain of the source photo, reproducing a lens's natural color fringing, and repeating the same vignette falloff across every layer of the scene.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=E8wOwxUtKW4",
+      "id": "E8wOwxUtKW4",
+      "start": 30
+    },
+    "sections": [
+      {
+        "heading": "A. Matching Film Grain",
+        "bullets": [
+          "Sample the base photo's grain by viewing it at 100% zoom, then add a Grain/Noise layer matched to that intensity on every composited element.",
+          "Set the grain layer's blend mode to Overlay or Soft Light so it sits on top of every element uniformly rather than looking pasted onto just one layer."
+        ]
+      },
+      {
+        "heading": "B. Chromatic Aberration & Lens Vignette",
+        "bullets": [
+          "Split the composite's Red and Blue channels apart by a few pixels near the frame edges to reproduce a lens's natural chromatic aberration fringing.",
+          "Add a Lens Correction or Camera Raw vignette darkening the corners to match the original background photo's lens falloff.",
+          "Adjust the vignette's Midpoint and Roundness so it matches the exact falloff shape of the original lens rather than a generic dark corner."
+        ]
+      },
+      {
+        "heading": "C. Final Unifying Pass",
+        "bullets": [
+          "Flatten a merged copy of the composite and run a single Camera Raw Filter grade across it so grain, aberration, and vignette all read as one captured photograph instead of separate effects."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap13-advanced-channel-masking",
+    "tab": "AP-13",
+    "category": "advanced-photoshop",
+    "title": "Advanced Channel Masking: Calculations & Apply Image",
+    "intro": "When Select Subject and Select and Mask can't cleanly separate fine detail like hair, smoke, or glass, the Channels panel's Calculations and Apply Image commands let you build a custom alpha mask directly from whichever color channel holds the most contrast.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SVqJOny0FyQ",
+      "id": "SVqJOny0FyQ",
+      "start": 30
+    },
+    "sections": [
+      {
+        "heading": "A. Understanding Channels for Masking",
+        "bullets": [
+          "Open the Channels panel and inspect the Red, Green, and Blue channels individually to find which one has the highest contrast between subject and background.",
+          "Duplicate the highest-contrast channel to use as the base for a hand-refined alpha mask."
+        ]
+      },
+      {
+        "heading": "B. Using Calculations",
+        "bullets": [
+          "Open Image > Calculations, set Source 1 and Source 2 channels, and choose a blend mode like Subtract or Multiply to isolate fine detail like hair or fur into a new alpha channel.",
+          "Load the resulting alpha channel as a selection (Ctrl/Cmd-click its thumbnail) and use it directly as a Layer Mask on the subject."
+        ]
+      },
+      {
+        "heading": "C. Using Apply Image",
+        "bullets": [
+          "Use Image > Apply Image to blend one channel or layer's data directly into another as a mask source, useful for combining two different channel selections into one mask.",
+          "Refine the finished channel mask with Levels or Curves to punch up the contrast between what should be fully selected and fully hidden."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap14-advanced-liquify-warp",
+    "tab": "AP-14",
+    "category": "advanced-photoshop",
+    "title": "Advanced Liquify & Warp for Portrait and Product Retouching",
+    "intro": "Liquify and Warp go far beyond a quick slim-down — used with the right brush settings, Face-Aware sliders, and mesh controls, they let a retoucher make precise, symmetrical adjustments to a portrait or straighten a product's perspective without visibly distorting the rest of the image.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=2ThKFOaD86U",
+      "id": "2ThKFOaD86U",
+      "start": 60
+    },
+    "sections": [
+      {
+        "heading": "A. Setting Up Non-Destructive Liquify",
+        "bullets": [
+          "Convert your layer to a Smart Object before opening Filter > Liquify so every warp stays editable and re-openable as a Smart Filter.",
+          "Increase the Brush Pressure and Density settings in the tool options for finer, more controlled pushes with the Forward Warp Tool."
+        ]
+      },
+      {
+        "heading": "B. Face-Aware Liquify for Portraits",
+        "bullets": [
+          "Open the Face-Aware Liquify panel and use its Eyes, Nose, Mouth, and Face Shape sliders to make subtle, symmetrical adjustments instead of freehand warping.",
+          "Use the Freeze Mask Tool to protect background elements (like doorframes) from bending while you warp a subject near them."
+        ]
+      },
+      {
+        "heading": "C. Warp for Product Retouching",
+        "bullets": [
+          "Use Edit > Transform > Warp's mesh grid to correct a product's perspective or straighten a label that was photographed at a slight angle.",
+          "Push and pull individual Warp mesh handles to reshape a bottle or package's silhouette while keeping its surface texture intact."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap15-panorama-photomerge",
+    "tab": "AP-15",
+    "category": "advanced-photoshop",
+    "title": "Panorama & Photomerge Stitching",
+    "intro": "Photomerge automatically aligns and blends a series of overlapping photos into one seamless panorama, handling the perspective warping and exposure blending for you — but a clean result still depends on how the source photos were shot in the first place.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=QzTE3FUU4Ck",
+      "id": "QzTE3FUU4Ck",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Shooting for a Clean Stitch",
+        "bullets": [
+          "Overlap each frame by roughly 20-40% and keep the camera at one fixed position while panning, so Photomerge has enough shared detail to align seams.",
+          "Shoot in Manual mode with a fixed exposure and white balance across every frame so no frame-to-frame brightness jump appears in the stitch."
+        ]
+      },
+      {
+        "heading": "B. Running Photomerge",
+        "bullets": [
+          "Open File > Automate > Photomerge, load your source images, and choose a Layout option (Auto, Perspective, Cylindrical, Spherical) to match your scene's geometry.",
+          "Enable Blend Images Together and Vignette Removal so Photomerge automatically smooths exposure seams and corrects lens vignetting between frames.",
+          "Turn on Content-Aware Fill Transparent Areas so Photomerge automatically fills in the ragged edges left by the stitching warp."
+        ]
+      },
+      {
+        "heading": "C. Finishing the Panorama",
+        "bullets": [
+          "Crop the merged panorama down from its irregular stitched edge to a clean rectangle, or Content-Aware Fill any remaining transparent gaps by hand.",
+          "Flatten the stitched layers and run a final Camera Raw pass to even out any remaining tonal differences across the width of the panorama."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap16-hdr-merge-tone-mapping",
+    "tab": "AP-16",
+    "category": "advanced-photoshop",
+    "title": "HDR Merge & Tone Mapping",
+    "intro": "Merge to HDR Pro combines a bracketed exposure sequence into a single 32-bit image holding far more dynamic range than any one frame captured — tone mapping is then the step that compresses that extended range back down into a natural, printable photo.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=uVgstcQy3Ts",
+      "id": "uVgstcQy3Ts",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Shooting and Merging Exposure Brackets",
+        "bullets": [
+          "Shoot a bracketed exposure sequence (e.g. -2, 0, +2 EV) on a tripod so each frame captures a different part of the scene's dynamic range.",
+          "Open File > Automate > Merge to HDR Pro, load the bracketed sequence, and let Photoshop align and combine them into one 32-bit HDR image."
+        ]
+      },
+      {
+        "heading": "B. Tone Mapping the Result",
+        "bullets": [
+          "Choose the Local Adaptation method in Merge to HDR Pro and adjust its Radius and Threshold curve to control how much local contrast is pulled out of the merged image.",
+          "Pull down the Highlight slider and lift the Shadow slider to compress the HDR image's extreme range back into a printable, natural-looking result.",
+          "Increase Detail and Vibrance sparingly to avoid the telltale over-processed \"HDR halo\" look around high-contrast edges."
+        ]
+      },
+      {
+        "heading": "C. Finishing in 8/16-bit",
+        "bullets": [
+          "Convert the tone-mapped result from 32-bit down to 16-bit, then finish with a Curves pass to fine-tune contrast now that the exposure range is compressed."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap17-neural-filters-deep-dive",
+    "tab": "AP-17",
+    "category": "advanced-photoshop",
+    "title": "Neural Filters Deep Dive: Skin Smoothing, Style Transfer & Colorize",
+    "intro": "Neural Filters use Adobe's AI engine to generate entirely new pixel data — smoothing skin, repainting a photo in a master painter's style, or adding realistic color to a black-and-white image — all from a downloadable panel of sliders rather than manual retouching.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=gAPJW_nAP-k",
+      "id": "gAPJW_nAP-k",
+      "start": 30
+    },
+    "sections": [
+      {
+        "heading": "A. Accessing Neural Filters",
+        "bullets": [
+          "Open Filter > Neural Filters and toggle on the specific filters you want from the panel's list, downloading each one from Adobe's cloud the first time it's used.",
+          "Convert the layer to a Smart Object first so every Neural Filter you apply stays adjustable as a Smart Filter afterward."
+        ]
+      },
+      {
+        "heading": "B. Skin Smoothing & Smart Portrait",
+        "bullets": [
+          "Use the Skin Smoothing filter's Blur and Smoothness sliders to reduce blemishes and even out skin tone while keeping the Output set to a new layer.",
+          "Mask out non-skin areas (hair, eyes, lips) from the Skin Smoothing effect using the filter's own output mask so only skin texture gets softened."
+        ]
+      },
+      {
+        "heading": "C. Style Transfer & Colorize",
+        "bullets": [
+          "Pick a master-painter preset (e.g. Monet, Van Gogh) in the Style Transfer panel and adjust the Strength and Detail sliders to control how strongly the painterly effect takes over the photo.",
+          "Apply the Colorize filter to a black-and-white photo and place focal points on key areas (skin, sky, clothing) so the AI assigns realistic, targeted colors to each region."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap18-advanced-puppet-warp",
+    "tab": "AP-18",
+    "category": "advanced-photoshop",
+    "title": "Advanced Puppet Warp for Pose & Perspective Changes",
+    "intro": "Puppet Warp overlays a triangulated mesh across an isolated subject and lets you place pins at each joint, so you can rotate a limb, adjust a pose, or push a subject's angle toward the camera by dragging pins instead of manually redrawing anatomy.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=6h6AZ9XV9-I",
+      "id": "6h6AZ9XV9-I",
+      "start": 30
+    },
+    "sections": [
+      {
+        "heading": "A. Setting Up Puppet Warp",
+        "bullets": [
+          "Isolate the subject onto its own layer first, then open Edit > Puppet Warp to see a triangulated mesh overlaid across the entire selection.",
+          "Click to place pins at each joint (shoulder, elbow, wrist, knee) that needs to move independently of the rest of the body."
+        ]
+      },
+      {
+        "heading": "B. Repositioning Limbs and Pose",
+        "bullets": [
+          "Add an Anchor pin at any joint that should stay fixed in place while you drag a neighboring pin to reposition a limb.",
+          "Drag a placed pin to rotate or reposition the limb around it, watching the mesh deform the underlying pixels to match the new pose.",
+          "Switch the mode dropdown to Distort for more dramatic perspective changes, like turning a subject's angle toward the camera."
+        ]
+      },
+      {
+        "heading": "C. Cleaning Up the Warp",
+        "bullets": [
+          "Use Content-Aware Fill or the Clone Stamp to rebuild any background area left empty after a limb was warped into a new position.",
+          "Add a layer mask and touch up the mesh's stretched or pinched pixels at the edges of the warp for a seamless result."
+        ]
+      }
+    ]
+  },
+  {
     "id": "f1-figma-getting-started",
     "tab": "F-1",
     "category": "figma",
@@ -2062,6 +2346,175 @@
         "bullets": [
           "Rigging a character: parent individual body-part layers (arms, legs, head) to a single Null Object so animating the null moves the whole character rig together.",
           "Why use a Null: a Null Object is a special layer that isn't visible in exports, making it ideal as an invisible parent for multiple layers at once."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae7-expressions-wiggle-loopout",
+    "tab": "AE-7",
+    "category": "ae",
+    "title": "Expressions: Wiggle, LoopOut & Combining Formulas",
+    "intro": "Expressions replace manual keyframing with a small line of code attached to a property. Wiggle adds random jitter, loopOut repeats existing keyframes forever, and combining the two with variables lets a layer both loop and jitter at the same time.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=RpAdFa7IzLU",
+      "id": "RpAdFa7IzLU",
+      "start": 25
+    },
+    "sections": [
+      {
+        "heading": "A. Writing an Expression",
+        "bullets": [
+          "Alt/Option-click the stopwatch: Alt-click the stopwatch icon on a property like Position to reveal the red expression entry field beneath it.",
+          "Type the wiggle() expression: enter wiggle(6,10) into the expression field so the layer jitters randomly within the given range."
+        ]
+      },
+      {
+        "heading": "B. Combining loopOut with Wiggle",
+        "bullets": [
+          "Create named variables: define separate variables in the expression field, one holding a loopOut() expression and one holding the wiggle() expression.",
+          "Add the variables into one formula: combine both variables into a single formula (like loop + wiggle - value) so they animate the same property together instead of one overriding the other."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae8-puppet-pin-rigging",
+    "tab": "AE-8",
+    "category": "ae",
+    "title": "Puppet Pin Tool & Character Rigging",
+    "intro": "The Puppet Pin tool lets you deform a single character illustration directly, without cutting it into separate layers. Pinning joints and dragging them creates natural, bendy motion straight out of a flat piece of artwork.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=R52rgYBbDIY",
+      "id": "R52rgYBbDIY",
+      "start": 197
+    },
+    "sections": [
+      {
+        "heading": "A. Placing Pins",
+        "bullets": [
+          "Select the Puppet Pin tool and click on a character's joints, like the knee and ankle, to drop yellow deform pins directly onto the artwork.",
+          "Add extra pins near an already-placed pin so that area of the mesh holds its shape instead of warping every time a nearby pin moves."
+        ]
+      },
+      {
+        "heading": "B. Animating the Rig",
+        "bullets": [
+          "Keyframe a pin's position at different points in time so dragging it later creates a smooth, repeating walk or wave cycle.",
+          "Scrub the timeline to preview the rigged motion, watching the mesh bend naturally between each fixed pin."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae9-3d-layers-camera",
+    "tab": "AE-9",
+    "category": "ae",
+    "title": "3D Layers & the Camera Tool",
+    "intro": "Turning a layer into a 3D layer gives it a Z-axis, so it can move through depth and be viewed from any angle. Adding a camera lets you fly through that space instead of being locked to a flat, front-on view.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=HDvQyHwQxrs",
+      "id": "HDvQyHwQxrs",
+      "start": 45
+    },
+    "sections": [
+      {
+        "heading": "A. Switching to 3D",
+        "bullets": [
+          "Toggle the 3D layer switch (cube icon) in the Timeline panel to convert a flat 2D layer into a 3D layer with X, Y, and Z Position and Rotation properties.",
+          "Rotate a 3D layer on its Y-axis to see it tilt away into the distance instead of just flattening or mirroring like a 2D layer would."
+        ]
+      },
+      {
+        "heading": "B. Adding & Moving a Camera",
+        "bullets": [
+          "Create a camera: use Layer > New > Camera and pick a focal-length preset (like 35mm) in the Camera Settings dialog.",
+          "Orbit with the Unified Camera tool: drag in the Composition viewer with the Unified Camera tool active to orbit, pan, and dolly around the 3D scene.",
+          "Parent the camera to a Null: parent the camera layer to a Null Object and animate the null's position for a smooth, controllable camera move."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae10-motion-tracking",
+    "tab": "AE-10",
+    "category": "ae",
+    "title": "Motion Tracking with the Tracker Panel",
+    "intro": "The Tracker panel follows a moving point in footage automatically, then hands that motion data to another layer. This is how titles, graphics, and effects appear to stick naturally to a moving subject instead of floating over the shot.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=DnD0UdDr3ks",
+      "id": "DnD0UdDr3ks",
+      "start": 48
+    },
+    "sections": [
+      {
+        "heading": "A. Tracking Footage",
+        "bullets": [
+          "Open the Tracker panel (Window > Tracker) and click Track Motion to place a tracking region, like Track Point 1, over a distinct part of the footage, such as a hiker's backpack.",
+          "Click the Analyze forward button to let After Effects step through the footage frame by frame, following the tracked feature point automatically."
+        ]
+      },
+      {
+        "heading": "B. Applying the Track",
+        "bullets": [
+          "Click Edit Target, choose a text or graphic layer, then click Apply to attach the tracked motion data to that layer's position.",
+          "Watch the attached layer, like a title reading 'HIKING', stick to the moving subject as the footage plays instead of drifting off of it."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae11-render-queue-media-encoder",
+    "tab": "AE-11",
+    "category": "ae",
+    "title": "The Render Queue & Media Encoder Export Workflow",
+    "intro": "Once your animation is finished, it has to leave After Effects as an actual video file. Adobe Media Encoder handles most modern export needs with format presets, while the classic Render Queue still offers direct, no-frills rendering inside After Effects itself.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=S23TGRXowRM",
+      "id": "S23TGRXowRM",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Adobe Media Encoder Queue",
+        "bullets": [
+          "Add to Media Encoder queue: use Composition > Add to Adobe Media Encoder Queue to send your composition to the Queue panel without leaving After Effects.",
+          "Pick a format and preset: in Media Encoder's Queue panel, choose an output format (like H.264) and preset before starting the render."
+        ]
+      },
+      {
+        "heading": "B. The Render Queue",
+        "bullets": [
+          "Add to Render Queue: use Composition > Add to Render Queue to open the classic Render Queue panel directly inside After Effects.",
+          "Set the Output Module: click Output Module in the Render Queue to choose the codec, format, and output file location before clicking Render."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae12-essential-graphics-mogrt",
+    "tab": "AE-12",
+    "category": "ae",
+    "title": "Essential Graphics Panel & Motion Graphics Templates (Mogrts)",
+    "intro": "The Essential Graphics panel exposes chosen properties from an After Effects composition as simple, editable controls. Packaged as a Motion Graphics Template (.mogrt), those controls let a video editor customize the animation directly inside Premiere Pro, without ever opening After Effects.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=UgxQ6ncr2OU",
+      "id": "UgxQ6ncr2OU",
+      "start": 120
+    },
+    "sections": [
+      {
+        "heading": "A. Building a Template",
+        "bullets": [
+          "Open the Essential Graphics panel (Window > Essential Graphics) and drag a property, like a text layer's source text or a shape's fill color, into the Master Properties list.",
+          "Rename an exposed property in the Essential Graphics panel so it has a clear label, like 'Headline Text', instead of the raw property name."
+        ]
+      },
+      {
+        "heading": "B. Exporting & Using a Mogrt",
+        "bullets": [
+          "Click Export Motion Graphics Template at the bottom of the Essential Graphics panel and save the file as a .mogrt.",
+          "Drop the .mogrt into Premiere Pro's Essential Graphics panel and adjust its exposed controls directly in the Premiere timeline without reopening After Effects."
         ]
       }
     ]
