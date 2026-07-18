@@ -148,7 +148,7 @@ def _stage_windows_update(new_dir: Path, tmp_root: Path):
         ":wait\r\n"
         'tasklist /FI "PID eq %PID%" 2>NUL | find "%PID%" >NUL\r\n'
         "if not errorlevel 1 (\r\n"
-        "  timeout /t 1 /nobreak >nul\r\n"
+        "  ping -n 2 127.0.0.1 >nul\r\n"
         "  goto wait\r\n"
         ")\r\n"
         "set TRIES=0\r\n"
@@ -157,7 +157,7 @@ def _stage_windows_update(new_dir: Path, tmp_root: Path):
         "if errorlevel 8 (\r\n"
         "  set /a TRIES+=1\r\n"
         "  if %TRIES% LSS 5 (\r\n"
-        "    timeout /t 3 /nobreak >nul\r\n"
+        "    ping -n 4 127.0.0.1 >nul\r\n"
         "    goto copy\r\n"
         "  )\r\n"
         ")\r\n"
@@ -167,11 +167,11 @@ def _stage_windows_update(new_dir: Path, tmp_root: Path):
         "(goto) 2>nul & del \"%~f0\"\r\n",
         encoding="utf-8",
     )
-    subprocess.Popen(
-        ["cmd", "/c", str(bat_path)],
-        creationflags=subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.DETACHED_PROCESS,
-        close_fds=True,
-    )
+    # Launched via ShellExecute (os.startfile) rather than subprocess.Popen so the
+    # updater process is handed off to the shell broker and survives this process
+    # exiting even if pywebview's WebView2 runtime has us inside a job object that
+    # kills descendants on close (CREATE_BREAKAWAY_FROM_JOB is not reliable there).
+    os.startfile(str(bat_path))
 
 
 def _stage_macos_update(new_dir: Path, tmp_root: Path):
