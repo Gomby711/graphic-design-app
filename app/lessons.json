@@ -742,6 +742,119 @@
     ]
   },
   {
+    "id": "18-remove-objects",
+    "tab": "18",
+    "title": "How to Remove Objects from an Image in Photoshop",
+    "intro": "Photoshop gives you two AI-assisted ways to erase unwanted elements from a photo: the one-click Remove tool for quick paint-over fixes, and the Content-Aware Fill workspace for precise control over exactly which pixels get sampled to rebuild the area.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=j4SHf34i95c",
+      "id": "j4SHf34i95c",
+      "start": 128
+    },
+    "sections": [
+      {
+        "heading": "A. The Remove Tool",
+        "bullets": [
+          "Select the Remove tool and paint directly over the unwanted object with a brush stroke; Photoshop analyzes the surrounding area and fills the object in automatically as soon as you release the mouse.",
+          "Clean up multiple distractions: keep brushing over each unwanted object in the frame \u2014 stray people, gear, trash \u2014 one at a time until the whole scene reads as a single clean shot."
+        ]
+      },
+      {
+        "heading": "B. Content-Aware Fill Workspace",
+        "bullets": [
+          "Make a selection around the object, then open Edit > Content-Aware Fill to see a green overlay marking exactly which pixels Photoshop plans to sample from to rebuild the area.",
+          "Adjust the sampling area: use the Sampling Brush tool to add or subtract from the green overlay so only the right surrounding texture gets pulled into the fill.",
+          "Compare the live Preview panel against your original, set Output To (New Layer is safest), and click OK to commit the fill without touching your original pixels."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "19-dodge-burn",
+    "tab": "19",
+    "title": "Dodge and Burn: Non-Destructive Light and Shadow Sculpting",
+    "intro": "Dodge and burn is the classic technique for sculpting light across a photo \u2014 brightening highlights and deepening shadows on a separate layer so the effect stays fully editable and never damages the original pixels.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=VJbqGevHt5I",
+      "id": "VJbqGevHt5I",
+      "start": 44
+    },
+    "sections": [
+      {
+        "heading": "A. Setting Up the Dodge & Burn Layer",
+        "bullets": [
+          "Create the layer: add a new Curves adjustment layer above your image, then fill its mask with white and press Ctrl/Cmd+I to invert it to black so it starts fully hidden and ready to paint in.",
+          "Plan your map first: temporarily paint in a bright color over the zones you intend to lighten, so you can preview the whole highlight plan before switching to real tones."
+        ]
+      },
+      {
+        "heading": "B. Painting Light and Shadow",
+        "bullets": [
+          "Paint with a soft round brush at low opacity directly on the mask, revealing the Curves adjustment underneath to build up brightening gradually with multiple light passes.",
+          "Map your shadows the same way: switch to a different area of the face or body and mark where the burn (darkening) should fall relative to your light source.",
+          "Check your work: stack additional Curves layers for separate highlight and shadow passes, then toggle each one's visibility to confirm your light map reads correctly before flattening."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20-actions-batch-automation",
+    "tab": "20",
+    "title": "Photoshop Actions and Batch Automation",
+    "intro": "Actions record a sequence of edits once so you can replay them instantly, and Batch processing applies a recorded action across an entire folder of images automatically \u2014 turning a repetitive manual job into a one-click workflow.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=kxziDfysBbs",
+      "id": "kxziDfysBbs",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Recording an Action",
+        "bullets": [
+          "Open the Actions panel (Window > Actions) to see any steps you've already recorded, or start fresh from Photoshop's Welcome screen drag-and-drop zone.",
+          "Record a new action: click the record button in the Actions panel, then perform your edit \u2014 crop, resize, color grade \u2014 once while every step gets captured automatically.",
+          "Fine-tune settings as you go: values you type into dialogs like Image Size are captured exactly as entered and will replay identically on every file."
+        ]
+      },
+      {
+        "heading": "B. Running a Batch",
+        "bullets": [
+          "Find Batch under File > Automate to apply your recorded action across an entire folder of images instead of running it one file at a time.",
+          "Set up the batch: choose your action, pick a Source folder of images and a Destination folder, then click OK to run it on every file in the folder at once."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "21-text-layer-styles",
+    "tab": "21",
+    "title": "Text, Alignment, and Layer Style Effects",
+    "intro": "Layer Styles let you turn flat type into a dimensional, textured design element \u2014 stacking effects like Bevel & Emboss, Pattern Overlay, and Drop Shadow on a single text layer without ever rasterizing it.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=PxCPdtmvygU",
+      "id": "PxCPdtmvygU",
+      "start": 90
+    },
+    "sections": [
+      {
+        "heading": "A. Type & Alignment",
+        "bullets": [
+          "Draw your highlight box first: create a solid rectangle shape on its own layer \u2014 this becomes the bold knockout backdrop your text will sit inside.",
+          "Add your type: click with the Type tool to place text, adjusting size and position for each line independently.",
+          "Center the text inside the box: select both layers and use the Align tools so the type sits perfectly centered inside your highlight rectangle."
+        ]
+      },
+      {
+        "heading": "B. Layer Style Effects",
+        "bullets": [
+          "Open Layer Style: double-click the text layer to launch the Layer Style dialog, then enable Bevel & Emboss to give the flat type real dimension.",
+          "Apply a Pattern Overlay: swap the flat text color for a texture \u2014 like a moss or camo pattern \u2014 directly inside the same Layer Style dialog.",
+          "Stack your effects: with Bevel & Emboss, Stroke, Pattern Overlay, and Drop Shadow layered together in the fx list, the type reads as a textured, dimensional badge instead of flat color."
+        ]
+      }
+    ]
+  },
+  {
     "id": "f1-figma-getting-started",
     "tab": "F-1",
     "category": "figma",
@@ -1458,6 +1571,180 @@
           "Composition & hierarchy: describe what should be dominant vs. supporting in the frame using the language of the 12 Principles lesson (contrast, emphasis, hierarchy) so the model prioritizes the right focal point.",
           "Color: request a specific color mode or mood (\"cool complementary teal-and-orange palette\" or a 60-30-10 split) rather than a single vague color word.",
           "Finish in Photoshop: treat the AI output as a strong first draft \u2014 bring it into Photoshop to grade color precisely, composite it with brand assets, and add crisp, on-brand typography using the typography lesson's tracking/kerning/leading controls."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae1-interface-workspace",
+    "tab": "AE-1",
+    "category": "ae",
+    "title": "The After Effects Workspace: Compositions, Timeline & Effects",
+    "intro": "Before animating anything, get comfortable with where everything lives: the Project panel, the Composition viewer, the Timeline, and the Effects & Presets browser. Every motion design workflow in After Effects starts from this same workspace.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=rBF-KpdBd7s",
+      "id": "rBF-KpdBd7s",
+      "start": 141
+    },
+    "sections": [
+      {
+        "heading": "A. The Workspace",
+        "bullets": [
+          "The three core panels: the Project panel (bottom-left) holds your imported footage, the Composition viewer (top) is your live preview, and the Timeline (bottom) is where you build animation over time.",
+          "Composition Settings: choose your preset (HDTV 1080 29.97, etc.), frame rate, and duration in the Composition Settings dialog before you start animating \u2014 changing it later can shift your keyframes.",
+          "Navigating the Timeline: scrub the playhead and step through keyframes on a layer's properties (like Rotation) to see exactly how a value changes over the length of the composition."
+        ]
+      },
+      {
+        "heading": "B. Effects & Color",
+        "bullets": [
+          "Browsing the Effects menu: open Effect in the top menu (or the Effects & Presets panel) to see effects organized by category \u2014 Blur & Sharpen, Distort, Color Correction, and more.",
+          "Lumetri-style color wheels: use the shadows/midtones/highlights color wheels in a color correction effect to push specific tonal ranges toward a color without affecting the whole image."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae2-keyframes-easing",
+    "tab": "AE-2",
+    "category": "ae",
+    "title": "Keyframes, Easy Ease & the Graph Editor",
+    "intro": "Raw linear keyframes move at a constant, robotic speed. The Graph Editor is where you shape that motion \u2014 easing in and out, overshooting, and building the kind of organic timing that separates amateur animation from professional motion design.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=WyU30vgN104",
+      "id": "WyU30vgN104",
+      "start": 65
+    },
+    "sections": [
+      {
+        "heading": "A. Keyframes & Easing",
+        "bullets": [
+          "Easy Ease: select your keyframes and press F9 (or right-click > Keyframe Assistant > Easy Ease) to instantly round off the sharp linear start and stop into a smooth curve.",
+          "The right-click keyframe menu: right-click any keyframe to access Keyframe Interpolation, Keyframe Velocity, and Keyframe Assistant options for finer control than Easy Ease alone."
+        ]
+      },
+      {
+        "heading": "B. The Graph Editor",
+        "bullets": [
+          "The Speed Graph: switch the Graph Editor to Speed view to see velocity plotted directly \u2014 a hump in the middle means the object is moving fastest at that point in time.",
+          "The Value Graph: switch to Value view to see the actual property value over time \u2014 flat sections mean no change, and steep slopes mean fast change.",
+          "Custom bezier handles: drag the yellow handles on a keyframe in the graph to sculpt a fully custom ease \u2014 a steep S-curve creates a sharp, snappy start and end."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae3-shapes-trim-paths",
+    "tab": "AE-3",
+    "category": "ae",
+    "title": "Shape Layers & Trim Paths",
+    "intro": "Shape layers are vector-based, so they stay crisp at any resolution and animate beautifully. Trim Paths is the classic mograph technique for drawing on strokes, revealing shapes, and building the line-animation look you see constantly in title sequences.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=2ligfZ4WKE0",
+      "id": "2ligfZ4WKE0",
+      "start": 61
+    },
+    "sections": [
+      {
+        "heading": "A. Shape Basics",
+        "bullets": [
+          "Draw the shape: use the Pen tool or a shape tool to create a stroke-only shape layer with no fill, ready to animate with Trim Paths.",
+          "Stroke settings: adjust the stroke's width, color, and cap style in the shape layer's stroke options before adding any animation on top."
+        ]
+      },
+      {
+        "heading": "B. Trim Paths in Action",
+        "bullets": [
+          "Add Trim Paths: with the shape layer selected, click the Add button next to Contents and choose Trim Paths to get Start, End, and Offset properties.",
+          "Animate Start and End: keyframe the End property from 0% to 100% to draw the stroke on over time, or animate Start and End together to create a moving segment.",
+          "Offset for a traveling dash: keyframe the Offset property to slide a partial trim segment continuously around a closed shape like a circle."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae4-text-animation",
+    "tab": "AE-4",
+    "category": "ae",
+    "title": "Text Animation with Animators & Range Selectors",
+    "intro": "After Effects' built-in Text Animators let you animate individual characters, words, or lines without keyframing every letter by hand. A Range Selector controls exactly which part of the text each animator affects, and how it reveals over time.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=qNvlDZeVStQ",
+      "id": "qNvlDZeVStQ",
+      "start": 196
+    },
+    "sections": [
+      {
+        "heading": "A. Setting Up Type",
+        "bullets": [
+          "Text on a path: type along a circular or custom path (Path Options on the text layer) to wrap letters around a shape instead of a straight line.",
+          "Frame-accurate keyframing: Ctrl/Cmd-click the timecode to switch it to Frames, so you can nudge the playhead one exact frame at a time while placing keyframes."
+        ]
+      },
+      {
+        "heading": "B. Animators & Range Selectors",
+        "bullets": [
+          "Add a Text Animator: open Animate on the text layer and choose a property (Opacity, Position, Tracking) to add an Animator with a Range Selector already attached.",
+          "Offset reveals letters progressively: keyframe the Range Selector's Offset property to sweep the animator's effect across the text one character at a time.",
+          "Build a multi-line composition: stack two or three separate text layers and animate each one's range selector slightly offset in time for a staggered, layered reveal."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae5-masks-track-mattes",
+    "tab": "AE-5",
+    "category": "ae",
+    "title": "Masks & Track Mattes",
+    "intro": "Masks and Track Mattes both control what's visible on a layer, but they work differently: a mask is a path drawn directly on a layer, while a Track Matte uses one layer's alpha or luma values to control a completely separate layer's transparency.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=sgVPYxPJbFU",
+      "id": "sgVPYxPJbFU",
+      "start": 136
+    },
+    "sections": [
+      {
+        "heading": "A. Masks",
+        "bullets": [
+          "Any shape can be a mask source: even a jagged, irregular hand-drawn or noise-based shape works as a mask path \u2014 it doesn't have to be a clean geometric shape.",
+          "Mask Feather: increase the Mask Feather value on a mask path to soften its edge into a smooth gradient instead of a hard cutoff line."
+        ]
+      },
+      {
+        "heading": "B. Track Mattes",
+        "bullets": [
+          "Alpha Matte: stack a shape (like a circle) above your footage, set the footage layer's Track Matte to Alpha, and only the area inside the shape stays visible.",
+          "Layer effects on top of a matte: add color correction or other effects directly on the matted layer \u2014 the effect only shows through wherever the matte already reveals content.",
+          "Luma and Luma Inverted: switch a Track Matte between Luma (bright matte areas reveal) and Luma Inverted (dark matte areas reveal) to flip which part of the source layer controls visibility."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ae6-parenting-null-objects",
+    "tab": "AE-6",
+    "category": "ae",
+    "title": "Parenting & Null Objects",
+    "intro": "Parenting links one layer's transform properties to another, so moving, rotating, or scaling the parent automatically drives every child layer. A Null Object is an invisible layer that exists purely to act as a parent \u2014 the standard way to rig multiple layers together.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=TP1fEnJkzmQ",
+      "id": "TP1fEnJkzmQ",
+      "start": 127
+    },
+    "sections": [
+      {
+        "heading": "A. Parenting Layers",
+        "bullets": [
+          "The pick-whip: drag a layer's pick-whip icon in the Parent column onto another layer to link them \u2014 the child now inherits the parent's Position, Rotation, and Scale.",
+          "Unparenting: set a layer's parent back to None at any point to disconnect it and let it move independently again.",
+          "Jump child to Parent's position: hold Shift while parenting to snap the child instantly to the parent's position instead of keeping its original offset."
+        ]
+      },
+      {
+        "heading": "B. Null Objects",
+        "bullets": [
+          "Rigging a character: parent individual body-part layers (arms, legs, head) to a single Null Object so animating the null moves the whole character rig together.",
+          "Why use a Null: a Null Object is a special layer that isn't visible in exports, making it ideal as an invisible parent for multiple layers at once."
         ]
       }
     ]
