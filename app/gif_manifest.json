@@ -493,5 +493,36 @@
     "2": "gifs/ae6-parenting-null-objects/2.gif",
     "3": "gifs/ae6-parenting-null-objects/3.gif",
     "4": "gifs/ae6-parenting-null-objects/4.gif"
+  },
+  "ap1-composite-images": {
+    "0": "gifs/ap1-composite-images/0.gif",
+    "1": "gifs/ap1-composite-images/1.gif"
+  },
+  "ap2-luminosity-masks": {
+    "2": "gifs/ap2-luminosity-masks/2.gif"
+  },
+  "ap3-frequency-separation": {
+    "0": "gifs/ap3-frequency-separation/0.gif"
+  },
+  "ap4-sky-replacement": {
+    "0": "gifs/ap4-sky-replacement/0.gif"
+  },
+  "ap5-double-exposure": {
+    "0": "gifs/ap5-double-exposure/0.gif"
+  },
+  "ap6-shadow-light-perspective": {
+    "1": "gifs/ap6-shadow-light-perspective/1.gif"
+  },
+  "ap7-water-reflections": {
+    "0": "gifs/ap7-water-reflections/0.gif"
+  },
+  "ap8-green-screen-spill": {
+    "0": "gifs/ap8-green-screen-spill/0.gif"
+  },
+  "ap9-camera-raw-color-grading": {
+    "1": "gifs/ap9-camera-raw-color-grading/1.gif"
+  },
+  "ap10-smart-object-workflow": {
+    "0": "gifs/ap10-smart-object-workflow/0.gif"
   }
 }

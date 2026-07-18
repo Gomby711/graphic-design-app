@@ -4,11 +4,12 @@ let activeId = null;
 const GROUPS = [
   { id: "fundamentals", label: "Fundamentals", match: l => isRoman(l.tab) },
   { id: "lessons", label: "Photoshop Lessons", match: l => !isRoman(l.tab) && !l.category },
+  { id: "advanced-photoshop", label: "Advanced Photoshop Lessons", match: l => l.category === "advanced-photoshop" },
+  { id: "ae", label: "Motion Design in Adobe After Effects", match: l => l.category === "ae" },
   { id: "figma", label: "Figma Lessons", match: l => l.category === "figma" },
   { id: "photo", label: "Aspect Ratio / Photography / Lenses", match: l => l.category === "photo" },
   { id: "colorspace", label: "Colorspaces", match: l => l.category === "colorspace" },
   { id: "ai", label: "AI Lessons", match: l => l.category === "ai" },
-  { id: "ae", label: "Motion Design in Adobe After Effects", match: l => l.category === "ae" },
 ];
 
 let collapsedGroups = new Set();
@@ -280,6 +281,45 @@ async function runUpdate(btn, frozen) {
   }
 }
 
+async function showVersionAndChangelog() {
+  const versionBtn = document.getElementById("app-version");
+  const panel = document.getElementById("whats-new-panel");
+  try {
+    const verRes = await fetch("/api/version");
+    if (verRes.ok) {
+      const { version } = await verRes.json();
+      if (version && version !== "dev") {
+        versionBtn.textContent = `v${version}`;
+        versionBtn.hidden = false;
+      }
+    }
+  } catch (e) {
+    // offline or dev mode — leave the version pill hidden
+  }
+
+  try {
+    const clRes = await fetch("/api/changelog");
+    if (clRes.ok) {
+      const entry = await clRes.json();
+      if (entry && entry.notes && entry.notes.length) {
+        const stripMd = s => s.replace(/\*\*(.*?)\*\*/g, "$1");
+        panel.innerHTML =
+          `<h4>What's changed — ${escapeHtml(entry.heading)}</h4>` +
+          `<ul>${entry.notes.map(n => `<li>${escapeHtml(stripMd(n))}</li>`).join("")}</ul>`;
+        versionBtn.hidden = false;
+        versionBtn.onclick = () => { panel.hidden = !panel.hidden; };
+        document.addEventListener("click", (e) => {
+          if (!panel.hidden && e.target !== versionBtn && !panel.contains(e.target)) {
+            panel.hidden = true;
+          }
+        });
+      }
+    }
+  } catch (e) {
+    // offline or dev mode — no changelog panel
+  }
+}
+
 async function init() {
   const res = await fetch("/api/lessons");
   LESSONS = await res.json();
@@ -287,6 +327,7 @@ async function init() {
   document.getElementById("tab-color-wheel-tool").addEventListener("click", () => selectTool("color-wheel"));
   if (LESSONS.length) selectLesson(LESSONS[0].id);
 
+  showVersionAndChangelog();
   checkForUpdate();
   setInterval(checkForUpdate, UPDATE_CHECK_INTERVAL_MS);
 }

@@ -31,6 +31,30 @@ GITHUB_REPO = "Gomby711/graphic-design-app"
 _webview_window = None
 
 
+def load_latest_changelog_entry():
+    path = APP_DIR / "CHANGELOG.md"
+    if not path.exists():
+        path = APP_DIR.parent / "CHANGELOG.md"
+    if not path.exists():
+        return None
+    lines = path.read_text(encoding="utf-8").splitlines()
+    heading = None
+    notes = []
+    in_first_entry = False
+    for line in lines:
+        if line.startswith("## "):
+            if in_first_entry:
+                break
+            heading = line[3:].strip()
+            in_first_entry = True
+            continue
+        if in_first_entry and line.startswith("- "):
+            notes.append(line[2:].strip())
+    if heading is None:
+        return None
+    return {"heading": heading, "notes": notes}
+
+
 def load_lessons():
     lessons = json.loads((APP_DIR / "lessons.json").read_text(encoding="utf-8"))
     manifest_path = APP_DIR / "gif_manifest.json"
@@ -66,6 +90,10 @@ class Handler(BaseHTTPRequestHandler):
             return
         if url.path == "/api/version":
             body = json.dumps({"version": APP_VERSION, "frozen": FROZEN}).encode("utf-8")
+            self._send(200, body, "application/json; charset=utf-8")
+            return
+        if url.path == "/api/changelog":
+            body = json.dumps(load_latest_changelog_entry()).encode("utf-8")
             self._send(200, body, "application/json; charset=utf-8")
             return
         name = url.path.lstrip("/") or "index.html"

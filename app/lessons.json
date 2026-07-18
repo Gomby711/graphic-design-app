@@ -855,6 +855,323 @@
     ]
   },
   {
+    "id": "ap1-composite-images",
+    "tab": "AP-1",
+    "category": "advanced-photoshop",
+    "title": "How to Composite Images in Photoshop",
+    "intro": "Compositing is the professional skill of combining multiple separate images — subjects, backgrounds, VFX elements, light effects — into one believable scene. It leans on everything from earlier lessons (selections, masks, blend modes) plus a disciplined non-destructive workflow so every element stays editable until the final export.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=aHPU_oeUpp0",
+      "id": "aHPU_oeUpp0",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Building the Composite Canvas",
+        "bullets": [
+          "Set up your canvas and basic document controls before bringing any source images in, so every layer you add lines up on the same resolution and color space.",
+          "Isolate each subject cleanly with Photoshop's selection tools — Select Subject, Quick Selection, or the Pen Tool — before dropping it into the scene.",
+          "Layer in VFX alpha elements like smoke, dust, or light leaks from a stock library to add atmosphere and depth to the composite."
+        ]
+      },
+      {
+        "heading": "B. Non-Destructive Blending",
+        "bullets": [
+          "Combine every element with Layer Masks and Clipping Masks instead of erasing pixels, so every part of the composite stays reversible.",
+          "Choose Blend Modes deliberately — Multiply, Screen, Linear Dodge — to merge each layer's lighting and tone into the rest of the scene.",
+          "Use Generative Fill and Neural Filters to extend or invent believable background detail around your composited subject."
+        ]
+      },
+      {
+        "heading": "C. Final Polish",
+        "bullets": [
+          "Add Glow and Emissive light effects on isolated light sources to sell the realism of the scene.",
+          "Finish the composite with a Camera Raw Filter pass for a single, unified color grade across every layer."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap2-luminosity-masks",
+    "tab": "AP-2",
+    "category": "advanced-photoshop",
+    "title": "Advanced Layer Masking with Luminosity Masks",
+    "intro": "Luminosity masks select pixels by brightness value instead of by shape, letting you target only the highlights, only the shadows, or any tonal range in between with pinpoint precision — the technique professional retouchers and landscape photographers rely on for the cleanest exposure blends and dodge-and-burn work.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=myIzxxlx7Do",
+      "id": "myIzxxlx7Do",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Why Luminosity Masks",
+        "bullets": [
+          "Understand why luminosity masks outperform simple brush masking when blending multiple exposures together.",
+          "Avoid the common exposure-blending mistakes that make composites look flat, muddy, or obviously edited."
+        ]
+      },
+      {
+        "heading": "B. Building the Mask",
+        "bullets": [
+          "Ctrl/Cmd-click the RGB channel thumbnail in the Channels panel to load a luminosity selection based on the image's highlights automatically.",
+          "Save that selection as a new Layer Mask so only the brightest tones are affected by the layer above.",
+          "Refine the mask further with Curves to tighten exactly which luminosity range gets selected."
+        ]
+      },
+      {
+        "heading": "C. Applying It",
+        "bullets": [
+          "Apply the finished luminosity mask to blend exposures, dodge highlights, or burn shadows with pinpoint precision.",
+          "Stack multiple luminosity masks — highlights, midtones, shadows — for full tonal control across a composite."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap3-frequency-separation",
+    "tab": "AP-3",
+    "category": "advanced-photoshop",
+    "title": "Frequency Separation for Advanced Retouching",
+    "intro": "Frequency separation splits a photo into two layers — one holding only color and tone, the other holding only texture — so a retoucher can smooth skin tone completely without ever softening or losing pore-level texture. It's the professional standard for high-end beauty and portrait retouching.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=bMkoCQA0o4o",
+      "id": "bMkoCQA0o4o",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. The Concept",
+        "bullets": [
+          "Understand how frequency separation splits an image into a low-frequency color/tone layer and a high-frequency texture layer.",
+          "Screen the image for blemishes and skin imperfections before you start retouching so you don't miss any spots."
+        ]
+      },
+      {
+        "heading": "B. Separating and Retouching",
+        "bullets": [
+          "Separate the frequencies to build the two layers — the smooth low-frequency base and the detailed high-frequency texture.",
+          "Retouch only the low-frequency layer with the Healing Brush to smooth tone without destroying texture.",
+          "Clone Stamp or heal on the high-frequency layer to remove texture-only flaws like fine lines or stray pores."
+        ]
+      },
+      {
+        "heading": "C. Streamlined Workflow",
+        "bullets": [
+          "Use Photoshop's modern one-click frequency separation workflow to skip the manual channel math entirely.",
+          "Recap your retouch by toggling both layers' visibility on and off to confirm skin still reads as natural, not plastic."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap4-sky-replacement",
+    "tab": "AP-4",
+    "category": "advanced-photoshop",
+    "title": "Sky Replacement & Environmental Compositing",
+    "intro": "Photoshop's Sky Replacement workspace automates the hardest parts of swapping a sky — masking the horizon and relighting the foreground — but a convincing result still depends on matching color temperature, edge detail, and light direction between the new sky and the original scene.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=hh-FGNL0zEw",
+      "id": "hh-FGNL0zEw",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Using the Sky Replacement Tool",
+        "bullets": [
+          "Open Edit > Sky Replacement to launch Photoshop's built-in sky-swapping workspace.",
+          "Pick a sky preset, or load your own custom sky image, into the Sky Replacement panel.",
+          "Adjust Shift Edge, Fade, and Brightness sliders so the new sky blends naturally into the original horizon line."
+        ]
+      },
+      {
+        "heading": "B. Environmental Compositing",
+        "bullets": [
+          "Use the Lighting Mode slider to relight the foreground subject so it matches the new sky's color temperature.",
+          "Enable Output To New Layers so the sky, foreground color match, and lighting each land on their own editable layer.",
+          "Fine-tune the automatic foreground mask by hand wherever fine detail like trees or hair needs cleanup."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap5-double-exposure",
+    "tab": "AP-5",
+    "category": "advanced-photoshop",
+    "title": "Double Exposure Effects",
+    "intro": "A double exposure blends a portrait silhouette with a second image — usually a landscape or texture — so the two read as one layered image. It's built entirely from blend modes, masking, and tonal balancing, making it a great showcase of core compositing skill.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=iOYz669WNpU",
+      "id": "iOYz669WNpU",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Building the Blend",
+        "bullets": [
+          "Open your portrait and your texture or landscape image as separate layers in the same document.",
+          "Set the top layer's Blend Mode to Screen or Lighten so the two images merge based on tone.",
+          "Add a layer mask and use a soft brush to control exactly where the second image shows through the silhouette."
+        ]
+      },
+      {
+        "heading": "B. Refining the Look",
+        "bullets": [
+          "Use Levels or Curves on each layer to balance contrast so the blended result doesn't look muddy.",
+          "Desaturate or color-grade the final composite with a Hue/Saturation or Gradient Map adjustment layer for a cohesive mood."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap6-shadow-light-perspective",
+    "tab": "AP-6",
+    "category": "advanced-photoshop",
+    "title": "Matching Light, Shadow & Perspective in Composites",
+    "intro": "The difference between an obvious cut-and-paste and a photorealistic composite almost always comes down to shadows, light direction, and perspective. This lesson builds a full shadow and light-matching workflow so a composited subject looks like it was actually photographed in the scene.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=Da4axkDKzxQ",
+      "id": "Da4axkDKzxQ",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Building the Shadow",
+        "bullets": [
+          "Decide whether to extract an existing shadow from your source photo or paint a new one from scratch to match your composite's light source.",
+          "Build the cast shadow shape on its own layer beneath the subject, following the direction of the scene's light.",
+          "Color the shadow to match the surface it falls on instead of leaving it flat black.",
+          "Apply the right amount of blur so the shadow's edge softness matches the light source's distance and softness."
+        ]
+      },
+      {
+        "heading": "B. Matching Light and Perspective",
+        "bullets": [
+          "Add a tight contact shadow where the subject actually touches the ground for a convincing anchor point.",
+          "Match the ambient light and color temperature between the subject and the background before final blending.",
+          "Match overall brightness levels between the subject and background so neither element looks pasted in."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap7-water-reflections",
+    "tab": "AP-7",
+    "category": "advanced-photoshop",
+    "title": "Creating Photorealistic Reflections and Water",
+    "intro": "A believable water reflection is a flipped, distorted, and color-tinted copy of the subject blended beneath it — the Ripple filter and gradient-based opacity fades are what sell the illusion of a real reflective surface rather than a mirrored duplicate.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=pZO0dFfCoiQ",
+      "id": "pZO0dFfCoiQ",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Setting Up the Reflection",
+        "bullets": [
+          "Duplicate the subject layer, flip it vertically, then drag the top layer below the other layer so the reflection sits directly beneath the original.",
+          "Fill a new layer with a muted blue color at low opacity beneath the reflection to simulate the tint of water."
+        ]
+      },
+      {
+        "heading": "B. Distorting for Realism",
+        "bullets": [
+          "Apply a ripple filter to create ripples and reflection distortions on the water's surface.",
+          "Set the ripple angle to 90 degrees, then dial in the horizontal and vertical scale sliders until the distortion reads as natural ripples.",
+          "Select bands of the reflection with the Rectangular Marquee tool and reduce its opacity to fade the reflection out toward the horizon."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap8-green-screen-spill",
+    "tab": "AP-8",
+    "category": "advanced-photoshop",
+    "title": "Green Screen Compositing & Color Spill Removal",
+    "intro": "Keying a subject off a green screen is only half the job — reflected green light (spill) on skin, hair, and edges has to be neutralized afterward with targeted color adjustments, or the composite will never fully sell against its new background.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=x8rK1aWaMj8",
+      "id": "x8rK1aWaMj8",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Keying the Subject",
+        "bullets": [
+          "Use the Select Subject or Color Range tool to key out the green background before touching any colors.",
+          "Refine the mask edge with Select and Mask so no green fringe remains around hair or transparent edges."
+        ]
+      },
+      {
+        "heading": "B. Removing Color Spill",
+        "bullets": [
+          "Add a Color Balance or Hue/Saturation adjustment layer clipped to the subject to cancel out reflected green spill on skin and edges.",
+          "Shift the spill areas toward magenta — green's opposite — in the shadows and midtones until the cast disappears.",
+          "Composite the cleaned subject onto its new background and match overall color temperature so the spill fix reads as natural."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap9-camera-raw-color-grading",
+    "tab": "AP-9",
+    "category": "advanced-photoshop",
+    "title": "Advanced Color Grading with the Camera Raw Filter",
+    "intro": "Applied as a Smart Filter, the Camera Raw Filter turns Photoshop into a full color-grading suite — Basic tone controls, a per-hue Color Mixer, split-toning Color Grading wheels, and Optics corrections — all non-destructive and re-editable at any time.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=-jEUUZvVWhQ",
+      "id": "-jEUUZvVWhQ",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. Foundational Adjustments",
+        "bullets": [
+          "Convert your layer to a Smart Object first, then open Filter > Camera Raw Filter so every grading decision stays editable.",
+          "Set exposure, contrast, and white balance in the Basic panel before touching any creative color tools.",
+          "Use the Color Mixer to shift the hue, saturation, and luminance of individual color ranges — reds, blues, greens — independently."
+        ]
+      },
+      {
+        "heading": "B. Creative Grading",
+        "bullets": [
+          "Split-tone the image with the Color Grading panel, pushing shadows and highlights toward complementary hues.",
+          "Use the Color Wheels for finer three-way control over shadows, midtones, and highlights simultaneously.",
+          "Correct lens distortion and chromatic aberration in the Optics panel before finalizing the grade.",
+          "Save your grade as a Camera Raw preset so it can be reapplied instantly to future images."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ap10-smart-object-workflow",
+    "tab": "AP-10",
+    "category": "advanced-photoshop",
+    "title": "Smart Object Workflows for Non-Destructive Composites",
+    "intro": "Every serious composite should be built entirely out of Smart Objects — they preserve original pixel data through unlimited transforms, keep filters editable as Smart Filters, and let you update a single embedded source and see the change propagate everywhere it's used.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=44KFPa6WzWI",
+      "id": "44KFPa6WzWI",
+      "start": 0
+    },
+    "sections": [
+      {
+        "heading": "A. What Smart Objects Do",
+        "bullets": [
+          "Understand what Smart Objects are and how they preserve your original pixel data no matter how many transforms you apply.",
+          "Compare a Smart Object layer against a regular raster layer to see why edits on a Smart Object never destroy source quality."
+        ]
+      },
+      {
+        "heading": "B. Building the Workflow",
+        "bullets": [
+          "Convert every placed image into a Smart Object as soon as it's opened, so scaling and cropping stay fully reversible.",
+          "Double-click a Smart Object's thumbnail to edit its contents in a separate document, then save to update it everywhere it's used.",
+          "Apply filters directly to a Smart Object to turn them into editable Smart Filters you can adjust or delete at any time."
+        ]
+      }
+    ]
+  },
+  {
     "id": "f1-figma-getting-started",
     "tab": "F-1",
     "category": "figma",
