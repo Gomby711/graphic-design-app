@@ -315,7 +315,6 @@ async function runUpdate(btn, frozen) {
 
 async function showVersionAndChangelog() {
   const versionBtn = document.getElementById("app-version");
-  const panel = document.getElementById("whats-new-panel");
   try {
     const verRes = await fetch("/api/version");
     if (verRes.ok) {
@@ -327,27 +326,6 @@ async function showVersionAndChangelog() {
     }
   } catch (e) {
     // offline or dev mode — leave the version pill hidden
-  }
-
-  try {
-    const clRes = await fetch("/api/changelog");
-    if (clRes.ok) {
-      const entry = await clRes.json();
-      if (entry && entry.notes && entry.notes.length && versionBtn.textContent) {
-        const stripMd = s => s.replace(/\*\*(.*?)\*\*/g, "$1");
-        panel.innerHTML =
-          `<h4>What's changed — ${escapeHtml(entry.heading)}</h4>` +
-          `<ul>${entry.notes.map(n => `<li>${escapeHtml(stripMd(n))}</li>`).join("")}</ul>`;
-        versionBtn.onclick = () => { panel.hidden = !panel.hidden; };
-        document.addEventListener("click", (e) => {
-          if (!panel.hidden && e.target !== versionBtn && !panel.contains(e.target)) {
-            panel.hidden = true;
-          }
-        });
-      }
-    }
-  } catch (e) {
-    // offline or dev mode — no changelog panel
   }
 }
 
