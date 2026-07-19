@@ -496,33 +496,164 @@
   },
   "ap1-composite-images": {
     "0": "gifs/ap1-composite-images/0.gif",
-    "1": "gifs/ap1-composite-images/1.gif"
+    "1": "gifs/ap1-composite-images/1.gif",
+    "2": "gifs/ap1-composite-images/2.gif",
+    "3": "gifs/ap1-composite-images/3.gif",
+    "4": "gifs/ap1-composite-images/4.gif",
+    "5": "gifs/ap1-composite-images/5.gif",
+    "6": "gifs/ap1-composite-images/6.gif",
+    "7": "gifs/ap1-composite-images/7.gif"
   },
   "ap2-luminosity-masks": {
-    "2": "gifs/ap2-luminosity-masks/2.gif"
+    "0": "gifs/ap2-luminosity-masks/0.gif",
+    "1": "gifs/ap2-luminosity-masks/1.gif",
+    "2": "gifs/ap2-luminosity-masks/2.gif",
+    "3": "gifs/ap2-luminosity-masks/3.gif",
+    "4": "gifs/ap2-luminosity-masks/4.gif",
+    "5": "gifs/ap2-luminosity-masks/5.gif",
+    "6": "gifs/ap2-luminosity-masks/6.gif"
   },
   "ap3-frequency-separation": {
-    "0": "gifs/ap3-frequency-separation/0.gif"
+    "0": "gifs/ap3-frequency-separation/0.gif",
+    "1": "gifs/ap3-frequency-separation/1.gif",
+    "2": "gifs/ap3-frequency-separation/2.gif",
+    "3": "gifs/ap3-frequency-separation/3.gif",
+    "4": "gifs/ap3-frequency-separation/4.gif",
+    "5": "gifs/ap3-frequency-separation/5.gif",
+    "6": "gifs/ap3-frequency-separation/6.gif"
   },
   "ap4-sky-replacement": {
-    "0": "gifs/ap4-sky-replacement/0.gif"
+    "0": "gifs/ap4-sky-replacement/0.gif",
+    "1": "gifs/ap4-sky-replacement/1.gif",
+    "2": "gifs/ap4-sky-replacement/2.gif",
+    "3": "gifs/ap4-sky-replacement/3.gif",
+    "4": "gifs/ap4-sky-replacement/4.gif",
+    "5": "gifs/ap4-sky-replacement/5.gif"
   },
   "ap5-double-exposure": {
-    "0": "gifs/ap5-double-exposure/0.gif"
+    "0": "gifs/ap5-double-exposure/0.gif",
+    "1": "gifs/ap5-double-exposure/1.gif",
+    "2": "gifs/ap5-double-exposure/2.gif",
+    "3": "gifs/ap5-double-exposure/3.gif",
+    "4": "gifs/ap5-double-exposure/4.gif"
   },
   "ap6-shadow-light-perspective": {
-    "1": "gifs/ap6-shadow-light-perspective/1.gif"
+    "0": "gifs/ap6-shadow-light-perspective/0.gif",
+    "1": "gifs/ap6-shadow-light-perspective/1.gif",
+    "2": "gifs/ap6-shadow-light-perspective/2.gif",
+    "3": "gifs/ap6-shadow-light-perspective/3.gif",
+    "4": "gifs/ap6-shadow-light-perspective/4.gif",
+    "5": "gifs/ap6-shadow-light-perspective/5.gif",
+    "6": "gifs/ap6-shadow-light-perspective/6.gif"
   },
   "ap7-water-reflections": {
-    "0": "gifs/ap7-water-reflections/0.gif"
+    "0": "gifs/ap7-water-reflections/0.gif",
+    "1": "gifs/ap7-water-reflections/1.gif",
+    "2": "gifs/ap7-water-reflections/2.gif",
+    "3": "gifs/ap7-water-reflections/3.gif",
+    "4": "gifs/ap7-water-reflections/4.gif"
   },
   "ap8-green-screen-spill": {
-    "0": "gifs/ap8-green-screen-spill/0.gif"
+    "0": "gifs/ap8-green-screen-spill/0.gif",
+    "1": "gifs/ap8-green-screen-spill/1.gif",
+    "2": "gifs/ap8-green-screen-spill/2.gif",
+    "3": "gifs/ap8-green-screen-spill/3.gif",
+    "4": "gifs/ap8-green-screen-spill/4.gif"
   },
   "ap9-camera-raw-color-grading": {
-    "1": "gifs/ap9-camera-raw-color-grading/1.gif"
+    "0": "gifs/ap9-camera-raw-color-grading/0.gif",
+    "1": "gifs/ap9-camera-raw-color-grading/1.gif",
+    "2": "gifs/ap9-camera-raw-color-grading/2.gif",
+    "3": "gifs/ap9-camera-raw-color-grading/3.gif",
+    "4": "gifs/ap9-camera-raw-color-grading/4.gif",
+    "5": "gifs/ap9-camera-raw-color-grading/5.gif",
+    "6": "gifs/ap9-camera-raw-color-grading/6.gif"
   },
   "ap10-smart-object-workflow": {
-    "0": "gifs/ap10-smart-object-workflow/0.gif"
+    "0": "gifs/ap10-smart-object-workflow/0.gif",
+    "1": "gifs/ap10-smart-object-workflow/1.gif",
+    "2": "gifs/ap10-smart-object-workflow/2.gif",
+    "3": "gifs/ap10-smart-object-workflow/3.gif",
+    "4": "gifs/ap10-smart-object-workflow/4.gif"
+  },
+  "ae7-expressions-wiggle-loopout": {
+    "0": "gifs/ae7-expressions-wiggle-loopout/0.gif",
+    "1": "gifs/ae7-expressions-wiggle-loopout/1.gif",
+    "2": "gifs/ae7-expressions-wiggle-loopout/2.gif",
+    "3": "gifs/ae7-expressions-wiggle-loopout/3.gif"
+  },
+  "ae8-puppet-pin-rigging": {
+    "0": "gifs/ae8-puppet-pin-rigging/0.gif",
+    "1": "gifs/ae8-puppet-pin-rigging/1.gif",
+    "2": "gifs/ae8-puppet-pin-rigging/2.gif",
+    "3": "gifs/ae8-puppet-pin-rigging/3.gif"
+  },
+  "ae9-3d-layers-camera": {
+    "0": "gifs/ae9-3d-layers-camera/0.gif",
+    "1": "gifs/ae9-3d-layers-camera/1.gif",
+    "2": "gifs/ae9-3d-layers-camera/2.gif",
+    "3": "gifs/ae9-3d-layers-camera/3.gif",
+    "4": "gifs/ae9-3d-layers-camera/4.gif"
+  },
+  "ae10-motion-tracking": {
+    "0": "gifs/ae10-motion-tracking/0.gif",
+    "1": "gifs/ae10-motion-tracking/1.gif",
+    "2": "gifs/ae10-motion-tracking/2.gif",
+    "3": "gifs/ae10-motion-tracking/3.gif"
+  },
+  "ae11-render-queue-media-encoder": {
+    "0": "gifs/ae11-render-queue-media-encoder/0.gif",
+    "1": "gifs/ae11-render-queue-media-encoder/1.gif",
+    "2": "gifs/ae11-render-queue-media-encoder/2.gif",
+    "3": "gifs/ae11-render-queue-media-encoder/3.gif"
+  },
+  "ae12-essential-graphics-mogrt": {
+    "0": "gifs/ae12-essential-graphics-mogrt/0.gif",
+    "1": "gifs/ae12-essential-graphics-mogrt/1.gif",
+    "2": "gifs/ae12-essential-graphics-mogrt/2.gif",
+    "3": "gifs/ae12-essential-graphics-mogrt/3.gif"
+  },
+  "ap11-cgi-3d-compositing": {
+    "0": "gifs/ap11-cgi-3d-compositing/0.gif",
+    "1": "gifs/ap11-cgi-3d-compositing/1.gif",
+    "2": "gifs/ap11-cgi-3d-compositing/2.gif",
+    "3": "gifs/ap11-cgi-3d-compositing/3.gif",
+    "4": "gifs/ap11-cgi-3d-compositing/4.gif",
+    "5": "gifs/ap11-cgi-3d-compositing/5.gif",
+    "6": "gifs/ap11-cgi-3d-compositing/6.gif",
+    "7": "gifs/ap11-cgi-3d-compositing/7.gif"
+  },
+  "ap12-composite-realism-grain-ca-vignette": {
+    "0": "gifs/ap12-composite-realism-grain-ca-vignette/0.gif",
+    "1": "gifs/ap12-composite-realism-grain-ca-vignette/1.gif",
+    "2": "gifs/ap12-composite-realism-grain-ca-vignette/2.gif",
+    "3": "gifs/ap12-composite-realism-grain-ca-vignette/3.gif",
+    "4": "gifs/ap12-composite-realism-grain-ca-vignette/4.gif",
+    "5": "gifs/ap12-composite-realism-grain-ca-vignette/5.gif"
+  },
+  "ap13-advanced-channel-masking": {
+    "0": "gifs/ap13-advanced-channel-masking/0.gif",
+    "1": "gifs/ap13-advanced-channel-masking/1.gif",
+    "2": "gifs/ap13-advanced-channel-masking/2.gif",
+    "3": "gifs/ap13-advanced-channel-masking/3.gif",
+    "4": "gifs/ap13-advanced-channel-masking/4.gif",
+    "5": "gifs/ap13-advanced-channel-masking/5.gif"
+  },
+  "ap14-advanced-liquify-warp": {
+    "0": "gifs/ap14-advanced-liquify-warp/0.gif",
+    "1": "gifs/ap14-advanced-liquify-warp/1.gif",
+    "2": "gifs/ap14-advanced-liquify-warp/2.gif",
+    "3": "gifs/ap14-advanced-liquify-warp/3.gif",
+    "4": "gifs/ap14-advanced-liquify-warp/4.gif",
+    "5": "gifs/ap14-advanced-liquify-warp/5.gif"
+  },
+  "ap15-panorama-photomerge": {
+    "0": "gifs/ap15-panorama-photomerge/0.gif",
+    "1": "gifs/ap15-panorama-photomerge/1.gif",
+    "2": "gifs/ap15-panorama-photomerge/2.gif",
+    "3": "gifs/ap15-panorama-photomerge/3.gif",
+    "4": "gifs/ap15-panorama-photomerge/4.gif",
+    "5": "gifs/ap15-panorama-photomerge/5.gif",
+    "6": "gifs/ap15-panorama-photomerge/6.gif"
   }
 }

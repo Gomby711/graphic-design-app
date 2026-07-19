@@ -214,7 +214,43 @@ html, body {
   transition: width 0.15s ease;
   border-right: 1px solid var(--border);
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 14px 10px 30px;
+}
+
+#sidebar-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+#sidebar-toggle:hover { color: var(--text); background: var(--border); }
+#sidebar-toggle .chevron { flex-shrink: 0; font-size: 12px; }
+
+#sidebar.collapsed { width: 60px; padding: 14px 8px 30px; }
+#sidebar.collapsed #sidebar-toggle { justify-content: center; }
+#sidebar.collapsed #sidebar-toggle .label { display: none; }
+#sidebar.collapsed .sidebar-group-label,
+#sidebar.collapsed .group-count,
+#sidebar.collapsed .tab-item span:last-child { display: none; }
+#sidebar.collapsed .sidebar-group-header { justify-content: center; padding: 9px 0; }
+#sidebar.collapsed .group-chevron { display: none; }
+#sidebar.collapsed .sidebar-group-icon { display: inline-flex; }
+#sidebar.collapsed .sidebar-group-body { display: none; }
+
+.sidebar-group-icon {
+  display: none;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .sidebar-group { margin-bottom: 2px; }
@@ -301,7 +337,7 @@ html, body {
 
 .tab-badge {
   flex-shrink: 0;
-  width: 24px;
+  min-width: 24px;
   height: 24px;
   border-radius: 6px;
   background: var(--panel-2);
@@ -311,6 +347,8 @@ html, body {
   font-size: 11px;
   font-weight: 700;
   color: var(--text-dim);
+  padding: 0 4px;
+  white-space: nowrap;
 }
 .tab-item.active .tab-badge {
   background-image: linear-gradient(135deg, var(--splash-cyan), var(--splash-purple));

@@ -2,15 +2,42 @@ let LESSONS = [];
 let activeId = null;
 
 const GROUPS = [
-  { id: "fundamentals", label: "Fundamentals", match: l => isRoman(l.tab) },
-  { id: "lessons", label: "Photoshop Lessons", match: l => !isRoman(l.tab) && !l.category },
-  { id: "advanced-photoshop", label: "Advanced Photoshop Lessons", match: l => l.category === "advanced-photoshop" },
-  { id: "ae", label: "Motion Design in Adobe After Effects", match: l => l.category === "ae" },
-  { id: "figma", label: "Figma Lessons", match: l => l.category === "figma" },
-  { id: "photo", label: "Aspect Ratio / Photography / Lenses", match: l => l.category === "photo" },
-  { id: "colorspace", label: "Colorspaces", match: l => l.category === "colorspace" },
-  { id: "ai", label: "AI Lessons", match: l => l.category === "ai" },
+  { id: "fundamentals", label: "Fundamentals", icon: "📐", match: l => isRoman(l.tab) },
+  { id: "lessons", label: "Photoshop Lessons", icon: "🖼️", match: l => !isRoman(l.tab) && !l.category },
+  { id: "advanced-photoshop", label: "Advanced Photoshop Lessons", icon: "✨", match: l => l.category === "advanced-photoshop" },
+  { id: "ae", label: "Motion Design in Adobe After Effects", icon: "🎬", match: l => l.category === "ae" },
+  { id: "figma", label: "Figma Lessons", icon: "🅵", match: l => l.category === "figma" },
+  { id: "photo", label: "Aspect Ratio / Photography / Lenses", icon: "📷", match: l => l.category === "photo" },
+  { id: "colorspace", label: "Colorspaces", icon: "🌈", match: l => l.category === "colorspace" },
+  { id: "ai", label: "AI Lessons", icon: "🤖", match: l => l.category === "ai" },
 ];
+
+let sidebarCollapsed = localStorage.getItem("sidebarCollapsed") === "1";
+
+function applySidebarCollapsed() {
+  const sidebar = document.getElementById("sidebar");
+  const toggle = document.getElementById("sidebar-toggle");
+  sidebar.classList.toggle("collapsed", sidebarCollapsed);
+  toggle.querySelector(".chevron").textContent = sidebarCollapsed ? "»" : "«";
+  toggle.title = sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar";
+}
+
+function toggleSidebarCollapsed() {
+  sidebarCollapsed = !sidebarCollapsed;
+  localStorage.setItem("sidebarCollapsed", sidebarCollapsed ? "1" : "0");
+  applySidebarCollapsed();
+}
+
+function expandSidebarAndGroup(groupId) {
+  if (sidebarCollapsed) {
+    sidebarCollapsed = false;
+    localStorage.setItem("sidebarCollapsed", "0");
+    applySidebarCollapsed();
+  }
+  collapsedGroups.delete(groupId);
+  saveCollapsedGroups();
+  renderSidebar();
+}
 
 let collapsedGroups = new Set();
 const storedCollapsed = localStorage.getItem("collapsedGroups");
@@ -60,10 +87,15 @@ function renderSidebar() {
 
     const header = document.createElement("div");
     header.className = "sidebar-group-header";
+    header.title = group.label;
     header.innerHTML = `<span class="group-chevron">${isCollapsed ? "▸" : "▾"}</span>
+      <span class="sidebar-group-icon">${group.icon || "•"}</span>
       <span class="sidebar-group-label">${escapeHtml(group.label)}</span>
       <span class="group-count">${lessons.length}</span>`;
-    header.addEventListener("click", () => toggleGroup(group.id));
+    header.addEventListener("click", () => {
+      if (sidebarCollapsed) expandSidebarAndGroup(group.id);
+      else toggleGroup(group.id);
+    });
     groupEl.appendChild(header);
 
     const body = document.createElement("div");
@@ -301,12 +333,11 @@ async function showVersionAndChangelog() {
     const clRes = await fetch("/api/changelog");
     if (clRes.ok) {
       const entry = await clRes.json();
-      if (entry && entry.notes && entry.notes.length) {
+      if (entry && entry.notes && entry.notes.length && versionBtn.textContent) {
         const stripMd = s => s.replace(/\*\*(.*?)\*\*/g, "$1");
         panel.innerHTML =
           `<h4>What's changed — ${escapeHtml(entry.heading)}</h4>` +
           `<ul>${entry.notes.map(n => `<li>${escapeHtml(stripMd(n))}</li>`).join("")}</ul>`;
-        versionBtn.hidden = false;
         versionBtn.onclick = () => { panel.hidden = !panel.hidden; };
         document.addEventListener("click", (e) => {
           if (!panel.hidden && e.target !== versionBtn && !panel.contains(e.target)) {
@@ -324,6 +355,8 @@ async function init() {
   const res = await fetch("/api/lessons");
   LESSONS = await res.json();
   renderSidebar();
+  applySidebarCollapsed();
+  document.getElementById("sidebar-toggle").addEventListener("click", toggleSidebarCollapsed);
   document.getElementById("tab-color-wheel-tool").addEventListener("click", () => selectTool("color-wheel"));
   if (LESSONS.length) selectLesson(LESSONS[0].id);
 
