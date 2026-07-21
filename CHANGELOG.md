@@ -7,6 +7,7 @@ shows the most recent entry below.
 ## 2026-07-21
 - Added instructional demo gifs for the last 3 Advanced Photoshop lessons (HDR Merge & Tone Mapping, Neural Filters Deep Dive, and Advanced Puppet Warp) that were missing them.
 - Replaced the generic emoji icons shown in the collapsed sidebar with recognizable app-branded icons: a Photoshop "Ps" badge, an After Effects "Ae" badge, a real Figma logo, and a gold "A" badge for Advanced Photoshop Lessons.
+- Finished the Advanced Photoshop gif-precision audit: swapped in genuinely matching source videos for 8 bullets across 5 lessons whose old clips didn't show the technique the text describes, including replacing AP-8's whole demo video (it was keying a red screen while the lesson talks about green screen removal).
 
 ## 2026-07-18 (v1.0.8)
 - Added 6 new **Motion Design in Adobe After Effects** lessons: expressions (wiggle/loopOut), the Puppet Pin tool & character rigging, 3D layers & the Camera tool, motion tracking with the Tracker panel, the Render Queue & Media Encoder export workflow, and the Essential Graphics panel & Motion Graphics Templates (Mogrts) — each with instructional gifs.
