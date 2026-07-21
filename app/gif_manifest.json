@@ -655,5 +655,30 @@
     "4": "gifs/ap15-panorama-photomerge/4.gif",
     "5": "gifs/ap15-panorama-photomerge/5.gif",
     "6": "gifs/ap15-panorama-photomerge/6.gif"
+  },
+  "ap16-hdr-merge-tone-mapping": {
+    "0": "gifs/ap16-hdr-merge-tone-mapping/0.gif",
+    "1": "gifs/ap16-hdr-merge-tone-mapping/1.gif",
+    "2": "gifs/ap16-hdr-merge-tone-mapping/2.gif",
+    "3": "gifs/ap16-hdr-merge-tone-mapping/3.gif",
+    "4": "gifs/ap16-hdr-merge-tone-mapping/4.gif",
+    "5": "gifs/ap16-hdr-merge-tone-mapping/5.gif"
+  },
+  "ap17-neural-filters-deep-dive": {
+    "0": "gifs/ap17-neural-filters-deep-dive/0.gif",
+    "1": "gifs/ap17-neural-filters-deep-dive/1.gif",
+    "2": "gifs/ap17-neural-filters-deep-dive/2.gif",
+    "3": "gifs/ap17-neural-filters-deep-dive/3.gif",
+    "4": "gifs/ap17-neural-filters-deep-dive/4.gif",
+    "5": "gifs/ap17-neural-filters-deep-dive/5.gif"
+  },
+  "ap18-advanced-puppet-warp": {
+    "0": "gifs/ap18-advanced-puppet-warp/0.gif",
+    "1": "gifs/ap18-advanced-puppet-warp/1.gif",
+    "2": "gifs/ap18-advanced-puppet-warp/2.gif",
+    "3": "gifs/ap18-advanced-puppet-warp/3.gif",
+    "4": "gifs/ap18-advanced-puppet-warp/4.gif",
+    "5": "gifs/ap18-advanced-puppet-warp/5.gif",
+    "6": "gifs/ap18-advanced-puppet-warp/6.gif"
   }
 }
