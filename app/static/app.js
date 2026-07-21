@@ -1,12 +1,17 @@
 let LESSONS = [];
 let activeId = null;
 
+const ICON_PS = `<svg viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#001E36"/><text x="16" y="22.5" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#31A8FF" text-anchor="middle">Ps</text></svg>`;
+const ICON_ADVANCED = `<svg viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#241902"/><text x="16" y="23" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" fill="#FFD447" text-anchor="middle">A</text></svg>`;
+const ICON_AE = `<svg viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#00005B"/><text x="16" y="22.5" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#9999FF" text-anchor="middle">Ae</text></svg>`;
+const ICON_FIGMA = `<svg viewBox="0 0 38 57"><path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/><path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/><path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/><path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/></svg>`;
+
 const GROUPS = [
   { id: "fundamentals", label: "Fundamentals", icon: "📐", match: l => isRoman(l.tab) },
-  { id: "lessons", label: "Photoshop Lessons", icon: "🖼️", match: l => !isRoman(l.tab) && !l.category },
-  { id: "advanced-photoshop", label: "Advanced Photoshop Lessons", icon: "✨", match: l => l.category === "advanced-photoshop" },
-  { id: "ae", label: "Motion Design in Adobe After Effects", icon: "🎬", match: l => l.category === "ae" },
-  { id: "figma", label: "Figma Lessons", icon: "🅵", match: l => l.category === "figma" },
+  { id: "lessons", label: "Photoshop Lessons", icon: ICON_PS, match: l => !isRoman(l.tab) && !l.category },
+  { id: "advanced-photoshop", label: "Advanced Photoshop Lessons", icon: ICON_ADVANCED, match: l => l.category === "advanced-photoshop" },
+  { id: "ae", label: "Motion Design in Adobe After Effects", icon: ICON_AE, match: l => l.category === "ae" },
+  { id: "figma", label: "Figma Lessons", icon: ICON_FIGMA, match: l => l.category === "figma" },
   { id: "photo", label: "Aspect Ratio / Photography / Lenses", icon: "📷", match: l => l.category === "photo" },
   { id: "colorspace", label: "Colorspaces", icon: "🌈", match: l => l.category === "colorspace" },
   { id: "ai", label: "AI Lessons", icon: "🤖", match: l => l.category === "ai" },

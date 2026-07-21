@@ -221,6 +221,17 @@ html, body {
   display: none;
   font-size: 16px;
   line-height: 1;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sidebar-group-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 5px;
 }
 
 .sidebar-group { margin-bottom: 2px; }
