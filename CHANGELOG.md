@@ -4,6 +4,12 @@ All notable changes to Graphic Design Tips are documented here. The in-app
 "What's changed" panel (next to the version number in the top bar) always
 shows the most recent entry below.
 
+## 2026-08-03
+- Restored the "What's changed" panel next to the version number in the top bar (it was previously disconnected from the working `/api/changelog` endpoint) — this and future release notes are now visible in-app again.
+- Finished the demo-gif precision audit across every lesson category that hadn't been covered yet: the 12 After Effects/Motion Design lessons and the 4 base Photoshop lessons added since the last audit (Remove Objects, Dodge & Burn, Actions & Batch Automation, Text/Layer Styles).
+- Re-cut 5 gifs whose old clips didn't show the exact step the text describes: AE-1's Rotation-keyframe navigation bullet (was showing a plain footage scrub with no property/keyframes visible), AE-4's "text on a path" bullet (was showing flat stacked text instead of type wrapped on a curve), AE-12's "Export Motion Graphics Template" bullet (was showing an unrelated talking-head clip), Remove Objects' Content-Aware Fill "Preview/Output To/OK" bullet (was showing an earlier subject-selection step), and Text & Layer Styles' "enable Bevel & Emboss" bullet (was showing the dialog before the effect was turned on).
+- Added the 4 newly-audited Photoshop lessons to `audit_map.json` so the full audit record stays complete and consistent.
+
 ## 2026-07-21
 - Added instructional demo gifs for the last 3 Advanced Photoshop lessons (HDR Merge & Tone Mapping, Neural Filters Deep Dive, and Advanced Puppet Warp) that were missing them.
 - Replaced the generic emoji icons shown in the collapsed sidebar with recognizable app-branded icons: a Photoshop "Ps" badge, an After Effects "Ae" badge, a real Figma logo, and a gold "A" badge for Advanced Photoshop Lessons.

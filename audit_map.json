@@ -2290,5 +2290,155 @@
         "path": "gifs/ai-3-chatgpt-image/10.gif"
       }
     ]
+  },
+  "18-remove-objects": {
+    "title": "How to Remove Objects from an Image in Photoshop",
+    "num_bullets": 5,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. The Remove Tool",
+        "bullet": "Select the Remove tool and paint directly over the unwanted object with a brush stroke; Photoshop analyzes the surrounding area and fills the object in automatically as soon as you release the mouse.",
+        "path": "gifs/18-remove-objects/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. The Remove Tool",
+        "bullet": "Clean up multiple distractions: keep brushing over each unwanted object in the frame — stray people, gear, trash — one at a time until the whole scene reads as a single clean shot.",
+        "path": "gifs/18-remove-objects/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "B. Content-Aware Fill Workspace",
+        "bullet": "Make a selection around the object, then open Edit > Content-Aware Fill to see a green overlay marking exactly which pixels Photoshop plans to sample from to rebuild the area.",
+        "path": "gifs/18-remove-objects/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. Content-Aware Fill Workspace",
+        "bullet": "Adjust the sampling area: use the Sampling Brush tool to add or subtract from the green overlay so only the right surrounding texture gets pulled into the fill.",
+        "path": "gifs/18-remove-objects/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Content-Aware Fill Workspace",
+        "bullet": "Compare the live Preview panel against your original, set Output To (New Layer is safest), and click OK to commit the fill without touching your original pixels.",
+        "path": "gifs/18-remove-objects/4.gif"
+      }
+    ]
+  },
+  "19-dodge-burn": {
+    "title": "Dodge and Burn: Non-Destructive Light and Shadow Sculpting",
+    "num_bullets": 5,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Setting Up the Dodge & Burn Layer",
+        "bullet": "Create the layer: add a new Curves adjustment layer above your image, then fill its mask with white and press Ctrl/Cmd+I to invert it to black so it starts fully hidden and ready to paint in.",
+        "path": "gifs/19-dodge-burn/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Setting Up the Dodge & Burn Layer",
+        "bullet": "Plan your map first: temporarily paint in a bright color over the zones you intend to lighten, so you can preview the whole highlight plan before switching to real tones.",
+        "path": "gifs/19-dodge-burn/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "B. Painting Light and Shadow",
+        "bullet": "Paint with a soft round brush at low opacity directly on the mask, revealing the Curves adjustment underneath to build up brightening gradually with multiple light passes.",
+        "path": "gifs/19-dodge-burn/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. Painting Light and Shadow",
+        "bullet": "Map your shadows the same way: switch to a different area of the face or body and mark where the burn (darkening) should fall relative to your light source.",
+        "path": "gifs/19-dodge-burn/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Painting Light and Shadow",
+        "bullet": "Check your work: stack additional Curves layers for separate highlight and shadow passes, then toggle each one's visibility to confirm your light map reads correctly before flattening.",
+        "path": "gifs/19-dodge-burn/4.gif"
+      }
+    ]
+  },
+  "20-actions-batch-automation": {
+    "title": "Photoshop Actions and Batch Automation",
+    "num_bullets": 5,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Recording an Action",
+        "bullet": "Open the Actions panel (Window > Actions) to see any steps you've already recorded, or start fresh from Photoshop's Welcome screen drag-and-drop zone.",
+        "path": "gifs/20-actions-batch-automation/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Recording an Action",
+        "bullet": "Record a new action: click the record button in the Actions panel, then perform your edit — crop, resize, color grade — once while every step gets captured automatically.",
+        "path": "gifs/20-actions-batch-automation/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Recording an Action",
+        "bullet": "Fine-tune settings as you go: values you type into dialogs like Image Size are captured exactly as entered and will replay identically on every file.",
+        "path": "gifs/20-actions-batch-automation/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. Running a Batch",
+        "bullet": "Find Batch under File > Automate to apply your recorded action across an entire folder of images instead of running it one file at a time.",
+        "path": "gifs/20-actions-batch-automation/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Running a Batch",
+        "bullet": "Set up the batch: choose your action, pick a Source folder of images and a Destination folder, then click OK to run it on every file in the folder at once.",
+        "path": "gifs/20-actions-batch-automation/4.gif"
+      }
+    ]
+  },
+  "21-text-layer-styles": {
+    "title": "Text, Alignment, and Layer Style Effects",
+    "num_bullets": 6,
+    "entries": [
+      {
+        "index": 0,
+        "heading": "A. Type & Alignment",
+        "bullet": "Draw your highlight box first: create a solid rectangle shape on its own layer — this becomes the bold knockout backdrop your text will sit inside.",
+        "path": "gifs/21-text-layer-styles/0.gif"
+      },
+      {
+        "index": 1,
+        "heading": "A. Type & Alignment",
+        "bullet": "Add your type: click with the Type tool to place text, adjusting size and position for each line independently.",
+        "path": "gifs/21-text-layer-styles/1.gif"
+      },
+      {
+        "index": 2,
+        "heading": "A. Type & Alignment",
+        "bullet": "Center the text inside the box: select both layers and use the Align tools so the type sits perfectly centered inside your highlight rectangle.",
+        "path": "gifs/21-text-layer-styles/2.gif"
+      },
+      {
+        "index": 3,
+        "heading": "B. Layer Style Effects",
+        "bullet": "Open Layer Style: double-click the text layer to launch the Layer Style dialog, then enable Bevel & Emboss to give the flat type real dimension.",
+        "path": "gifs/21-text-layer-styles/3.gif"
+      },
+      {
+        "index": 4,
+        "heading": "B. Layer Style Effects",
+        "bullet": "Apply a Pattern Overlay: swap the flat text color for a texture — like a moss or camo pattern — directly inside the same Layer Style dialog.",
+        "path": "gifs/21-text-layer-styles/4.gif"
+      },
+      {
+        "index": 5,
+        "heading": "B. Layer Style Effects",
+        "bullet": "Stack your effects: with Bevel & Emboss, Stroke, Pattern Overlay, and Drop Shadow layered together in the fx list, the type reads as a textured, dimensional badge instead of flat color.",
+        "path": "gifs/21-text-layer-styles/5.gif"
+      }
+    ]
   }
 }
