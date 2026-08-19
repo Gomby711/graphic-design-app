@@ -13,3 +13,6 @@ site/.env
 site/*.log
 
 site/tsconfig.tsbuildinfo
+
+# Cloudflare Worker local dev state
+.wrangler/

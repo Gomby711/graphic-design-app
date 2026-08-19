@@ -7,8 +7,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:worker-assets": "node scripts/build-worker-assets.mjs",
     "hash-password": "node server/hash-password.js",
-    "start": "node server/index.js"
+    "hash-password:worker": "node scripts/hash-password-worker.mjs",
+    "start": "node server/index.js",
+    "worker:dev": "npm run build && npm run build:worker-assets && wrangler dev --config ../wrangler.jsonc",
+    "worker:deploy": "npm run build && npm run build:worker-assets && wrangler deploy --config ../wrangler.jsonc"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
@@ -33,6 +37,7 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "wrangler": "^4.24.0"
   }
 }
