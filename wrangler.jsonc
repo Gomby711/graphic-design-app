@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "graphic-design-app",
+  "main": "site/worker/index.js",
+  "compatibility_date": "2026-08-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    // Built once locally and committed (site/worker-assets/) — the
+    // Cloudflare Workers Build pipeline for this project runs no build
+    // command, so the asset tree has to already exist in the repo. See
+    // site/scripts/build-worker-assets.mjs to regenerate it.
+    "directory": "site/worker-assets",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Every request goes through the Worker first (not just /portal and
+    // /api) so the same security headers land on every response, including
+    // the public login page and its JS/CSS bundle.
+    "run_worker_first": true
+  },
+  "observability": {
+    "enabled": true
+  }
+}
