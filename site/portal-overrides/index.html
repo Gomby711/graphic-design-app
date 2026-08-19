@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>graphic design tips — site</title>
+<link rel="icon" type="image/png" sizes="256x256" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Same structure/functionality as the app: original stylesheet loads first,
+     site-theme.css then re-points the app's CSS custom properties at the
+     site's minimalist/artistic palette (no layout or behavior changes). -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="site-theme.css">
+</head>
+<body>
+<header id="topbar">
+  <div id="brand">
+    <img id="brand-icon" src="icon.png" alt="graphic design tips logo">
+    <span id="brand-name">graphic<b>design</b>tips</span>
+  </div>
+  <div id="topbar-sub">
+    by Evan Taye Lee
+    <button id="app-version" class="version-pill" hidden></button>
+    <div id="whats-new-panel" hidden></div>
+  </div>
+  <button id="update-btn" hidden></button>
+  <button id="site-logout-btn" title="Sign out">Sign out</button>
+</header>
+
+<div id="subbar">
+  <div id="topbar-crumb">
+    <span id="crumb-category"></span>
+  </div>
+  <div id="topbar-right">
+    <span id="crumb-counter"></span>
+  </div>
+</div>
+
+<main id="main">
+  <aside id="sidebar">
+    <button id="sidebar-toggle" title="Collapse sidebar">
+      <span class="chevron">&laquo;</span><span class="label">Collapse</span>
+    </button>
+    <div id="sidebar-groups"></div>
+    <div class="sidebar-group" id="group-tools">
+      <div class="sidebar-group-header" data-group="tools">
+        <span class="group-chevron">▾</span>
+        <span class="sidebar-group-icon">🎨</span>
+        <span class="sidebar-group-label">Tools</span>
+      </div>
+      <div class="sidebar-group-body">
+        <ul id="tab-list-tools">
+          <li class="tab-item" id="tab-color-wheel-tool" data-tool="color-wheel">
+            <span class="tab-badge">🎨</span><span>Color Theory Studio</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <article id="content-pane">
+    <div id="empty-state">Select a tab to begin.</div>
+  </article>
+</main>
+
+<script src="app.js"></script>
+<script>
+  // Site-only addition: sign out clears the server session and returns to
+  // the password gate. Everything else on this page is the unmodified app.
+  document.getElementById("site-logout-btn").addEventListener("click", async () => {
+    await fetch("/api/logout", { method: "POST" }).catch(() => {});
+    window.location.href = "/";
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/*
+ * Site reskin — overrides only the app's CSS custom properties.
+ * Every rule in style.css is written against these variables, so redefining
+ * them here retints the entire lesson viewer without touching a single
+ * layout rule: content, structure, and behavior stay 1:1 with the app.
+ *
+ * Palette: a single warm, muted gold/ivory-on-charcoal system — minimalist
+ * and editorial — replacing the app's bright multicolor "splash" theme so
+ * the site reads as a distinct, high-end artist's archive.
+ */
+:root {
+  --bg: #131110;
+  --panel: #1b1815;
+  --panel-2: #221e19;
+  --border: #34302a;
+  --text: #f3ede1;
+  --text-dim: #a79c88;
+  --accent-2: #c9a464;
+  --accent-2-rgb: 201, 164, 100;
+  --splash-pink: #c9a464;
+  --splash-purple: #8a7a5c;
+  --splash-purple-rgb: 138, 122, 92;
+  --splash-orange: #c9a464;
+  --splash-cyan: #dcd0b4;
+  --splash-cyan-rgb: 220, 208, 180;
+}
+
+html, body {
+  font-family: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#brand-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: 0.3px;
+}
+#brand-name b {
+  font-weight: 600;
+  font-style: italic;
+}
+
+#brand-icon {
+  border-radius: 12px;
+}
+
+/* Softer, less saturated shadows to match the muted palette. */
+#brand-icon:hover {
+  transform: rotate(-2deg) scale(1.04);
+}
+
+#site-logout-btn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+#site-logout-btn:hover {
+  color: var(--text);
+  border-color: var(--accent-2);
+}
+
+/* When the update pill is visible it inherits the app's cyan/purple
+   gradient via the vars above, which now resolve to the gold/taupe pair —
+   no separate override needed. */

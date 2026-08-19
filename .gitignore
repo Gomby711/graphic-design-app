@@ -5,3 +5,11 @@ app/video_cache/
 build/
 dist/
 *.spec
+
+# site (password-gated web portal)
+site/node_modules/
+site/dist/
+site/.env
+site/*.log
+
+site/tsconfig.tsbuildinfo
