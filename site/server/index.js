@@ -47,10 +47,30 @@ app.use(cookieParser(SESSION_SECRET));
 app.use(express.json({ limit: "8kb" }));
 
 // Baseline hardening headers on every response.
+//
+// X-Frame-Options was previously DENY, which — applied globally — also
+// blocked our OWN pages from being framed by our own pages: the color-wheel
+// tool (both the standalone Tool tab and the Color Theory lesson's inline
+// preview) is loaded in an <iframe> by portal-overrides/index.html /
+// app/static/app.js, so a same-origin page refusing to be framed at all
+// broke it outright. SAMEORIGIN + an explicit frame-ancestors/frame-src CSP
+// keeps third parties from framing us while allowing that same-origin
+// embedding and the YouTube lesson-video embeds to render.
 app.use((req, res, next) => {
-  res.setHeader("X-Frame-Options", "DENY");
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  res.setHeader(
+    "Content-Security-Policy",
+    "frame-ancestors 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;"
+  );
   res.setHeader("X-Content-Type-Options", "nosniff");
-  res.setHeader("Referrer-Policy", "no-referrer");
+  // "no-referrer" broke the YouTube lesson embeds: YouTube's domain-restricted
+  // embedding check needs to see the embedding page's origin in the request
+  // it makes for the iframe, and with no referrer sent at all it rejects the
+  // embed with "Error 153 — Video player configuration error". This still
+  // strips the referrer entirely on any downgrade to plain HTTP, and never
+  // leaks the full URL path cross-origin — just the origin, which YouTube
+  // (and any other embed) needs to identify us.
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
   res.setHeader("Permissions-Policy", "geolocation=(), microphone=(), camera=()");
   next();
 });
