@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FormEvent } from "react"
-import { Lock, ArrowRight, ShieldCheck } from "lucide-react"
+import { Lock, ArrowRight, ShieldCheck, Eye, EyeOff } from "lucide-react"
 import { WebGLShader } from "@/components/ui/web-gl-shader"
 import { LiquidButton } from "@/components/ui/liquid-glass-button"
 
@@ -16,6 +16,7 @@ export default function PasswordGate() {
   const [password, setPassword] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle")
   const [error, setError] = useState("")
+  const [showPassword, setShowPassword] = useState(false)
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
@@ -71,7 +72,7 @@ export default function PasswordGate() {
               <Lock className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-paper/40" />
               <input
                 id="site-password"
-                type="password"
+                type={showPassword ? "text" : "password"}
                 inputMode="text"
                 autoComplete="off"
                 autoCorrect="off"
@@ -80,9 +81,20 @@ export default function PasswordGate() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
-                className="w-full rounded-full border border-white/15 bg-white/5 py-3 pl-10 pr-4 text-sm text-paper placeholder:text-paper/30 outline-none transition focus:border-primary/60 focus:bg-white/10"
+                className="w-full rounded-full border border-white/15 bg-white/5 py-3 pl-10 pr-10 text-sm text-paper placeholder:text-paper/30 outline-none transition focus:border-primary/60 focus:bg-white/10"
                 disabled={status === "loading"}
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword((v) => !v)}
+                disabled={status === "loading"}
+                aria-label={showPassword ? "Hide password" : "Show password"}
+                aria-pressed={showPassword}
+                tabIndex={-1}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-paper/40 transition hover:text-paper/80 disabled:pointer-events-none"
+              >
+                {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              </button>
             </div>
 
             {error && (

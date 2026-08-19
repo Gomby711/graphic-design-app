@@ -66,6 +66,14 @@ html, body {
   border-color: var(--accent-2);
 }
 
+/* The self-update flow (checks GitHub releases, downloads a desktop build)
+   only makes sense for the packaged app — hide it on the site regardless
+   of what app.js decides to show. Site-only override; app/static is
+   untouched. */
+#update-btn {
+  display: none !important;
+}
+
 /* When the update pill is visible it inherits the app's cyan/purple
    gradient via the vars above, which now resolve to the gold/taupe pair —
    no separate override needed. */

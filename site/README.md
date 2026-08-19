@@ -122,12 +122,21 @@ anyone changes that, since it's a change to shared account configuration.
   recover the password from source.
 - Sessions expire after 12 hours; "Sign out" clears the cookie (and, for the
   Express server, destroys the server-side session) immediately.
-- The Worker has no per-IP rate limiting — a Worker has no reliable shared
-  memory across the isolates/regions a request might land on, so an
-  in-process counter (which the Express server does have) wouldn't actually
-  work there. Add a Cloudflare **Rate Limiting Rule** on `/api/login` in the
-  dashboard (Security → WAF → Rate limiting rules) instead — it enforces
-  centrally at the edge, which is a better fit than application code here.
+- Escalating per-IP lockout on failed logins: 5 wrong passwords in a row
+  locks that IP out for 5 minutes; hitting the limit again after that
+  escalates to 15 min, then 30 min, 1h, 2h, 6h, 12h, 1 day, 1 week, and
+  keeps doubling from there for any further offense. State lives in a
+  Cloudflare KV namespace (`RATE_LIMIT_KV`) — a Worker has no memory shared
+  across requests/isolates/regions, so this is the one piece of state that
+  has to persist server-side between requests; an in-process counter
+  wouldn't actually work here (the Express server, which is a single
+  process, does keep one in memory instead — see `site/server/auth.js`).
+  A correct login clears the lockout state for that IP. Tune
+  `FAILS_BEFORE_LOCKOUT` / `LOCKOUT_TIERS_SEC` in `site/worker/index.js` if
+  the defaults don't fit. This is separate from and complementary to a
+  Cloudflare **Rate Limiting Rule** (Security → WAF → Rate limiting rules)
+  on `/api/login`, which enforces at the edge before the Worker even runs —
+  worth adding too for defense in depth.
 
 ## Cloudflare Worker setup (production)
 

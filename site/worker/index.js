@@ -20,6 +20,71 @@ import gifManifest from "../../app/gif_manifest.json";
 const SESSION_COOKIE = "gdt_session";
 const SESSION_TTL_MS = 12 * 60 * 60 * 1000; // 12 hours
 
+// --- Escalating login lockout ----------------------------------------------
+// Failed attempts are tracked per client IP in Cloudflare KV (RATE_LIMIT_KV)
+// — a Worker has no memory shared across requests/isolates/regions, so this
+// is the one piece of state that has to persist between requests. After
+// FAILS_BEFORE_LOCKOUT wrong passwords in a row, the IP is locked out for an
+// escalating duration: 5min, 15min, 30min, 1h, 2h, 6h, 12h, 1 day, 1 week —
+// each further offense (a lockout triggered again after a previous one)
+// doubles the last tier onward, indefinitely.
+const FAILS_BEFORE_LOCKOUT = 5;
+const LOCKOUT_TIERS_SEC = [
+  5 * 60, // 5 min
+  15 * 60, // 15 min
+  30 * 60, // 30 min
+  60 * 60, // 1 hour
+  2 * 60 * 60, // 2 hours
+  6 * 60 * 60, // 6 hours
+  12 * 60 * 60, // 12 hours
+  24 * 60 * 60, // 1 day
+  7 * 24 * 60 * 60, // 1 week
+];
+
+function lockoutDurationSec(offenseCount) {
+  if (offenseCount < LOCKOUT_TIERS_SEC.length) return LOCKOUT_TIERS_SEC[offenseCount];
+  const last = LOCKOUT_TIERS_SEC[LOCKOUT_TIERS_SEC.length - 1];
+  return last * 2 ** (offenseCount - LOCKOUT_TIERS_SEC.length + 1);
+}
+
+function formatDuration(seconds) {
+  if (seconds < 3600) return `${Math.ceil(seconds / 60)} minute${seconds >= 120 ? "s" : ""}`;
+  if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hour${seconds >= 7200 ? "s" : ""}`;
+  return `${Math.ceil(seconds / 86400)} day${seconds >= 172800 ? "s" : ""}`;
+}
+
+function clientIp(request) {
+  return request.headers.get("CF-Connecting-IP") || "unknown";
+}
+
+async function getRateLimitState(env, ip) {
+  if (!env.RATE_LIMIT_KV) return { failCount: 0, offenseCount: 0, lockedUntil: 0 };
+  const raw = await env.RATE_LIMIT_KV.get(`rl:${ip}`);
+  if (!raw) return { failCount: 0, offenseCount: 0, lockedUntil: 0 };
+  try {
+    const parsed = JSON.parse(raw);
+    return {
+      failCount: parsed.failCount || 0,
+      offenseCount: parsed.offenseCount || 0,
+      lockedUntil: parsed.lockedUntil || 0,
+    };
+  } catch {
+    return { failCount: 0, offenseCount: 0, lockedUntil: 0 };
+  }
+}
+
+async function putRateLimitState(env, ip, state, ttlSeconds) {
+  if (!env.RATE_LIMIT_KV) return;
+  await env.RATE_LIMIT_KV.put(`rl:${ip}`, JSON.stringify(state), {
+    expirationTtl: Math.max(60, Math.ceil(ttlSeconds)),
+  });
+}
+
+async function clearRateLimitState(env, ip) {
+  if (!env.RATE_LIMIT_KV) return;
+  await env.RATE_LIMIT_KV.delete(`rl:${ip}`);
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -74,6 +139,19 @@ async function handleLogin(request, env) {
     return json({ error: "Server is not configured." }, 500);
   }
 
+  const ip = clientIp(request);
+  const state = await getRateLimitState(env, ip);
+  const now = Date.now();
+
+  if (state.lockedUntil > now) {
+    const remainingSec = (state.lockedUntil - now) / 1000;
+    return json(
+      { error: `Too many attempts. Try again in ${formatDuration(remainingSec)}.` },
+      429,
+      { "Retry-After": String(Math.ceil(remainingSec)) }
+    );
+  }
+
   let ok;
   try {
     ok = await verifyPassword(String(body?.password ?? ""), hash);
@@ -83,11 +161,34 @@ async function handleLogin(request, env) {
     // implementation supports) would otherwise throw inside crypto.subtle
     // and crash the whole request with an opaque empty 500. Treat it as
     // "wrong password" instead of an unhandled exception.
-    return json({ error: "Incorrect password." }, 401);
+    ok = false;
   }
+
   if (!ok) {
+    const failCount = state.failCount + 1;
+    if (failCount >= FAILS_BEFORE_LOCKOUT) {
+      const durationSec = lockoutDurationSec(state.offenseCount);
+      const lockedUntil = now + durationSec * 1000;
+      await putRateLimitState(
+        env,
+        ip,
+        { failCount: 0, offenseCount: state.offenseCount + 1, lockedUntil },
+        durationSec + 60
+      );
+      return json(
+        { error: `Too many attempts. Try again in ${formatDuration(durationSec)}.` },
+        429,
+        { "Retry-After": String(durationSec) }
+      );
+    }
+    // Not locked out yet — remember the fail count for an hour so a slow
+    // trickle of attempts still accumulates, but a single stray typo years
+    // apart doesn't linger forever.
+    await putRateLimitState(env, ip, { ...state, failCount }, 3600);
     return json({ error: "Incorrect password." }, 401);
   }
+
+  await clearRateLimitState(env, ip);
 
   const expiresAt = Date.now() + SESSION_TTL_MS;
   const token = await signSession(expiresAt, env.SESSION_SECRET);
