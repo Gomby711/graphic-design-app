@@ -38,6 +38,29 @@ export default {
       return withSecurityHeaders(json({ authenticated: authed }));
     }
 
+    // TEMPORARY — remove once the SITE_PASSWORD_HASH secret is confirmed
+    // correct. Reports structure only (length, PBKDF2 format, iteration
+    // count, segment lengths) — never the value itself — to debug a
+    // secret that was pasted wrong without exposing it.
+    if (path === "/api/debug-hash-check") {
+      const hash = env.SITE_PASSWORD_HASH;
+      if (!hash) return withSecurityHeaders(json({ present: false }));
+      const parts = String(hash).split(":");
+      return withSecurityHeaders(
+        json({
+          present: true,
+          length: hash.length,
+          startsWithPbkdf2: parts[0] === "pbkdf2",
+          segmentCount: parts.length,
+          iterations: parts[1] ?? null,
+          saltLength: parts[2]?.length ?? null,
+          hashLength: parts[3]?.length ?? null,
+          firstChar: hash[0],
+          lastChar: hash[hash.length - 1],
+        })
+      );
+    }
+
     if (path.startsWith("/api/")) {
       if (!authed) return withSecurityHeaders(json({ error: "Not authenticated." }, 401));
       if (path === "/api/lessons") return withSecurityHeaders(json(loadLessonsPayload(), 200, noStoreHeaders()));
