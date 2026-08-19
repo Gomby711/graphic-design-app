@@ -17,6 +17,19 @@
     // the public login page and its JS/CSS bundle.
     "run_worker_first": true
   },
+  // Declared to match what's actually configured on the Worker (added via
+  // the Cloudflare dashboard, Domains tab) — without this, every deploy logs
+  // a "local configuration differs from remote" warning. Deploy command is
+  // `wrangler versions upload`, which only affects code, not this route (a
+  // separate `wrangler triggers deploy` would be needed for that), so this
+  // is purely documentation-in-config, not a functional change.
+  "routes": [
+    {
+      "pattern": "gda.evtlee.com",
+      "zone_name": "evtlee.com",
+      "custom_domain": true
+    }
+  ],
   "observability": {
     "enabled": true
   },
