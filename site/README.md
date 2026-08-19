@@ -94,7 +94,9 @@ anyone changes that, since it's a change to shared account configuration.
 ## Security measures
 
 - Password is **never** sent to or stored in the client. The Worker holds a
-  PBKDF2 hash (210,000 iterations, SHA-256) in a Cloudflare secret; the
+  PBKDF2 hash (100,000 iterations, SHA-256 — the max Cloudflare Workers'
+  PBKDF2 implementation supports; higher throws at verify time) in a
+  Cloudflare secret; the
   Express dev server holds a bcrypt hash (cost 12) in `.env`. Either way it
   never leaves the server.
 - Sessions are `httpOnly` + `Secure` (on real HTTPS requests) +

@@ -38,52 +38,6 @@ export default {
       return withSecurityHeaders(json({ authenticated: authed }));
     }
 
-    // TEMPORARY — remove once the SITE_PASSWORD_HASH secret is confirmed
-    // correct. Reports structure only (length, PBKDF2 format, iteration
-    // count, segment lengths) — never the value itself — to debug a
-    // secret that was pasted wrong without exposing it.
-    if (path === "/api/debug-hash-check") {
-      const hash = env.SITE_PASSWORD_HASH;
-      if (!hash) return withSecurityHeaders(json({ present: false }));
-      const parts = String(hash).split(":");
-      let saltDecodable = null;
-      let hashDecodable = null;
-      let saltDecodedBytes = null;
-      let hashDecodedBytes = null;
-      try {
-        saltDecodedBytes = bytesFromB64url(parts[2] ?? "").length;
-        saltDecodable = true;
-      } catch (e) {
-        saltDecodable = false;
-      }
-      try {
-        hashDecodedBytes = bytesFromB64url(parts[3] ?? "").length;
-        hashDecodable = true;
-      } catch (e) {
-        hashDecodable = false;
-      }
-      return withSecurityHeaders(
-        json({
-          present: true,
-          length: hash.length,
-          startsWithPbkdf2: parts[0] === "pbkdf2",
-          segmentCount: parts.length,
-          iterations: parts[1] ?? null,
-          saltLength: parts[2]?.length ?? null,
-          hashLength: parts[3]?.length ?? null,
-          // Expect 16 and 32 respectively — if these decode fine but
-          // aren't 16/32, or fail to decode at all, a character in the
-          // secret got altered even though the surface length looks right.
-          saltDecodable,
-          saltDecodedBytes,
-          hashDecodable,
-          hashDecodedBytes,
-          firstChar: hash[0],
-          lastChar: hash[hash.length - 1],
-        })
-      );
-    }
-
     if (path.startsWith("/api/")) {
       if (!authed) return withSecurityHeaders(json({ error: "Not authenticated." }, 401));
       if (path === "/api/lessons") return withSecurityHeaders(json(loadLessonsPayload(), 200, noStoreHeaders()));
@@ -123,13 +77,13 @@ async function handleLogin(request, env) {
   let ok;
   try {
     ok = await verifyPassword(String(body?.password ?? ""), hash);
-  } catch (err) {
-    // A malformed SITE_PASSWORD_HASH secret (e.g. a character altered in
-    // copy/paste) would otherwise throw inside crypto.subtle and crash the
-    // whole request with an opaque empty 500 — treat it as "wrong
-    // password" instead of an unhandled exception, and surface *why* via
-    // /api/debug-hash-check rather than a stack trace.
-    return json({ error: "Incorrect password.", debug: String(err?.message || err) }, 401);
+  } catch {
+    // A malformed SITE_PASSWORD_HASH secret (bad encoding, or — as found
+    // during setup — an iteration count above the 100,000 Workers' PBKDF2
+    // implementation supports) would otherwise throw inside crypto.subtle
+    // and crash the whole request with an opaque empty 500. Treat it as
+    // "wrong password" instead of an unhandled exception.
+    return json({ error: "Incorrect password." }, 401);
   }
   if (!ok) {
     return json({ error: "Incorrect password." }, 401);

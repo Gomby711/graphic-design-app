@@ -12,7 +12,11 @@
 // Workers & Pages > graphic-design-app > Settings > Variables and Secrets.
 import { webcrypto as crypto } from "node:crypto";
 
-const ITERATIONS = 210000; // OWASP-recommended minimum for PBKDF2-HMAC-SHA256
+// Cloudflare Workers' PBKDF2 implementation hard-caps iterations at 100,000
+// (higher values throw "iteration counts above 100000 are not supported" at
+// verify time) — OWASP's 210,000+ recommendation isn't achievable here, so
+// this uses the platform's actual maximum instead.
+const ITERATIONS = 100000;
 
 function b64url(bytes) {
   let str = "";
